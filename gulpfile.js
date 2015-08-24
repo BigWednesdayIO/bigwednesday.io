@@ -38,6 +38,7 @@ gulp.task('build:assets', function () {
 
 gulp.task('build', function(callback) {
 	runSequence('clean:build',
+		'sass',
 		['copy:build', 'build:assets'],
 	callback);
 });
