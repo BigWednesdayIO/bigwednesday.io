@@ -1,0 +1,21 @@
+{
+  "name": "bigwednesday.io",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BigWednesdayIO/bigwednesday.io.git"
+  },
+  "author": "Big Wednesday IO",
+  "bugs": {
+    "url": "https://github.com/BigWednesdayIO/bigwednesday.io/issues"
+  },
+  "homepage": "https://github.com/BigWednesdayIO/bigwednesday.io"
+}
