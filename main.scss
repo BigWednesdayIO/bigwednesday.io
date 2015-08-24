@@ -1,10 +1,12 @@
-/* brand-light: #00adef */
-/* brand-dark: #17184a */
+$brand-light: #00adef;
+$brand-dark: #17184a;
 
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
+* {
+	&,
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
 }
 
 html,
@@ -19,10 +21,8 @@ html {
 	font-size: 50%;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-}
 
-@media (min-width: 35em) {
-	html {
+	@media (min-width: 35em) {
 		font-size: 62.5%;
 	}
 }
@@ -35,24 +35,18 @@ body {
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	text-align: center;
 	color: white;
-	background: url('logo.png') 0 100% no-repeat #00adef;
+	background: url('logo.png') 0 100% no-repeat $brand-light;
 	background-size: 90%;
-}
 
-@media (min-width: 35em) {
-	body {
+	@media (min-width: 35em) {
 		background-size: 75%;
 	}
-}
 
-@media (min-width: 45em) {
-	body {
+	@media (min-width: 45em) {
 		background-size: 55%;
 	}
-}
 
-@media (min-width: 65em) {
-	body {
+	@media (min-width: 65em) {
 		background-size: 500px;
 	}
 }
@@ -60,10 +54,10 @@ body {
 h1 {
 	margin: 0;
 	font-weight: lighter;
-}
 
-h1 span {
-	color: #17184a;
+	span {
+		color: $brand-dark;
+	}
 }
 
 p {
