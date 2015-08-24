@@ -35,7 +35,7 @@ body {
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	text-align: center;
 	color: white;
-	background: url('logo.png') 0 100% no-repeat $brand-light;
+	background: url('/assets/images/logo.png') 0 100% no-repeat $brand-light;
 	background-size: 90%;
 
 	@media (min-width: 35em) {
