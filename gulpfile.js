@@ -3,8 +3,9 @@ var gulp = require('gulp'),
 	gulpLoadPlugins = require('gulp-load-plugins'),
 	plugins = gulpLoadPlugins();
 
-gulp.task('sass', function () {
-	return gulp.src('app/assets/scss/*.scss')
+gulp.task('sass', function() {
+	return gulp
+		.src('app/assets/scss/*.scss')
 		.pipe(plugins.sourcemaps.init())
 		.pipe(plugins.sass())
 		.pipe(plugins.autoprefixer({
@@ -14,13 +15,15 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest('app/assets/css'));
 });
 
-gulp.task('clean:build', function () {
-	return gulp.src('build', {read: false})
+gulp.task('clean:build', function() {
+	return gulp
+		.src('build', {read: false})
 		.pipe(plugins.clean());
 });
 
-gulp.task('copy:build', function () {
-	return gulp.src([
+gulp.task('copy:build', function() {
+	return gulp
+		.src([
 			'app/**',
 			'!app/assets/{css,scss}{,/**}',
 			'!app/index.html'
@@ -28,8 +31,9 @@ gulp.task('copy:build', function () {
 		.pipe(gulp.dest('build/'));
 });
 
-gulp.task('build:assets', function () {
-	return gulp.src('app/index.html')
+gulp.task('build:assets', function() {
+	return gulp
+		.src('app/index.html')
 		.pipe(plugins.usemin({
 			css: [plugins.minifyCss(), plugins.rev()]
 		}))
@@ -37,14 +41,25 @@ gulp.task('build:assets', function () {
 });
 
 gulp.task('build', function(callback) {
-	runSequence('clean:build',
+	return runSequence('clean:build',
 		'sass',
 		['copy:build', 'build:assets'],
 	callback);
 });
 
-gulp.task('watch', function () {
-	gulp.watch('app/main.scss', ['sass']);
+gulp.task('lint', function() {
+	return gulp
+		.src([
+			'gulpfile.js',
+			'app/assets/js'
+		])
+		.pipe(plugins.eslint())
+		.pipe(plugins.eslint.format())
+		.pipe(plugins.eslint.failOnError());
+});
+
+gulp.task('watch', function() {
+	gulp.watch('app/assets/scss/**', ['sass']);
 });
 
 gulp.task('default', ['watch']);
