@@ -40,31 +40,33 @@ gulp.task('copy:build', ['clean:build'], function() {
 		.src([
 			'app/**',
 			'!app/assets/{css,scss}{,/**}',
-			'!app/index.html'
+			'!app/{,*/}*.html',
+			'!app/layouts'
 		])
 		.pipe(gulp.dest('build/'));
 });
 
-gulp.task('build:assets', ['clean:build', 'sass'], function() {
-	return gulp
-		.src('app/index.html')
-		.pipe(usemin({
-			css: [
-				minifyCss(),
-				rev()
-			]
-		}))
-		.pipe(gulp.dest('build/'));
-});
-
 gulp.task('build:html', ['clean:build'], function() {
-	nunjucksRender.nunjucks.configure(['app/'], {watch: false});
+	nunjucksRender.nunjucks.configure(['build/', 'app/'], {watch: false});
 	return gulp
 		.src([
 			'app/{,*/}*.html',
 			'!app/layouts/*'
 		])
 		.pipe(nunjucksRender())
+		.pipe(gulp.dest('build/'));
+});
+
+gulp.task('build:assets', ['build:html', 'sass'], function() {
+	return gulp
+		.src('build/{,*/}*.html')
+		.pipe(usemin({
+			css: [
+				minifyCss(),
+				rev()
+			],
+			path: 'app'
+		}))
 		.pipe(gulp.dest('build/'));
 });
 
