@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
 	// Plugins:
-	autoprefixer = require('gulp-autoprefixer')
+	autoprefixer = require('gulp-autoprefixer'),
 	clean = require('gulp-clean'),
 	connect = require('gulp-connect'),
 	eslint = require('gulp-eslint'),
