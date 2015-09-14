@@ -1,0 +1,65 @@
+.nav-bar {
+	&__actions {
+		position: relative;
+		z-index: 99;
+		background: inherit;
+
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding: $pad-half $pad;
+	}
+
+	@media (min-width: $bp-medium) {
+		padding: 0 $pad;
+
+		&__actions {
+			padding: $pad-half 0;
+		}
+
+		&__inner {
+			display: flex;
+			flex-flow: row-reverse nowrap;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__menu-button {
+			display: none;
+		}
+	}
+}
+
+.primary-navigation {
+	font-size: 1.6rem;
+	padding: 0 $pad;
+
+	height: 252px;
+	overflow: hidden;
+	transition: height .25s;
+
+	&.is-hidden {
+		height: 0;
+	}
+	
+	a {
+		display: block;
+		padding: $pad-half 0;
+	}
+
+	@media (min-width: $bp-medium) {
+		height: auto !important;
+		overflow: visible;
+
+		padding: $pad-half 0;
+
+		a {
+			display: inline-block;
+			padding: 0;
+		}
+
+		a + a {
+			margin-left: $pad;
+		}
+	}
+}

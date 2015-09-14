@@ -18,7 +18,7 @@ function handleError (err) {
 
 gulp.task('sass', function() {
 	return gulp
-		.src('app/assets/scss/*.scss')
+		.src('app/assets/scss/app.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', handleError))
 		.pipe(autoprefixer({

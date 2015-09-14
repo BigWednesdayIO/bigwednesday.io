@@ -1,0 +1,20 @@
+.site-header {
+	background: $gradient;
+	border-bottom: $border;
+}
+
+.logo {
+	&__text {
+		font-size: 2em;
+		font-weight: 300;
+
+		strong {
+			font-weight: 400;
+		}
+	}
+
+	&__icon {
+		border-radius: 50%;
+		overflow: hidden;
+	}
+}

@@ -1,0 +1,30 @@
+* {
+	&,
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	box-sizing: border-box;
+	min-height: 100%;
+	font-size: 62.5%; // 1em = 10px
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+svg {
+	fill: currentColor;
+}

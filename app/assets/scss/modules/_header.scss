@@ -1,0 +1,13 @@
+.site-header {
+	position: relative;
+	z-index: 99;
+	padding: $pad;
+}
+
+.logo {
+	display: flex;
+
+	&__icon {
+		margin-right: $pad-half;
+	}
+}
