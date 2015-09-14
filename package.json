@@ -4,21 +4,26 @@
   "description": "",
   "main": "app/index.html",
   "devDependencies": {
-    "connect-nunjucks": "bigwednesdayio/connect-nunjucks#feature/default-tags",
     "gulp": "^3.9.0",
+    "gulp-add-src": "^0.2.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-clean": "^0.3.1",
     "gulp-connect": "^2.2.0",
     "gulp-eslint": "^1.0.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-minify-css": "^1.2.1",
-    "gulp-nunjucks-render": "^0.2.1",
     "gulp-rev": "git://github.com/mstrutt/gulp-rev",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-usemin": "^0.3.11",
-    "nunjucks": "^2.0.0",
-    "surge": "^0.14.3"
+    "moment": "2.3.x",
+    "run-wintersmith": "0.0.3",
+    "surge": "^0.14.3",
+    "typogr": "0.5.x",
+    "underscore": "1.4.x",
+    "wintersmith": "^2.2.1",
+    "wintersmith-livereload": "^0.2.0",
+    "wintersmith-nunjucks": "^0.5.1"
   },
   "scripts": {
     "test": "gulp lint"

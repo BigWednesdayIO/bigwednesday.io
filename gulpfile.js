@@ -1,15 +1,15 @@
 var gulp = require('gulp'),
 	// Plugins:
 	autoprefixer = require('gulp-autoprefixer'),
-	clean = require('gulp-clean'),
-	connect = require('gulp-connect'),
 	eslint = require('gulp-eslint'),
 	minifyCss = require('gulp-minify-css'),
-	nunjucksRender = require('gulp-nunjucks-render'),
 	rev = require('gulp-rev'),
+	runWintersmith = require('run-wintersmith'),
 	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
 	usemin = require('gulp-usemin');
+
+var assetsDir = 'app/contents/assets';
 
 function handleError (err) {
 	console.log(err.toString());
@@ -18,15 +18,14 @@ function handleError (err) {
 
 gulp.task('sass', function() {
 	return gulp
-		.src('app/assets/scss/app.scss')
+		.src(assetsDir + '/scss/app.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', handleError))
 		.pipe(autoprefixer({
 			browsers: ['last 3 versions'],
 		}))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('app/assets/css'))
-		.pipe(connect.reload());
+		.pipe(gulp.dest(assetsDir + '/css'));
 });
 
 gulp.task('clean:build', function() {
@@ -35,27 +34,7 @@ gulp.task('clean:build', function() {
 		.pipe(clean());
 });
 
-gulp.task('copy:build', ['clean:build'], function() {
-	return gulp
-		.src([
-			'app/**',
-			'!app/assets/{css,scss}{,/**}',
-			'!app/{,*/}*.html',
-			'!app/layouts'
-		])
-		.pipe(gulp.dest('build/'));
-});
-
-gulp.task('build:html', ['clean:build'], function() {
-	nunjucksRender.nunjucks.configure(['build/', 'app/'], {watch: false});
-	return gulp
-		.src([
-			'app/{,*/}*.html',
-			'!app/layouts/*'
-		])
-		.pipe(nunjucksRender())
-		.pipe(gulp.dest('build/'));
-});
+gulp.task('build:html', runWintersmith.build);
 
 gulp.task('build:assets', ['build:html', 'sass'], function() {
 	return gulp
@@ -70,44 +49,24 @@ gulp.task('build:assets', ['build:html', 'sass'], function() {
 		.pipe(gulp.dest('build/'));
 });
 
-gulp.task('build', ['copy:build', 'build:assets', 'build:html']);
+gulp.task('build', [/*'build:assets',*/ 'build:html']);
 
 gulp.task('lint', function() {
 	return gulp
 		.src([
 			'gulpfile.js',
-			'app/assets/js'
+			assetsDir + '/js'
 		])
 		.pipe(eslint())
 		.pipe(eslint.format())
 		.pipe(eslint.failOnError());
 });
 
-gulp.task('serve', function() {
-	connect.server({
-		root: 'app',
-		port: 9000,
-		livereload: true,
-		middleware: function() {
-			var nunjucksMiddleware = require('connect-nunjucks');
-			return [nunjucksMiddleware({
-				baseDir: 'app',
-				// debug: 'console',
-				ext: '.html'
-			})];
-		}
-	});
-});
-
-gulp.task('reload', function() {
-	return gulp
-		.src('app/**/*.html')
-		.pipe(connect.reload());
-});
+gulp.task('serve', runWintersmith.preview);
 
 gulp.task('watch', ['sass'], function() {
-	gulp.watch('app/assets/scss/**', ['sass']);
-	gulp.watch('app/**/*.html', ['reload']);
+	gulp.watch(assetsDir + '/scss/**', ['sass']);
+	// gulp.watch('app/**/*.html', ['reload']);
 });
 
 gulp.task('default', ['serve', 'watch']);

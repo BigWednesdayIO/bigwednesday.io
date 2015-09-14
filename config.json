@@ -1,0 +1,26 @@
+{
+  "locals": {
+    "url": "http://localhost:9000",
+    "owner": "Michael Strutt",
+    "name": "bigwednesday.io",
+    "description": "Big Wednesday IO site",
+    "baseUrl": "app/",
+    "assets": "/assets"
+  },
+  "plugins": [
+    "wintersmith-nunjucks",
+    "wintersmith-livereload"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "templates": "app/templates",
+  "contents": "app/contents",
+  "port": "9000"
+}
