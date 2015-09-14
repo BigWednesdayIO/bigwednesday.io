@@ -1,23 +1,10 @@
-<!doctype html>
-<html lang="en-GB">
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="x-ua-compatible" content="ie=edge" />
-		<title>Big Wednesday IO</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+{% extends "layouts/default.html" %}
 
-		<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
-		<link rel="favicon" href="favicon.ico" />
-		<!-- build:css /assets/css/site.css -->
-		<link rel="stylesheet" href="/assets/css/main.css" />
-		<!-- endbuild -->
-	</head>
-	<body>
-		<h1><span>big</span>wednesday<span>io</span></h1>		
-		<p>Fixing enterprise software, one application at a time.</p>
+{% block content %}
+	<h1><span>big</span>wednesday<span>io</span></h1>
+	<p>Fixing enterprise software, one application at a time.</p>
 
-		<aside class="prefetch">
-			<img src="/assets/images/logo.png" alt="Big Wednesday IO's logo" />
-		</aside>
-	</body>
-</html>
+	<aside class="prefetch">
+		<img src="/assets/images/logo.png" alt="Big Wednesday IO's logo" />
+	</aside>
+{% endblock %}
