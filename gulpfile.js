@@ -37,6 +37,7 @@ gulp.task('clean:build', function() {
 gulp.task('build:html', runWintersmith.build);
 
 gulp.task('build:assets', ['build:html', 'sass'], function() {
+	// TODO bring this back into the build
 	return gulp
 		.src('build/{,*/}*.html')
 		.pipe(usemin({
@@ -49,7 +50,7 @@ gulp.task('build:assets', ['build:html', 'sass'], function() {
 		.pipe(gulp.dest('build/'));
 });
 
-gulp.task('build', [/*'build:assets',*/ 'build:html']);
+gulp.task('build', ['build:html']);
 
 gulp.task('lint', function() {
 	return gulp

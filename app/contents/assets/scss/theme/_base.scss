@@ -17,7 +17,11 @@ h1 {
 }
 
 p {
-	margin: 0 0 1em;
+	margin: 0;
+
+	+p {
+		margin: $pad 0 0;
+	}
 }
 
 .prefetch {
