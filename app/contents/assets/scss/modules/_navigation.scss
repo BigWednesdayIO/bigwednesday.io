@@ -10,6 +10,12 @@
 		padding: $pad-half $pad;
 	}
 
+	&__menu-button {
+		.no-js & {
+			display: none;
+		}
+	}
+
 	@media (min-width: $bp-medium) {
 		padding: 0 $pad;
 
@@ -40,6 +46,11 @@
 
 	&.is-hidden {
 		height: 0;
+
+		.no-js & {
+			height: auto;
+			transition: none;
+		}
 	}
 	
 	a {
