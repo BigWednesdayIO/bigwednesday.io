@@ -1,3 +1,5 @@
 node_modules
 app/contents/assets/css
 build
+tmp
+build.json

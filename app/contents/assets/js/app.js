@@ -4,17 +4,16 @@
 	htmlClass.add('js');
 
 	document.addEventListener('DOMContentLoaded', function(event) { 
-		var navElement = document.getElementsByClassName('primary-navigation')[0];
-		var subNavLinks = document.getElementsByClassName('with-sub-nav');
+		var navElement = document.getElementsByClassName('primary-navigation')[0],
+			subNavLinks = document.getElementsByClassName('with-sub-nav'),
+			timer = {},
+			subNavElements = {};
 
 		if (navElement) {
 			document.getElementById('navicon').addEventListener('click', function() {
 				navElement.classList.toggle('is-hidden');
 			});
 		}
-
-		var timer = {},
-			subNavElements = {};
 
 		function showSubNav (id) {
 			clearTimeout(timer[id]);

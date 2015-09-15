@@ -93,7 +93,7 @@ gulp.task('lint', function() {
 	return gulp
 		.src([
 			'gulpfile.js',
-			assetsDir + '/js'
+			assetsDir + '/js/{,*/}*.js'
 		])
 		.pipe(eslint())
 		.pipe(eslint.format())
