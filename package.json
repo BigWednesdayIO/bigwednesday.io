@@ -13,7 +13,7 @@
     "gulp-extend": "^0.2.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-minify-css": "^1.2.1",
-    "gulp-rev": "git://github.com/mstrutt/gulp-rev",
+    "gulp-rev": "git://github.com/mstrutt/gulp-rev.git",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.4.1",
