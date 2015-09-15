@@ -1,12 +1,15 @@
 var gulp = require('gulp'),
 	// Plugins:
 	autoprefixer = require('gulp-autoprefixer'),
+	clean = require('gulp-clean'),
 	eslint = require('gulp-eslint'),
+	extend = require('gulp-extend'),
 	minifyCss = require('gulp-minify-css'),
 	rev = require('gulp-rev'),
 	runWintersmith = require('run-wintersmith'),
 	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
+	uglify = require('gulp-uglify'),
 	usemin = require('gulp-usemin');
 
 var assetsDir = 'app/contents/assets';
@@ -28,29 +31,63 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest(assetsDir + '/css'));
 });
 
-gulp.task('clean:build', function() {
+gulp.task('build:preclean', function() {
 	return gulp
-		.src('build', {read: false})
+		.src([
+			'tmp',
+			'build'
+		], {read: false})
 		.pipe(clean());
 });
 
-gulp.task('build:html', runWintersmith.build);
-
-gulp.task('build:assets', ['build:html', 'sass'], function() {
-	// TODO bring this back into the build
+gulp.task('build:copy', ['sass', 'build:preclean'], function() {
 	return gulp
-		.src('build/{,*/}*.html')
+		.src('app/**')
+		.pipe(gulp.dest('tmp'));
+});
+
+gulp.task('build:assets', ['build:copy'], function() {
+	return gulp
+		.src('tmp/templates/layouts/base.html')
 		.pipe(usemin({
 			css: [
 				minifyCss(),
 				rev()
 			],
-			path: 'app'
+			js: [
+				uglify(),
+				rev()
+			],
+			assetsDir: 'tmp/contents/',
+			outputRelativePath: '../../contents/'
 		}))
-		.pipe(gulp.dest('build/'));
+		.pipe(gulp.dest('tmp/templates/layouts'));
 });
 
-gulp.task('build', ['build:html']);
+gulp.task('build:config', function() {
+	runWintersmith.settings.configFile = 'build.json';
+	return gulp
+		.src([
+			'config.json',
+			'config.build.json'
+		])
+		.pipe(extend('build.json', true, 2))
+		.pipe(gulp.dest(''));
+});
+
+gulp.task('build:html', ['build:assets', 'build:config'], function(cb) {
+	return runWintersmith.build(cb);
+});
+
+gulp.task('build', ['build:html'], function() {
+	// Clean up once it's all done
+	return gulp
+		.src([
+			'build.json',
+			'tmp'
+		], {read: false})
+		.pipe(clean());
+});
 
 gulp.task('lint', function() {
 	return gulp

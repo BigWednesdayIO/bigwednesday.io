@@ -1,0 +1,8 @@
+{
+  "locals": {
+    "url": "http://bigwednesday.io",
+    "baseUrl": "tmp/"
+  },
+  "templates": "tmp/templates",
+  "contents": "tmp/contents"
+}
