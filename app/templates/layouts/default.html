@@ -8,11 +8,16 @@
 	</div>
 </div>
 
-<main class="page-body">
+<div class="page-body">
 	<div class="content-wrap">
-		{% block content %}
-			{{ page.html }}
-		{% endblock %}
+		<div class="page-body__inner">
+			<main class="page-body__primary">
+				{% block content %}
+					{{ page.html }}
+				{% endblock %}
+			</main>
+			<aside class="page-body__secondary">{% block aside %}{% endblock %}</aside>
+		</div>
 	</div>
-</main>
+</div>
 {% endblock %}
