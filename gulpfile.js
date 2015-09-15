@@ -63,7 +63,11 @@ gulp.task('lint', function() {
 		.pipe(eslint.failOnError());
 });
 
-gulp.task('serve', runWintersmith.preview);
+gulp.task('serve', function() {
+	runWintersmith.settings.hostname = '0.0.0.0';
+	runWintersmith.settings.port = 9000;
+	runWintersmith.preview();
+});
 
 gulp.task('watch', ['sass'], function() {
 	gulp.watch(assetsDir + '/scss/**', ['sass']);
