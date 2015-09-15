@@ -1,0 +1,70 @@
+body {
+	font-family: $font-primary;
+	font-size: 14px;
+	line-height: 1.6;
+	font-weight: 400;
+	color: $body-text;
+}
+
+h1 {
+	margin: 0;
+	font-weight: lighter;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+.prefetch {
+	display: none;
+}
+
+.image-link {
+	display: inline-block;
+
+	&__image {
+		display: block;
+	}
+}
+
+%button {
+	padding: $pad-half $pad;
+	border-radius: 3px;
+	font-weight: 600;
+	cursor: pointer;
+
+	& + & {
+		margin-left: $pad-half;
+	}
+}
+
+.button--primary {
+	@extend %button;
+	color: white;
+	background: #5393FA;
+	border: 1px solid #5393FA;
+
+	&:hover {
+		background: #396bbc;
+		background: linear-gradient(to bottom, #5587d7, #396bbc);
+		border-color: #396bbc;
+	}
+}
+
+.button--secondary {
+	@extend %button;
+	background: #FCFCFC;
+	color: #444;
+	border: 1px solid #DBDBDB;
+
+	&:hover {
+		background: $light-grey-three;
+		background: linear-gradient(to bottom, $light-grey-two, $light-grey-three);
+		border-color: #e1e1e1;
+	}
+}
+
+.button--icon {
+	@extend %button;
+	line-height: 0.1;
+}

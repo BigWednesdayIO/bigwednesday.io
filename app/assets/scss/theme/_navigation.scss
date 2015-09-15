@@ -1,0 +1,32 @@
+.nav-bar {
+	background: white;
+}
+
+.primary-navigation {
+	background: $gradient;
+	box-shadow: inset $shadow;
+	border-bottom: $border;
+
+	a {
+		color: $nav;
+		text-decoration: none;
+
+		&:hover {
+			color: $nav-hover;
+		}
+	}
+
+	a + a {
+		border-top: $border;
+	}
+
+	@media (min-width: $bp-medium) {
+		background: transparent;
+		border: 0 none;
+		box-shadow: none;
+
+		a + a {
+			border: 0 none;
+		}
+	}
+}
