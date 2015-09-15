@@ -40,8 +40,7 @@
 		.with-sub-nav {
 			position: relative;
 
-			&::before,
-			&::after {
+			&::before {
 				content: '';
 				position: absolute;
 				left: 50%;
@@ -52,18 +51,26 @@
 				border-bottom-color: $light-grey-one;
 				opacity: 0;
 				transition: opacity .25s;
+				filter: drop-shadow(0 -1px 0 #eee);
 			}
 
-			&::before {
-				border-width: 8px;
-				border-bottom-color: #eee;
-				margin-left: -9px;
+			&::after {
+				content: '';
+				display: block;
+				border: 4px solid transparent;
+				border-color: $border-strong-color transparent;
+				border-bottom-width: 0;
+				margin: 0 .25em;
 			}
 
 			&.is-open {
-				&::before,
-				&::after {
+				&::before {
 					opacity: 1;
+				}
+
+				&::after {
+					border-top-width: 0;
+					border-bottom-width: 4px;
 				}
 			}
 		}

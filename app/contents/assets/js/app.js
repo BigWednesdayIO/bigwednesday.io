@@ -5,8 +5,7 @@
 
 	document.addEventListener('DOMContentLoaded', function(event) { 
 		var navElement = document.getElementsByClassName('primary-navigation')[0];
-		var subNavElement = document.getElementsByClassName('sub-nav')[0];
-		var productsLink = document.getElementById('products-link');
+		var subNavLinks = document.getElementsByClassName('with-sub-nav');
 
 		if (navElement) {
 			document.getElementById('navicon').addEventListener('click', function() {
@@ -14,29 +13,47 @@
 			});
 		}
 
-		var timer;
+		var timer = {},
+			subNavElements = {};
 
-		function showSubNav () {
-			clearTimeout(timer);
-			timer = setTimeout(function() {
-				productsLink.classList.add('is-open')
-				subNavElement.classList.remove('is-hidden');
+		function showSubNav (id) {
+			clearTimeout(timer[id]);
+			timer[id] = setTimeout(function() {
+				subNavLinks[id].classList.add('is-open')
+				subNavElements[id].classList.remove('is-hidden');
 			}, 100);
 		}
 
-		function hideSubNav () {
-			clearTimeout(timer);
-			timer = setTimeout(function() {
-				productsLink.classList.remove('is-open')
-				subNavElement.classList.add('is-hidden');
-			}, 100);
+		function hideSubNav (id) {
+			clearTimeout(timer[id]);
+			timer[id] = setTimeout(function() {
+				subNavLinks[id].classList.remove('is-open')
+				subNavElements[id].classList.add('is-hidden');
+			}, 50);
 		}
 
-		if (subNavElement) {
-			productsLink.addEventListener('mouseenter', showSubNav);
-			productsLink.addEventListener('mouseleave', hideSubNav);
-			subNavElement.addEventListener('mouseenter', showSubNav);
-			subNavElement.addEventListener('mouseleave', hideSubNav);
+		if (subNavLinks.length) {
+			subNavLinks = Array.prototype.reduce.call(subNavLinks, function(linksMap, subNavLink) {
+				var id = subNavLink.dataset.subNav;
+				linksMap[id] = subNavLink;
+
+				subNavElements[id] = document.getElementById('sub-nav-' + id);
+
+				subNavLink.addEventListener('mouseenter', function() {
+					showSubNav(id);
+				});
+				subNavLink.addEventListener('mouseleave', function() {
+					hideSubNav(id);
+				});
+				subNavElements[id].addEventListener('mouseenter', function() {
+					showSubNav(id);
+				});
+				subNavElements[id].addEventListener('mouseleave', function() {
+					hideSubNav(id);
+				});
+
+				return linksMap;
+			}, {});
 		}
 	});
 })();

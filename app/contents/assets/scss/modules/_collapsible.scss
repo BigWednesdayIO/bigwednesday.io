@@ -6,7 +6,7 @@
 	&.is-hidden {
 		&:not(:hover) {
 			max-height: 0;
-			transition: max-height .35s ease-out;
+			transition: max-height .25s ease-out;
 		}
 
 		.no-js & {

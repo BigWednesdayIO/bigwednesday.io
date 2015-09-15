@@ -23,31 +23,19 @@
 
 				<nav class="primary-navigation collapsible is-hidden">
 					<a href="/why"{% if page.metadata.section == 'why' %} class="active"{% endif %}><span>Why</span></a>
-					<a href="/products" id="products-link" class="with-sub-nav"><span>Products</span></a>
-					<a href="/industries"><span>Industries</span></a>
-					<a href="/industries/pub-co"><span>Pub Co<span></a>
-					<a href="/industries/retail"><span>Retail<span></a>
-					<a href="/about"><span>About<span></a>
+					<a href="/products" class="with-sub-nav" data-sub-nav="products"><span>Products</span></a>
+					<a href="/solutions" class="with-sub-nav" data-sub-nav="solutions"><span>Solutions</span></a>
+					<a href="/industries" class="with-sub-nav" data-sub-nav="industries"><span>Industries</span></a>
+					<a href="/integration"><span>Integration</span></a>
+					<a href="/about"><span>About</span></a>
 				</nav>
 			</div>
 		</div>
 	</div>
 
-	<div class="sub-nav collapsible is-hidden">
+	<div id="sub-nav-products" class="sub-nav collapsible is-hidden">
 		<div class="content-wrap">
 			<div class="sub-nav__inner">
-				<section class="sub-nav__section">
-					<h2 class="sub-nav__heading">Customer Apps</h2>
-					<ul>
-						<li><a href="/products/pub-buying-club">Pub Buying Club</a></li>
-					</ul>
-				</section>
-				<section class="sub-nav__section">
-					<h2 class="sub-nav__heading">Big Data</h2>
-					<ul>
-						<li><a href="/products/customer-cloud">Customer Cloud</a></a></li>
-					</ul>
-				</section>
 				<section class="sub-nav__section is-wide">
 					<h2 class="sub-nav__heading">Management Apps</h2>
 					<ul>
@@ -70,6 +58,38 @@
 						<li><a href="/products/import-api">Import API</a></li>
 						<li><a href="/products/export-api">Export API</a></li>
 						<li><a href="/products/rest-api">REST API</a></li>
+					</ul>
+				</section>
+				<section class="sub-nav__section">
+					<h2 class="sub-nav__heading">Big Data</h2>
+					<ul>
+						<li><a href="/products/customer-cloud">Customer Cloud</a></a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
+	<div id="sub-nav-solutions" class="sub-nav collapsible is-hidden">
+		<div class="content-wrap">
+			<div class="sub-nav__inner">
+				<section class="sub-nav__section">
+					<h2 class="sub-nav__heading">Solutions</h2>
+					<ul>
+						<li><a href="/solutions/pub-buying-club">Pub Buying Club</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
+	<div id="sub-nav-industries" class="sub-nav collapsible is-hidden">
+		<div class="content-wrap">
+			<div class="sub-nav__inner">
+				<section class="sub-nav__section">
+					<h2 class="sub-nav__heading">Industries</h2>
+					<ul>
+						<li><a href="/industries/pub-companies"><span>Pub Companies</span></a></li>
+						<li><a href="/industries/b2b"><span>B2B</span></a></li>
+						<li><a href="/industries/retail"><span>Retail</span></a></li>
 					</ul>
 				</section>
 			</div>
