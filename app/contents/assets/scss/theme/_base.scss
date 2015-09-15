@@ -6,13 +6,22 @@ body {
 	color: $body-text;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	margin: $pad-half 0;
+}
+
 h1 {
 	margin: 0;
 	font-weight: lighter;
 }
 
 p {
-	margin: 0 0 1em;
+	margin: 0;
+
+	+p {
+		margin: $pad 0 0;
+	}
 }
 
 .prefetch {
