@@ -24,6 +24,10 @@ p {
 	}
 }
 
+a {
+	transition: color .15s;
+}
+
 .prefetch {
 	display: none;
 }
@@ -49,27 +53,24 @@ p {
 
 .button--primary {
 	@extend %button;
-	color: white;
-	background: #5393FA;
-	border: 1px solid #5393FA;
+	background: $ui-primary;
+	color: $ui-primary-text;
+	border: $ui-primary-border;
 
 	&:hover {
-		background: #396bbc;
-		background: linear-gradient(to bottom, #5587d7, #396bbc);
-		border-color: #396bbc;
+		background: $ui-primary-highlight;
 	}
 }
 
 .button--secondary {
 	@extend %button;
-	background: #FCFCFC;
-	color: #444;
-	border: 1px solid #DBDBDB;
+	background: $ui-secondary;
+	color: $ui-secondary-text;
+	border: $ui-secondary-border;
 
 	&:hover {
-		background: $light-grey-three;
-		background: linear-gradient(to bottom, $light-grey-two, $light-grey-three);
-		border-color: #e1e1e1;
+		background: $ui-secondary-highlight;
+		border-color: $ui-secondary-highlight-border-color;
 	}
 }
 
