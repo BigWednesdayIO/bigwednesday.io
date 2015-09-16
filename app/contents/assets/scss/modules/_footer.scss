@@ -8,5 +8,11 @@ html {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	padding: $pad;
+	padding: $pad-half $pad;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
