@@ -5,4 +5,14 @@
 	&__inner {
 		font-size: 1.2rem;
 	}
+
+	&__social {
+		a {
+			color: #333;
+
+			&:hover {
+				color: #666;
+			}
+		}
+	}
 }

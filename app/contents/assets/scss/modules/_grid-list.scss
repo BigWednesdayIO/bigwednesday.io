@@ -1,0 +1,15 @@
+.grid-list {
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: -$pad;
+	margin-right: -$pad;
+
+	> li {
+		padding: 0 $pad;
+		margin-bottom: $pad*3;
+
+		@media (min-width: 36em) {
+			width: 50%;
+		}
+	}
+}

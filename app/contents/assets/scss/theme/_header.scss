@@ -5,16 +5,16 @@
 
 .logo {
 	&__text {
-		font-size: 2em;
+		font-size: 1.7em;
 		font-weight: 400;
-		color: #666;
+		color: $body-heading;
 
-		strong {
-			font-weight: 500;
+		span {
+			color: #888;
 		}
 	}
 
 	&__icon {
-		color: #333;
+		color: $brand;
 	}
 }

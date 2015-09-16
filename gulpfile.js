@@ -9,6 +9,7 @@ var gulp = require('gulp'),
 	runWintersmith = require('run-wintersmith'),
 	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
+	svgSymbols = require('gulp-svg-symbols'),
 	uglify = require('gulp-uglify'),
 	usemin = require('gulp-usemin');
 
@@ -40,7 +41,15 @@ gulp.task('build:preclean', function() {
 		.pipe(clean());
 });
 
-gulp.task('build:copy', ['sass', 'build:preclean'], function() {
+gulp.task('build:icons', function() {
+	return gulp.src(assetsDir + '/images/icons/*.svg')
+		.pipe(svgSymbols({
+			templates: ['default-svg']
+		}))
+		.pipe(gulp.dest('app/templates/includes/'));
+});
+
+gulp.task('build:copy', ['sass', 'build:icons', 'build:preclean'], function() {
 	return gulp
 		.src('app/**')
 		.pipe(gulp.dest('tmp'));
@@ -108,7 +117,7 @@ gulp.task('serve', function() {
 
 gulp.task('watch', ['sass'], function() {
 	gulp.watch(assetsDir + '/scss/**', ['sass']);
-	// gulp.watch('app/**/*.html', ['reload']);
+	gulp.watch(assetsDir + '/images/icons/*.svg', ['build:icons']);
 });
 
 gulp.task('default', ['serve', 'watch']);
