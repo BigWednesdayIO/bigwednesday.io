@@ -41,7 +41,7 @@ gulp.task('build:preclean', function() {
 		.pipe(clean());
 });
 
-gulp.task('build:icons', function () {
+gulp.task('build:icons', function() {
 	return gulp.src(assetsDir + '/images/icons/*.svg')
 		.pipe(svgSymbols({
 			templates: ['default-svg']
