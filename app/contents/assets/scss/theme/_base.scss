@@ -1,5 +1,5 @@
 body {
-	font-family: $font-primary;
+	font-family: $font-secondary;
 	font-size: 14px;
 	line-height: 1.6;
 	font-weight: 400;
@@ -53,9 +53,11 @@ a {
 }
 
 %button {
-	padding: $pad-half $pad;
+	padding: .4em $pad;
+	line-height: 1.5em;
 	border-radius: 3px;
 	font-weight: 600;
+	font-family: $font-secondary;
 	cursor: pointer;
 
 	& + & {
