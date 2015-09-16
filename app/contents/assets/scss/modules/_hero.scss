@@ -1,5 +1,6 @@
 .hero {
-	padding: 40px 10px 40px 20px;
+	padding: $pad-double $pad-half $pad-double $pad;
+	margin-bottom: $pad;
 	background-position: 50% 33%;
 	background-size: cover;
 	background-repeat: no-repeat;

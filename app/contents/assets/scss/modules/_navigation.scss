@@ -26,7 +26,6 @@
 		&__inner {
 			display: flex;
 			flex-flow: row-reverse nowrap;
-			align-items: center;
 			justify-content: space-between;
 		}
 
@@ -37,21 +36,7 @@
 }
 
 .primary-navigation {
-	font-size: 1.6rem;
 	padding: 0 $pad;
-
-	height: 252px;
-	overflow: hidden;
-	transition: height .25s;
-
-	&.is-hidden {
-		height: 0;
-
-		.no-js & {
-			height: auto;
-			transition: none;
-		}
-	}
 	
 	a {
 		display: block;
@@ -59,18 +44,44 @@
 	}
 
 	@media (min-width: $bp-medium) {
-		height: auto !important;
+		display: inline-flex;
+		align-items: stretch;
+		max-height: none !important;
 		overflow: visible;
 
-		padding: $pad-half 0;
+		padding: 0;
 
 		a {
-			display: inline-block;
-			padding: 0;
+			display: inline-flex;
+			align-items: center;
 		}
 
 		a + a {
 			margin-left: $pad;
+		}
+	}
+}
+
+.sub-nav {
+	&__inner {
+		display: flex;
+	}
+
+	&__heading {
+		margin: 0;
+	}
+
+	&__section {
+		flex-grow: 1;
+		padding: $pad $pad-and-half;
+
+		&.is-wide {
+			flex-grow: 2;
+
+			ul {
+				column-count: 2;
+				column-gap: $pad-double;
+			}
 		}
 	}
 }

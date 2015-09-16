@@ -1,0 +1,109 @@
+<header>
+	<div class="site-header">
+		<div class="content-wrap">
+			<div class="logo">
+				<a href="/" class="image-link logo__icon">
+					<svg height="44" width="44" version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+						 xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="113.577" height="113.577" viewBox="0 0 113.577 113.577"
+						 overflow="visible" enable-background="new 0 0 113.577 113.577" xml:space="preserve">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.007,0.042h113.384v113.385H0.007V0.042z"/>
+							<rect x="16.634" y="16.632" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 137.0996 56.7878)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="80.31" height="80.312"/>
+						<rect x="28.353" y="28.389" fill-rule="evenodd" clip-rule="evenodd" width="56.693" height="56.692"/>
+							<rect x="36.739" y="37.005" transform="matrix(-0.7072 0.7071 -0.7071 -0.7072 137.1398 56.9457)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="40.077" height="39.735"/>
+						<rect x="42.624" y="42.562" fill-rule="evenodd" clip-rule="evenodd" width="28.25" height="28.346"/>
+							<rect x="46.833" y="47.057" transform="matrix(-0.7072 0.7071 -0.7071 -0.7072 137.204 56.9067)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="19.97" height="19.619"/>
+						<rect x="49.859" y="49.743" fill-rule="evenodd" clip-rule="evenodd" width="14.173" height="14.173"/>
+							<rect x="51.908" y="51.737" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 137.4756 56.705)" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="10.172" height="10.172"/>
+					</svg>
+				</a>
+				<span class="logo__text">big<strong>wednesday</strong>io</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav-bar">
+		<div class="content-wrap">
+			<div class="nav-bar__inner">
+				<div class="nav-bar__actions">
+					<button class="button--primary">Get started</button>
+					<button class="button--secondary">Login</button>
+					<button id="navicon" class="button--secondary button--icon nav-bar__menu-button">
+						<svg width="15" height="15" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z" /></svg>
+					</button>
+				</div>
+
+				<nav class="primary-navigation collapsible is-hidden">
+					<a href="/why"{% if page.metadata.section == 'why' %} class="active"{% endif %}><span>Why</span></a>
+					<a href="/products" class="with-sub-nav" data-sub-nav="products"><span>Products</span></a>
+					<a href="/solutions" class="with-sub-nav" data-sub-nav="solutions"><span>Solutions</span></a>
+					<a href="/industries" class="with-sub-nav" data-sub-nav="industries"><span>Industries</span></a>
+					<a href="/integration"><span>Integration</span></a>
+					<a href="/about"><span>About</span></a>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<div id="sub-nav-products" class="sub-nav collapsible is-hidden">
+		<div class="content-wrap">
+			<div class="sub-nav__inner">
+				<section class="sub-nav__section is-wide">
+					<h2 class="sub-nav__heading">Management Apps</h2>
+					<ul>
+						<li><a href="/products/unified-admin-console">Unified Admin Console</a></li>
+						<li><a href="/products/dashboard">Dashboard</a></li>
+						<li><a href="/products/personalisation">Personalisation<!-- ed Experience and Guided Search --></a></li>
+						<li><a href="/products/product">Product</a></li>
+						<li><a href="/products/promote">Promote</a></li>
+						<li><a href="/products/order">Order</a></li>
+						<li><a href="/products/service">Service</a></li>
+						<li><a href="/products/customer">Customer</a></li>
+						<li><a href="/products/outlet">Outlet</a></li>
+						<li><a href="/products/user">User</a></li>
+						<li><a href="/products/report">Report</a></li>
+					</ul>
+				</section>
+				<section class="sub-nav__section">
+					<h2 class="sub-nav__heading">Services</h2>
+					<ul>
+						<li><a href="/products/import-api">Import API</a></li>
+						<li><a href="/products/export-api">Export API</a></li>
+						<li><a href="/products/rest-api">REST API</a></li>
+					</ul>
+				</section>
+				<section class="sub-nav__section">
+					<h2 class="sub-nav__heading">Big Data</h2>
+					<ul>
+						<li><a href="/products/customer-cloud">Customer Cloud</a></a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
+	<div id="sub-nav-solutions" class="sub-nav collapsible is-hidden">
+		<div class="content-wrap">
+			<div class="sub-nav__inner">
+				<section class="sub-nav__section">
+					<h2 class="sub-nav__heading">Solutions</h2>
+					<ul>
+						<li><a href="/solutions/pub-buying-club">Pub Buying Club</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
+	<div id="sub-nav-industries" class="sub-nav collapsible is-hidden">
+		<div class="content-wrap">
+			<div class="sub-nav__inner">
+				<section class="sub-nav__section">
+					<h2 class="sub-nav__heading">Industries</h2>
+					<ul>
+						<li><a href="/industries/pub-companies"><span>Pub Companies</span></a></li>
+						<li><a href="/industries/b2b"><span>B2B</span></a></li>
+						<li><a href="/industries/retail"><span>Retail</span></a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
+</header>

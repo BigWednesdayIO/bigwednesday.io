@@ -1,4 +1,5 @@
 {
 	"template": "pages/index.html",
-	"title": "Home"
+	"title": "Home",
+	"filename": "index.html"
 }

@@ -1,12 +1,18 @@
 ---
-template: layouts/default.html
+template: pages/why.html
 title: Why
 section: why
 ---
 
-## Why Commerce Cloud Platform for Business-to-Business
+```
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+------------------------->XXXXXX
+Lower hosting costs by up to 75%
 
-Our Commerce Cloud Platform for B2B provides the building blocks that allow us to rapidly create powerful commerce applications for any industry
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+------------------------------>X
+Cut deployment time by up to 95%
+```
 
 ## Build Unique Experiences
 
@@ -22,7 +28,7 @@ Take your pick from our growing family of granular public microservices and mode
 
 ## Advanced Analytics
 
-track all your customers’ interactions to give you insight into their behaviours and to qualify them for the most suitable products and promotions.
+We track all your customers’ interactions to give you insight into their behaviours and to qualify them for the most suitable products and promotions.
 
 ## Beautiful Everywhere
 

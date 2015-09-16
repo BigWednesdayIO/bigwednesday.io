@@ -7,11 +7,14 @@
 @import 'layout/main';
 
 // Modules
+@import 'modules/collapsible';
+@import 'modules/footer';
 @import 'modules/header';
 @import 'modules/hero';
 @import 'modules/navigation';
 
 // Theme
+@import 'theme/footer';
 @import 'theme/header';
 @import 'theme/hero';
 @import 'theme/navigation';

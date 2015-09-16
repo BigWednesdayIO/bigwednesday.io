@@ -6,4 +6,32 @@
 
 .page-body {
 	padding: 0 $pad;
+
+	@media (min-width: $bp-medium) {
+		&__inner {
+			display: flex;
+		}
+
+		&__primary,
+		&__secondary {
+			flex-grow: 1;
+			flex-shrink: 1;
+		}
+
+		&__primary + &__secondary {
+			margin-left: $pad-double;
+		}
+
+		&__primary {
+			width: 70%;
+		}
+
+		&__secondary {
+			width: 30%;
+
+			&:empty {
+				display: none;
+			}
+		}
+	}
 }

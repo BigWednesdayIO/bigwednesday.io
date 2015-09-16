@@ -21,6 +21,7 @@
     "smartypants": true
   },
   "templates": "app/templates",
+  "filenameTemplate": ":file/index.html",
   "contents": "app/contents",
   "port": "9000",
   "ignore": [

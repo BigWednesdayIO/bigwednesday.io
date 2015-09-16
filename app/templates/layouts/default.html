@@ -1,49 +1,23 @@
 {% extends "layouts/base.html" %}
 {% block page %}
-<header>
-	<div class="site-header">
-		<div class="content-wrap">
-			<div class="logo">
-				<a href="/" class="image-link logo__icon">
-					<img src="/assets/images/logo.svg" height="44" width="44" class="image-link__image" alt />
-				</a>
-				<span class="logo__text">big<strong>wednesday</strong>io</span>
-			</div>
-		</div>
-	</div>
-
-	<div class="nav-bar">
-		<div class="content-wrap">
-			<div class="nav-bar__inner">
-				<div class="nav-bar__actions">
-					<button class="button--primary">Get started</button>
-					<button class="button--secondary">Login</button>
-					<button id="navicon" class="button--secondary button--icon nav-bar__menu-button">
-						<svg width="15" height="15" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z" /></svg>
-					</button>
-				</div>
-
-				<nav class="primary-navigation is-hidden">
-					<a href="/why.html"{% if page.metadata.section == 'why' %} class="active"{% endif %}>Why</a>
-					<a href="#">Products</a>
-					<a href="#">Industries</a>
-						<a href="#">Pub Co</a>
-						<a href="#">Retail</a>
-					<a href="#">About</a>
-				</nav>
-			</div>
-		</div>
-	</div>
-</header>
-
-{% block hero %}
-{% endblock %}
-
-<main class="page-body">
+<div class="hero" style="background-image: url(/assets/images/hero--home.jpg)">
 	<div class="content-wrap">
-		{% block content %}
-			{{ page.html }}
+		{% block hero %}
+			<h1>{{ page.title }}</h1>
 		{% endblock %}
 	</div>
-</main>
+</div>
+
+<div class="page-body">
+	<div class="content-wrap">
+		<div class="page-body__inner">
+			<main class="page-body__primary">
+				{% block content %}
+					{{ page.html }}
+				{% endblock %}
+			</main>
+			<aside class="page-body__secondary">{% block aside %}{% endblock %}</aside>
+		</div>
+	</div>
+</div>
 {% endblock %}
