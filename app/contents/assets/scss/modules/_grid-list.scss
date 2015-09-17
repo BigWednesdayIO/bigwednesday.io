@@ -1,8 +1,7 @@
 .grid-list {
 	display: flex;
 	flex-flow: row wrap;
-	margin-left: -$pad;
-	margin-right: -$pad;
+	margin: 0 $pad*-1;
 
 	> li {
 		padding: 0 $pad;
