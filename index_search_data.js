@@ -118,7 +118,7 @@ var buildProductObject = function(productPage, path) {
   return {
     href: toHref(path),
     name: $('h1').text(),
-    meta_description: $('meta[name=description]').attr('content'),
+    description: $('meta[name=description]').attr('content'),
   };
 }
 
