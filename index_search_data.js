@@ -49,11 +49,13 @@ glob(directory + '/**/*.html', function(err, files) {
       var $ = cheerio.load(data);
 
       var data = {
-        title: $('head>title').text(),
+        title: $('head>title').text().replace(' | Big Wednesday IO', ''),
+        meta_description: $('meta[name=description]').attr('content'),
         primary: $('.page-body__primary').text(),
         secondary: $('.page-body__secondary').text(),
         hero: $('.hero').text(),
       };
+
       request({url: indexUri, method: 'post', json: data})
         .on('response', function(response) {
           if (response.statusCode.toString().indexOf('2') === 0) {
