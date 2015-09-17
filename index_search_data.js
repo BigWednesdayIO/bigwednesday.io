@@ -1,6 +1,8 @@
 'use strict';
 
 var fs = require('fs');
+
+var cheerio = require('cheerio');
 var request = require('request');
 var glob = require('glob');
 
@@ -39,17 +41,31 @@ console.log('Indexing files from ' + directory + ' to ' + indexUri);
 
 glob(directory + '/**/*.html', function(err, files) {
   files.forEach(function(path) {
-    request({url: indexUri, method: 'post', json: {file: path}})
-      .on('response', function(response) {
-        if (response.statusCode.toString().indexOf('2') === 0) {
-          return console.log(path + ' - indexed');
-        }
+    fs.readFile(path, 'utf8', function(err, data) {
+      if (err) {
+        return console.error('Failed to read file ' + path + '. ' + err);
+      }
 
-        console.error(path + ' - failed: ' + response.statusCode);
-      })
-      .on('error', function(err) {
-        console.error(path + ' - failed: ' + err);
-      });
+      var $ = cheerio.load(data);
+
+      var data = {
+        title: $('head>title').text(),
+        primary: $('.page-body__primary').text(),
+        secondary: $('.page-body__secondary').text(),
+        hero: $('.hero').text(),
+      };
+      request({url: indexUri, method: 'post', json: data})
+        .on('response', function(response) {
+          if (response.statusCode.toString().indexOf('2') === 0) {
+            return console.log(path + ' - indexed');
+          }
+
+          console.error(path + ' - failed: ' + response.statusCode);
+        })
+        .on('error', function(err) {
+          console.error(path + ' - failed: ' + err);
+        });
+    });
   });
 });
 
