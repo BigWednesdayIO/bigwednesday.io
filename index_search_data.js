@@ -49,12 +49,17 @@ glob(directory + '/**/*.html', function(err, files) {
       var $ = cheerio.load(data);
 
       var data = {
+        href: path.substring(5).replace('/index.html', ''),
         title: $('head>title').text().replace(' | Big Wednesday IO', ''),
         meta_description: $('meta[name=description]').attr('content'),
         primary: $('.page-body__primary').text(),
         secondary: $('.page-body__secondary').text(),
         hero: $('.hero').text(),
       };
+
+      if (!data.href) {
+        data.href = '/';
+      }
 
       request({url: indexUri, method: 'post', json: data})
         .on('response', function(response) {
