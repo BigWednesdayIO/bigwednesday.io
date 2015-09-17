@@ -23,7 +23,11 @@ catch(e) {
 }
 
 if (!process.env.SEARCH_API) {
-  preRequisiteErrors.push('Please set the search API URI in environment variable "SEARCH_API" and try again.');
+  preRequisiteErrors.push('Please set the search API URI in environment variable "SEARCH_API.');
+}
+
+if (!process.env.SEARCH_API_TOKEN) {
+  preRequisiteErrors.push('Please set the search API token for indexing in the environment variable "SEARCH_API_TOKEN".')
 }
 
 if (preRequisiteErrors.length) {
@@ -59,8 +63,12 @@ var createIndexJobs = function(files, indexUri, buildIndexObject) {
         }
 
         var data = buildIndexObject(data, path);
+        var headers = {
+          'content-type': 'application/json',
+          authorization: 'bearer ' + process.env.SEARCH_API_TOKEN
+        };
 
-        request({url: indexUri, method: 'post', json: data})
+        request({url: indexUri, method: 'post', headers: headers, json: data})
           .on('response', function(response) {
             if (response.statusCode.toString().indexOf('2') === 0) {
               console.log(path + ' - indexed');
