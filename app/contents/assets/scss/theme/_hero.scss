@@ -5,10 +5,21 @@
 	color: white;
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 
+	&__well-padded {
+		@media (min-width: $bp-medium) {
+			padding: $pad*4 42.5% $pad*7 0;
+		}
+	}
+
 	h1 {
 		color: inherit;
 		font-size: 4.1rem;
 		margin-bottom: .2em;
+
+		span {
+			color: lighten($brand, 5%);
+			text-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+		}
 	}
 
 	h1, p {

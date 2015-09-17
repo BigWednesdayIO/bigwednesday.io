@@ -1,5 +1,6 @@
 {
 	"template": "layouts/pages/index.html",
 	"title": "Home",
-	"filename": "index.html"
+	"filename": "index.html",
+	"hero": "hero--home.jpg"
 }
