@@ -20,6 +20,7 @@
     "gulp-uglify": "^1.4.1",
     "gulp-usemin": "^0.3.11",
     "moment": "2.3.x",
+    "request": "^2.62.0",
     "run-wintersmith": "0.0.3",
     "surge": "^0.14.3",
     "typogr": "0.5.x",
