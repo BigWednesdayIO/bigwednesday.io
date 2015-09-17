@@ -126,6 +126,7 @@ Promise.all([getFiles(pagesDirectory), getFiles(productsDirectory)])
   .then(function(res) {
     var pages = res[0];
     var products = res[1].filter(function(productPagePath) {
+      // the products list page is not a product!
       return productPagePath !== 'build/products/index.html';
     });
 
