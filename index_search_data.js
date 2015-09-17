@@ -6,19 +6,20 @@ var cheerio = require('cheerio');
 var request = require('request');
 var glob = require('glob');
 
-var directory = 'build';
+var pagesDirectory = 'build';
+var productsDirectory = pagesDirectory + '/products';
 
 var preRequisiteErrors = [];
 
 try {
-  var stat = fs.statSync(directory);
+  var stat = fs.statSync(pagesDirectory);
 
   if (!stat.isDirectory()) {
-    preRequisiteErrors.push(directory + ' is not a directory. Please ensure that the site has been built first.');
+    preRequisiteErrors.push(pagesDirectory + ' is not a directory. Please ensure that the site has been built first.');
   }
 }
 catch(e) {
-  preRequisiteErrors.push('Directory ' + directory+ ' does not exist. Please ensure that the site has been built first.');
+  preRequisiteErrors.push('Directory ' + pagesDirectory+ ' does not exist. Please ensure that the site has been built first.');
 }
 
 if (!process.env.SEARCH_API) {
@@ -35,44 +36,99 @@ if (preRequisiteErrors.length) {
   return;
 }
 
-var indexUri = process.env.SEARCH_API + '/1/indexes/big-wednesday-io';
-
-console.log('Indexing files from ' + directory + ' to ' + indexUri);
-
-glob(directory + '/**/*.html', function(err, files) {
-  files.forEach(function(path) {
-    fs.readFile(path, 'utf8', function(err, data) {
+var getFiles = function(directory) {
+  return new Promise(function(resolve) {
+    glob(directory + '/**/*.html', function(err, files) {
       if (err) {
-        return console.error('Failed to read file ' + path + '. ' + err);
+        console.err(err);
+        return reject(err);
       }
 
-      var $ = cheerio.load(data);
-
-      var data = {
-        href: path.substring(5).replace('/index.html', ''),
-        title: $('head>title').text().replace(' | Big Wednesday IO', ''),
-        meta_description: $('meta[name=description]').attr('content'),
-        primary: $('.page-body__primary').text(),
-        secondary: $('.page-body__secondary').text(),
-        hero: $('.hero').text(),
-      };
-
-      if (!data.href) {
-        data.href = '/';
-      }
-
-      request({url: indexUri, method: 'post', json: data})
-        .on('response', function(response) {
-          if (response.statusCode.toString().indexOf('2') === 0) {
-            return console.log(path + ' - indexed');
-          }
-
-          console.error(path + ' - failed: ' + response.statusCode);
-        })
-        .on('error', function(err) {
-          console.error(path + ' - failed: ' + err);
-        });
+      resolve(files);
     });
   });
-});
+};
 
+var createIndexJobs = function(files, indexUri, buildIndexObject) {
+  return files.map(function(path) {
+    return new Promise(function(resolve) {
+      fs.readFile(path, 'utf8', function(err, data) {
+        if (err) {
+          return console.error('Failed to read file ' + path + '. ' + err);
+          resolve();
+        }
+
+        var data = buildIndexObject(data, path);
+
+        request({url: indexUri, method: 'post', json: data})
+          .on('response', function(response) {
+            if (response.statusCode.toString().indexOf('2') === 0) {
+              console.log(path + ' - indexed');
+            } else {
+              console.error(path + ' - failed: ' + response.statusCode);
+            }
+
+            resolve();
+          })
+          .on('error', function(err) {
+            console.error(path + ' - failed: ' + err);
+            resolve();
+          });
+      });
+    });
+  });
+};
+
+var toHref = function(path) {
+  var href = path.substring(5).replace('/index.html', '');
+
+  return href ? href : '/';
+};
+
+var buildPageObject = function(page, path) {
+  var $ = cheerio.load(page);
+
+  var data = {
+    href: toHref(path),
+    title: $('head>title').text().replace(' | Big Wednesday IO', ''),
+    meta_description: $('meta[name=description]').attr('content'),
+    primary: $('.page-body__primary').text(),
+    secondary: $('.page-body__secondary').text(),
+    hero: $('.hero').text(),
+  };
+
+  if (!data.href) {
+    data.href = '/';
+  }
+
+  return data;
+};
+
+var buildProductObject = function(productPage, path) {
+  var $ = cheerio.load(productPage);
+
+  return {
+    href: toHref(path),
+    name: $('h1').text(),
+    meta_description: $('meta[name=description]').attr('content'),
+  };
+}
+
+Promise.all([getFiles(pagesDirectory), getFiles(productsDirectory)])
+  .then(function(res) {
+    var pages = res[0];
+    var products = res[1].filter(function(productPagePath) {
+      return productPagePath !== 'build/products/index.html';
+    });
+
+    var pagesIndexUri = process.env.SEARCH_API + '/1/indexes/big-wednesday-io-pages';
+    console.log('Indexing pages from ' + pagesDirectory + '/ to ' + pagesIndexUri);
+
+    return Promise.all(createIndexJobs(pages, pagesIndexUri, buildPageObject))
+      .then(function() {
+        var productsIndexUri = process.env.SEARCH_API + '/1/indexes/big-wednesday-io-products';
+        console.log('Indexing products from ' + productsDirectory + '/ to ' + productsIndexUri);
+
+        return Promise.all(createIndexJobs(products, productsIndexUri, buildProductObject));
+      });
+  });
