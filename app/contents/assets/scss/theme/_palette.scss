@@ -31,7 +31,8 @@ $ui-primary-text: white;
 $ui-primary-border: 1px solid transparent;
 $ui-secondary: #FCFCFC;
 $ui-secondary-text: $nav;
-$ui-secondary-border: 1px solid #DBDBDB;
+$ui-secondary-border-color: #DBDBDB;
+$ui-secondary-border: 1px solid $ui-secondary-border-color;
 
 $darken-top: (lightness($light-grey-two) - lightness(#FCFCFC)) * -1;
 $darken-bottom: (lightness($light-grey-three) - lightness(#FCFCFC)) * -1;

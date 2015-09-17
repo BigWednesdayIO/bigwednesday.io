@@ -77,11 +77,21 @@
 {% endblock %}
 
 {% block aside %}
-<pre>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-------------------------->XXXXXX
-Lower hosting costs by up to 75%
+<div class="savings-graph">
+	<div class="savings-graph__old">Old cost (100%).</div>
+	<div class="savings-graph__new">
+		<div class="savings-graph__reduction">Reduced by up to 75%.</div>
+		<div class="savings-graph__cost" style="width: 25%;">New cost as little as 25%.</div>
+	</div>
+	<div class="savings-graph__tagline">Lower hosting costs by up to <strong class="savings-graph__tagline__key-point">75%</strong></div>
+</div>
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
------------------------------->X
-Cut deployment time by up to 95%</pre>
+<div class="savings-graph">
+	<div class="savings-graph__old">Old cost (100%).</div>
+	<div class="savings-graph__new">
+		<div class="savings-graph__reduction">Reduced by up to 95%.</div>
+		<div class="savings-graph__cost" style="width: 5%;">New cost as little as 5%.</div>
+	</div>
+	<div class="savings-graph__tagline">Cut your deployment time by up to <strong class="savings-graph__tagline__key-point">95%</strong></div>
+</div>
 {% endblock %}
