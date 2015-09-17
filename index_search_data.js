@@ -7,8 +7,6 @@ var request = require('request');
 var glob = require('glob');
 
 var pagesDirectory = 'build';
-var productsDirectory = pagesDirectory + '/products';
-
 var preRequisiteErrors = [];
 
 try {
@@ -40,6 +38,17 @@ if (preRequisiteErrors.length) {
   return;
 }
 
+var productsDirectory = pagesDirectory + '/products';
+var indexBaseUri = process.env.SEARCH_API + '/1/indexes/';
+var pagesIndex = 'big-wednesday-io-pages';
+var productsIndex = 'big-wednesday-io-products';
+var pagesIndexUri = indexBaseUri + pagesIndex;
+var productsIndexUri = indexBaseUri + productsIndex;
+var apiHeaders = {
+  'content-type': 'application/json',
+  authorization: 'bearer ' + process.env.SEARCH_API_TOKEN
+};
+
 var getFiles = function(directory) {
   return new Promise(function(resolve) {
     glob(directory + '/**/*.html', function(err, files) {
@@ -63,12 +72,8 @@ var createIndexJobs = function(files, indexUri, buildIndexObject) {
         }
 
         var data = buildIndexObject(data, path);
-        var headers = {
-          'content-type': 'application/json',
-          authorization: 'bearer ' + process.env.SEARCH_API_TOKEN
-        };
 
-        request({url: indexUri, method: 'post', headers: headers, json: data})
+        request({url: indexUri, method: 'post', headers: apiHeaders, json: data})
           .on('response', function(response) {
             if (response.statusCode.toString().indexOf('2') === 0) {
               console.log(path + ' - indexed');
@@ -122,7 +127,34 @@ var buildProductObject = function(productPage, path) {
   };
 }
 
+var deleteIndex = function(name) {
+  return new Promise(function(resolve, reject) {
+    request({url: indexBaseUri + name, method: 'delete', headers: apiHeaders})
+      .on('response', function(response) {
+        if (response.statusCode.toString().indexOf('2') === 0 || response.statusCode === 404) {
+          return resolve();
+        }
+
+        console.error('Delete of index ' + name + ' failed - ' + response.statusCode);
+        reject();
+      })
+      .on('error', function(err) {
+        console.error('Delete of index ' + name + ' failed');
+        console.error(err);
+        reject();
+      });
+  });
+};
+
 Promise.all([getFiles(pagesDirectory), getFiles(productsDirectory)])
+  .then(function(res) {
+    console.log('Deleting existing indexes');
+
+    return Promise.all([deleteIndex(pagesIndex), deleteIndex(productsIndex)])
+      .then(function() {
+        return res;
+      });
+  })
   .then(function(res) {
     var pages = res[0];
     var products = res[1].filter(function(productPagePath) {
@@ -130,12 +162,10 @@ Promise.all([getFiles(pagesDirectory), getFiles(productsDirectory)])
       return productPagePath !== 'build/products/index.html';
     });
 
-    var pagesIndexUri = process.env.SEARCH_API + '/1/indexes/big-wednesday-io-pages';
     console.log('Indexing pages from ' + pagesDirectory + '/ to ' + pagesIndexUri);
 
     return Promise.all(createIndexJobs(pages, pagesIndexUri, buildPageObject))
       .then(function() {
-        var productsIndexUri = process.env.SEARCH_API + '/1/indexes/big-wednesday-io-products';
         console.log('Indexing products from ' + productsDirectory + '/ to ' + productsIndexUri);
 
         return Promise.all(createIndexJobs(products, productsIndexUri, buildProductObject));
