@@ -59,6 +59,7 @@ a {
 	font-weight: 600;
 	font-family: $font-secondary;
 	cursor: pointer;
+	text-transform: uppercase;
 
 	& + & {
 		margin-left: $pad-half;
@@ -88,7 +89,23 @@ a {
 	}
 }
 
+.button--hero {
+	font-size: inherit;
+}
+
 .button--icon {
 	@extend %button;
 	line-height: 0.1;
+}
+
+%clearfix {
+	&::before,
+	&::after {
+		content: " ";
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
 }

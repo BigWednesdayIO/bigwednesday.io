@@ -1,4 +1,6 @@
 .icon-header {
+	@extend %clearfix;
+
 	&__icon {
 		float: left;
 		margin-right: $pad*.75;
