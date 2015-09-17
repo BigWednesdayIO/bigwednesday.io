@@ -86,6 +86,10 @@
 		display: block;
 	}
 
+	a:hover {
+		color: $ui-primary;
+	}
+
 	&__heading {
 		font-size: inherit;
 		color: #bdbdbd;

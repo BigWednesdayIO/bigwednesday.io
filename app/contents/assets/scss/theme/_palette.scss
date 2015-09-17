@@ -13,6 +13,7 @@ $nav-hover: $black;
 
 $body-text: $black;
 $body-heading: #333;
+$body-bg: white;
 
 $font-primary: Roboto, sans-serif;
 $font-secondary: 'Open Sans', sans;
@@ -24,6 +25,7 @@ $gradient: linear-gradient(to bottom, $light-grey-one, $light-grey-two);
 $border: 1px solid $border-color;
 $border-strong: 1px solid $border-strong-color;
 $shadow: 0 1px 2px rgba(0, 0, 0, .08);
+$section-shadow: 0 3px 1px -2px rgba(0, 0, 0, .14), 0 2px 2px 0 rgba(0, 0, 0, .098), 0 1px 5px 0 rgba(0, 0, 0, .084);
 
 // UI Elements
 $ui-primary: $brand;
