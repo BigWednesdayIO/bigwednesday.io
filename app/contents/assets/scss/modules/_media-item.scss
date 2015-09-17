@@ -1,0 +1,36 @@
+.media-item {
+	display: flex;
+	align-items: center;
+	padding: $pad;
+
+	&__icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 6.6rem;
+		width: 6rem;
+		flex-shrink: 0;
+		margin-right: $pad;
+		clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+	}
+
+	&__text {
+
+	}
+
+	&__title {
+		margin: 0;
+	}
+
+	&__preview {
+	}
+}
+
+.media-group {
+	margin-bottom: $pad-double;
+
+	&__heading,
+	&__listing {
+		margin: 0;
+	}
+}
