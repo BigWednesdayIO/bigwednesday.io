@@ -1,5 +1,5 @@
 {
-	"template": "pages/index.html",
+	"template": "layouts/pages/index.html",
 	"title": "Home",
 	"filename": "index.html"
 }

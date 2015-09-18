@@ -1,5 +1,5 @@
 {
-	"template": "pages/why.html",
+	"template": "layouts/pages/why.html",
 	"title": "Why",
 	"section": "why"
 }
