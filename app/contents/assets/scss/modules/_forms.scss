@@ -1,0 +1,33 @@
+.form-rows {
+	margin: $pad-double 0 0;
+}
+
+.form-row {
+	display: flex;
+	flex-flow: column nowrap;
+
+	& + & {
+		margin-top: $pad;
+	}
+
+	&.with-cta {
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+	}
+}
+
+.input-wrapper {
+	position: relative;
+	display: flex;
+
+	input {
+		flex-grow: 1;
+	}
+
+	&__action {
+		position: absolute;
+		right: $pad;
+		top: 50%;
+    	transform: translateY(-50%);
+	}
+}

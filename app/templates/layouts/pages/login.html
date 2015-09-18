@@ -1,0 +1,26 @@
+{% extends "layouts/simple.html" %}
+
+
+{% block content %}
+<div class="panel panel--narrow">
+	<h1>Log in to your account</h1>
+	<form name="" method="POST" action="/api/v1/authentication">
+		<ol class="form-rows">
+			<li class="form-row">
+				<label for="email">Email address</label>
+				<input type="email" name="email" id="email" />
+			</li>
+			<li class="form-row">
+				<label for="password">Password</label>
+				<div class="input-wrapper">
+					<input type="password" name="password" id="password" />
+					<a class="input-wrapper__action" href="#">Forgot?</a>
+				</div>
+			</li>
+			<li class="form-row with-cta">
+				<button type="submit" class="button--primary">Log in</button>
+			</li>
+		</ol>
+	</form>
+</div>
+{% endblock %}

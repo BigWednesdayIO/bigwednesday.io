@@ -1,6 +1,6 @@
 body {
 	font-family: $font-secondary;
-	font-size: 14px;
+	font-size: 1.4rem;
 	line-height: 1.6;
 	font-weight: 400;
 	color: $body-text;
@@ -61,10 +61,12 @@ a {
 	padding: .4em $pad;
 	line-height: 1.5em;
 	border-radius: 3px;
+	font-size: inherit;
 	font-weight: 600;
 	font-family: $font-secondary;
 	cursor: pointer;
 	text-transform: uppercase;
+	text-decoration: none;
 
 	& + & {
 		margin-left: $pad-half;
@@ -101,6 +103,29 @@ a {
 .button--icon {
 	@extend %button;
 	line-height: 0.1;
+}
+
+input {
+	font-size: 1.4rem;
+	padding: $pad-half;
+	font-family: $font-secondary;
+}
+
+label {
+	color: #606060;
+	text-transform: uppercase;
+}
+
+.panel {
+	padding: $pad-double;
+	margin-left: auto;
+	margin-right: auto;
+	background: $gradient;
+	border: $border;
+
+	&--narrow {
+		max-width: 30em;
+	}
 }
 
 %clearfix {
