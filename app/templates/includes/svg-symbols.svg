@@ -63,6 +63,10 @@
       <title>line-chart icon</title>
       <path d="M1920 1536v128H-128V128H0v1408h1920zM1792 288v435q0 21-19.5 29.5T1737 745l-121-121-633 633q-10 10-23 10t-23-10l-233-233-416 416-192-192 585-585q10-10 23-10t23 10l233 233 464-464-121-121q-16-16-7.5-35.5T1325 256h435q14 0 23 9t9 23z"/>
     </symbol>
+    <symbol id="logo" viewBox="0 0 30.00001 60.000014">
+      <title>logo icon</title>
+      <g fill-rule="evenodd" stroke-width=".1"><path d="M15 40l15 10V30L15 20z" fill="#4c9225" stroke="#4c9225"/><path d="M15 40L0 50V30l15-10z" fill="#539f29" stroke="#539f29"/><path d="M0 50l15 10V40L0 30z" fill="#4c9225" stroke="#4c9225"/><path d="M15 60l15-10V30L15 40v20z" fill="#55a32a" stroke="#55a32a"/><path d="M0 30l15-10V0L0 10z" fill="#55a32a" stroke="#55a32a"/></g>
+    </symbol>
     <symbol id="map-marker" viewBox="0 0 24 24">
       <title>map-marker icon</title>
       <path d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/>
