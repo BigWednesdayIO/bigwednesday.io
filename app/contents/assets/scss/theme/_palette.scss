@@ -11,8 +11,11 @@ $light-grey-three: #f1f1f1;
 $nav: #444;
 $nav-hover: $black;
 
-$body-text: $black;
-$body-heading: #333;
+$link: $nav;
+$link-hover: $brand;
+
+$body-text: rgb(110,110,122);
+$body-heading: #606060;
 $body-bg: white;
 
 $font-primary: Roboto, sans-serif;

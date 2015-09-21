@@ -19,12 +19,12 @@ h1 {
 }
 
 h2 {
-	font-size: 27px;
+	font-size: 2.7rem;
 	margin: $pad 0;
 }
 
 h3 {
-	font-size: 19px;
+	font-size: 1.9rem;
 	margin-top: 0;
 }
 
@@ -37,7 +37,12 @@ p {
 }
 
 a {
+	color: $link;
 	transition: color .15s;
+
+	&:hover {
+		color: $link-hover;
+	}
 }
 
 .prefetch {
