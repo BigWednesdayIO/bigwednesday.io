@@ -107,16 +107,16 @@ a {
 }
 
 .button--large {
-    font-size: 1.1em;
-    padding: $pad-half $pad-and-half;
+	font-size: 1.1em;
+	padding: $pad-half $pad-and-half;
 }
 
 .button--icon {
 	@extend %button;
 	display: inline-flex;
 	align-items: center;
-    box-sizing: content-box;
-    height: 1.5em; // button's line-height
+	box-sizing: content-box;
+	height: 1.5em; // button's line-height
 }
 
 input {
@@ -139,7 +139,7 @@ input {
 }
 
 label {
-	color: #606060;
+	color: $body-heading;
 	text-transform: uppercase;
 	margin-bottom: .2em;
 }
