@@ -1,6 +1,6 @@
 body {
 	font-family: $font-secondary;
-	font-size: 14px;
+	font-size: 1.4rem;
 	line-height: 1.6;
 	font-weight: 400;
 	color: $body-text;
@@ -20,7 +20,11 @@ h1 {
 
 h2 {
 	font-size: 2.7rem;
-	margin: $pad 0;
+	margin: $pad*.75 0 $pad;
+
+	@media (min-width: $bp-medium) {
+		margin: $pad 0;
+	}
 }
 
 h3 {
@@ -38,6 +42,7 @@ p {
 
 a {
 	color: $link;
+	text-decoration: underline;
 	transition: color .15s;
 
 	&:hover {
@@ -61,10 +66,12 @@ a {
 	padding: .4em $pad;
 	line-height: 1.5em;
 	border-radius: 3px;
+	font-size: inherit;
 	font-weight: 600;
 	font-family: $font-secondary;
 	cursor: pointer;
 	text-transform: uppercase;
+	text-decoration: none;
 
 	& + & {
 		margin-left: $pad-half;
@@ -89,6 +96,7 @@ a {
 	border: $ui-secondary-border;
 
 	&:hover {
+		color: $ui-secondary-text;
 		background: $ui-secondary-highlight;
 		border-color: $ui-secondary-highlight-border-color;
 	}
@@ -98,9 +106,63 @@ a {
 	font-size: inherit;
 }
 
+.button--large {
+	font-size: 1.1em;
+	padding: $pad-half $pad-and-half;
+}
+
 .button--icon {
 	@extend %button;
-	line-height: 0.1;
+	display: inline-flex;
+	align-items: center;
+	box-sizing: content-box;
+	height: 1.5em; // button's line-height
+}
+
+input {
+	font-size: 1.4rem;
+	padding: $pad-half;
+	font-family: $font-secondary;
+	color: inherit;
+	border: $border-strong;
+	-webkit-appearance: none;
+	transition: border-color .15s;
+
+	&:focus {
+		border-color: inherit;
+		outline: 0 none;
+	}
+
+	&[type="password"] {
+		letter-spacing: .75px;
+	}
+}
+
+label {
+	color: $body-heading;
+	text-transform: uppercase;
+	margin-bottom: .2em;
+}
+
+.error {
+	color: $error;
+}
+
+.panel {
+	padding: $pad 0 0;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media (min-width: $bp-tiny) {
+		padding: $pad-double;
+		background: $gradient;
+		border: $border;
+		box-shadow: $shadow;
+	}
+
+	&--narrow {
+		max-width: 30em;
+	}
 }
 
 %clearfix {
