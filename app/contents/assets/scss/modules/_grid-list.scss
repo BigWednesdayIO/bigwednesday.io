@@ -7,7 +7,7 @@
 		padding: 0 $pad;
 		margin-bottom: $pad*3;
 
-		@media (min-width: 36em) {
+		@media (min-width: $bp-small) {
 			width: 50%;
 		}
 	}

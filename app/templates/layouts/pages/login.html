@@ -4,7 +4,7 @@
 {% block content %}
 <div class="panel panel--narrow">
 	<h1>Log in to your account</h1>
-	<form name="" method="POST" action="/api/v1/authentication">
+	<form name="login-form" id="login-form" method="POST" action="/api/v1/authentication">
 		<ol class="form-rows">
 			<li class="form-row">
 				<label for="email">Email address</label>
@@ -18,7 +18,7 @@
 				</div>
 			</li>
 			<li class="form-row with-cta">
-				<button type="submit" class="button--primary">Log in</button>
+				<button type="submit" class="button--primary button--large">Log in</button>
 			</li>
 		</ol>
 	</form>
