@@ -105,4 +105,12 @@
 			column-rule: $border;
 		}
 	}
+
+	.content-wrap {
+		display: none;
+
+		&.is-visible {
+			display: block;
+		}
+	}
 }
