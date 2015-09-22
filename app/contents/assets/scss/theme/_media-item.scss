@@ -21,7 +21,8 @@
 
 	&__icon {
 		color: $ui-primary-text;
-		background: $ui-primary;
+		background: url('/assets/images/icons/hexagon.svg') no-repeat 50% 50%;
+		background-size: cover;
 	}
 
 	&__title {

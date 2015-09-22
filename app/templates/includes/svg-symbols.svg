@@ -49,7 +49,7 @@
     </symbol>
     <symbol id="hexagon" viewBox="0 0 50.000012 55.00001">
       <title>hexagon icon</title>
-      <path d="M25 55L0 40V15L25 0l25 15v25L25 55z" fill-rule="evenodd"/>
+      <path d="M25 55L0 40V15L25 0l25 15v25L25 55z" fill="#55A32A" fill-rule="evenodd"/>
     </symbol>
     <symbol id="image-filter-center-focus" viewBox="0 0 24 24">
       <title>image-filter-center-focus icon</title>
