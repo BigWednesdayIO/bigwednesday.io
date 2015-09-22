@@ -1,15 +1,9 @@
 {% extends "layouts/default.html" %}
 
+{% set hero_style = 'hero--homepage' %}
+
 {% block hero %}
-<style>
-/* 1px before 768 (bp-medium) */
-@media (max-width: 47.9375em) {
-	.hero {
-		background-image: url({{ assets }}/images/hero--home-mobile.jpg) !important;
-	}
-}
-</style>
-<div class="hero__well-padded">
+<div class="hero__text-left">
 	<h1>Fixing <span>enterprise software</span>, one application at a time.</h1>
 	<p>Personalise & tailor every interaction with your customer to maximize the impact.</p>
 	<p><button class="button--primary button--hero">Get started now for FREE</button></p>
