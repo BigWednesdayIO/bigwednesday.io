@@ -9,9 +9,24 @@
 		color: inherit;
 		font-size: 4.1rem;
 		margin-bottom: .2em;
+
+		span {
+			color: lighten($brand, 5%);
+		}
 	}
 
 	h1, p {
 		line-height: 1.3;
+	}
+
+	&--homepage {
+		@media (min-width: $bp-medium) {
+			padding-top: 10%;
+			padding-bottom: 15%;
+		}
+
+		@media (max-width: $bp-medium - (1em/16em)) {
+			background-image: url(/assets/images/hero--home-mobile.jpg) !important;
+		}
 	}
 }

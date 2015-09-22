@@ -1,7 +1,18 @@
 .hero {
-	padding: $pad-double $pad-half $pad-double $pad;
+	padding: $pad-double $pad;
 	margin-bottom: 0;
 	background-position: 50% 33%;
 	background-size: cover;
 	background-repeat: no-repeat;
+
+	@media (min-width: $bp-medium) {
+		&__text-left {
+			padding-right: 45%;
+		}
+
+		&__text-right {
+			padding-left: 45%;
+			text-align: right;
+		}
+	}
 }

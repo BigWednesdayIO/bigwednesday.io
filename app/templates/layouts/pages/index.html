@@ -1,6 +1,11 @@
 {% extends "layouts/default.html" %}
 
+{% set hero_style = 'hero--homepage' %}
+
 {% block hero %}
-<h1>Big Wednesday IO</h1>
-<p>Fixing enterprise software, one application at a time.</p>
+<div class="hero__text-left">
+	<h1>Fixing <span>enterprise software</span>, one application at a time.</h1>
+	<p>Personalise &amp; tailor every interaction with your customer to maximize the impact.</p>
+	<p><button class="button--primary button--hero">Get started now for FREE</button></p>
+</div>
 {% endblock %}
