@@ -4,7 +4,7 @@
 			subNav = document.getElementById('sub-nav'),
 			subNavLinks = document.getElementsByClassName('with-sub-nav'),
 			timer,
-			openSiblingsTimer
+			openSiblingsTimer,
 			subNavElements = {};
 
 		if (navElement) {
