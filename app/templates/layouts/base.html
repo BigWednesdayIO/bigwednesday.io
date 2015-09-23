@@ -20,6 +20,7 @@
 		<!-- endbuild -->
 	</head>
 	<body class="{{ page.metadata.section }}">
+		{% include "includes/svg-symbols.svg" %}
 		{% include "includes/header.html" %}
 
 		{% block page %}{% endblock %}
@@ -30,7 +31,5 @@
 		<script src="/assets/js/navigation.js"></script>
 		<script src="/assets/js/login.js"></script>
 		<!-- endbuild -->
-
-		{% include "includes/svg-symbols.svg" %}
 	</body>
 </html>
