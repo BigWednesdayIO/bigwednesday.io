@@ -46,7 +46,7 @@
 
 		if (subNavLinks.length) {
 			subNavLinks = Array.prototype.reduce.call(subNavLinks, function(linksMap, subNavLink) {
-				var id = subNavLink.dataset.subNav;
+				var id = subNavLink.getAttribute('data-sub-nav');
 				linksMap[id] = subNavLink;
 
 				subNavElements[id] = document.getElementById('sub-nav-' + id);

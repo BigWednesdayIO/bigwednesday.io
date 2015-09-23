@@ -26,7 +26,7 @@ gulp.task('sass', function() {
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', handleError))
 		.pipe(autoprefixer({
-			browsers: ['last 3 versions'],
+			browsers: ['last 3 versions', '> 1% in GB'],
 		}))
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(assetsDir + '/css'));
