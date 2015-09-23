@@ -46,7 +46,7 @@ gulp.task('build:icons', function() {
 		.pipe(svgSymbols({
 			templates: ['default-svg']
 		}))
-		.pipe(gulp.dest('app/templates/includes/'));
+		.pipe(gulp.dest(assetsDir + '/images/'));
 });
 
 gulp.task('build:copy', ['sass', 'build:icons', 'build:preclean'], function() {
