@@ -14,7 +14,8 @@
 	}
 
 	&__text {
-
+		// needed for IE 10
+		flex-shrink: 1;
 	}
 
 	&__title {

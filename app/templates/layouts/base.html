@@ -14,6 +14,10 @@
 		<link rel="stylesheet" href="/assets/css/app.css" />
 		<!-- endbuild -->
 		{{ env.helpers.livereload() | safe }}
+
+		<!-- build:headjs /assets/js/head.js -->
+		<script src="/assets/vendor/modernizr.js"></script>
+		<!-- build:headjs /assets/js/head.js -->
 	</head>
 	<body class="{{ page.metadata.section }}">
 		{% include "includes/header.html" %}
@@ -23,7 +27,6 @@
 		{% include "includes/footer.html" %}
 
 		<!-- build:js /assets/js/site.js -->
-		<script src="/assets/vendor/modernizr.js"></script>
 		<script src="/assets/js/navigation.js"></script>
 		<script src="/assets/js/login.js"></script>
 		<!-- endbuild -->

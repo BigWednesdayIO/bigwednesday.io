@@ -16,6 +16,20 @@
 	}
 }
 
+#{$no-flexbox} {
+	.form-row {
+		label,
+		input {
+			display: block;
+			width: 100%;
+		}
+
+		&.with-cta {
+			text-align: right;
+		}
+	}
+}
+
 .input-wrapper {
 	position: relative;
 	display: flex;

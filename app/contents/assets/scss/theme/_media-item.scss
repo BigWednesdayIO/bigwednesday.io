@@ -35,6 +35,22 @@
 	}
 }
 
+#{$no-flexbox} {
+	.media-item {
+		@extend %clearfix;
+
+		&__icon {
+			float: left;
+			text-align: center;
+			line-height: 8rem;
+
+			svg {
+				display: inline-block;
+			}
+		}
+	}
+}
+
 .media-item__title,
 .media-group__heading {
 	color: #606060;
