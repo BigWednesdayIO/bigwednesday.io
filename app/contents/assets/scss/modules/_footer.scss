@@ -15,4 +15,24 @@ html {
 		justify-content: space-between;
 		align-items: center;
 	}
+
+	&__social a {
+		display: inline-block;
+	}
+}
+
+#{$no-flexbox} {
+	.site-footer {
+		&__inner {
+			@extend %clearfix;
+		}
+
+		&__info {
+			float: left;
+		}
+
+		&__social {
+			float: right;
+		}
+	}
 }

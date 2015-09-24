@@ -12,3 +12,23 @@
 		}
 	}
 }
+
+@media (min-width: $bp-medium) {
+	#{$no-flexbox} {
+		.grid-list {
+			> li {
+				float: left;
+
+				&:nth-child(odd) {
+					clear: both;
+				}
+			}
+		}
+
+		// Leaving this for now, https://github.com/Modernizr/Modernizr/issues/1675
+		/* &.no-nthchild .grid-list > li {
+			float: none;
+			width: 100%;
+		} */
+	}
+}

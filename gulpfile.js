@@ -26,7 +26,7 @@ gulp.task('sass', function() {
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', handleError))
 		.pipe(autoprefixer({
-			browsers: ['last 3 versions'],
+			browsers: ['last 3 versions', '> 1% in GB'],
 		}))
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(assetsDir + '/css'));
@@ -46,7 +46,7 @@ gulp.task('build:icons', function() {
 		.pipe(svgSymbols({
 			templates: ['default-svg']
 		}))
-		.pipe(gulp.dest('app/templates/includes/'));
+		.pipe(gulp.dest(assetsDir + '/images/'));
 });
 
 gulp.task('build:copy', ['sass', 'build:icons', 'build:preclean'], function() {

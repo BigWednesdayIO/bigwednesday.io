@@ -11,11 +11,11 @@
 		width: 6rem;
 		flex-shrink: 0;
 		margin-right: $pad;
-		clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 	}
 
 	&__text {
-
+		// needed for IE 10
+		flex-shrink: 1;
 	}
 
 	&__title {

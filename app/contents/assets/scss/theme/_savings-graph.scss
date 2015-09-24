@@ -61,3 +61,19 @@
 		}
 	}
 }
+
+#{$no-flexbox} {
+	.savings-graph {
+		&__new {
+			@extend %clearfix;
+		}
+
+		&__reduction {
+			display: none;
+		}
+
+		&__cost {
+			float: right;
+		}
+	}
+}

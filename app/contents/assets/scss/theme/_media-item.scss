@@ -20,8 +20,10 @@
 	}
 
 	&__icon {
+		// TODO test for polygon support and use it if possible
 		color: $ui-primary-text;
-		background: $ui-primary;
+		background: url('/assets/images/icons/hexagon.svg') no-repeat 50% 50%;
+		background-size: cover;
 	}
 
 	&__title {
@@ -31,6 +33,22 @@
 	&__preview {
 		font-size: 1.4rem;
 		line-height: 1.3;
+	}
+}
+
+#{$no-flexbox} {
+	.media-item {
+		@extend %clearfix;
+
+		&__icon {
+			float: left;
+			text-align: center;
+			line-height: 8rem;
+
+			svg {
+				display: inline-block;
+			}
+		}
 	}
 }
 

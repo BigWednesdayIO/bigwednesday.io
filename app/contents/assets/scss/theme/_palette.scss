@@ -57,3 +57,7 @@ $pad-and-half: $pad*1.5;
 $bp-tiny: 29em; // 464px
 $bp-small: 36em; // 576px;
 $bp-medium: 48em; // 768px
+
+// Modernizr
+$no-flexbox: '.no-flexbox.no-flexwrap.no-flexboxlegacy.no-flexboxtweener';
+// usage: #{$no-flexbox} { .selector { foo: bar; } }

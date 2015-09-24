@@ -12,6 +12,7 @@
 
 		&__inner {
 			display: flex;
+			flex-flow: row nowrap;
 		}
 
 		&__primary,
@@ -33,6 +34,23 @@
 
 			&:empty {
 				display: none;
+			}
+		}
+	}
+}
+
+@media (min-width: $bp-medium) {
+	#{$no-flexbox} {
+		.page-body {
+			@extend %claerfix;
+
+			&__primary,
+			&__secondary {
+				float: left;
+			}
+
+			&__secondary {
+				margin-left: 0;
 			}
 		}
 	}

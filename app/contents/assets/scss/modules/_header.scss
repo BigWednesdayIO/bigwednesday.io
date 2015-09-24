@@ -11,3 +11,15 @@
 		margin-right: $pad*.75;
 	}
 }
+
+@media (min-width: $bp-medium) {
+	#{$no-flexbox} {
+		.logo {
+			&__icon,
+			&__text {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+}
