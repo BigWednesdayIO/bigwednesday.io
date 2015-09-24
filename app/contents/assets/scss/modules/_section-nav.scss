@@ -1,0 +1,23 @@
+.section-nav {
+	@media (min-width: $bp-medium) {
+		position: sticky;
+		top: 2rem;
+		margin: 0;
+
+		.no-csspositionsticky & {
+			&.is-sticky {
+				position: absolute;
+				position: fixed;
+				width: 31%; // roughly correct for older browsers
+				width: calc(#{100/3}% - #{$pad * 4 / 3});
+				max-width: ($max-width - 20px) / 3;
+				max-width: calc(#{$max-width / 3} - #{$pad * 2 / 3});
+			}
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: $pad;
+	}
+}
