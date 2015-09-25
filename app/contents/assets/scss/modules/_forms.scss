@@ -14,6 +14,23 @@
 		flex-flow: row nowrap;
 		justify-content: flex-end;
 	}
+
+	&.with-postfix {
+		flex-flow: row nowrap;
+
+		input {
+			flex-grow: 1;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			border-right: 0 none;
+		}
+
+		.postfix {
+			flex-grow: 0;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
 }
 
 #{$no-flexbox} {
