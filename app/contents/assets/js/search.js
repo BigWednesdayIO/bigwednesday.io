@@ -44,7 +44,7 @@
 		return preview;
 	}
 
-	function getParameterByName(name) {
+	function getParameterByName (name) {
 		var regex, results;
 		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
 		regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
@@ -52,7 +52,7 @@
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
 
-	function formatResults(results) {
+	function formatResults (results) {
 		var output = document.createDocumentFragment()
 
 		results.hits.forEach(function(result) {
