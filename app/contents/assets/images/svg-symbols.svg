@@ -65,7 +65,7 @@
     </symbol>
     <symbol id="logo" viewBox="0 0 30.00001 60.000014">
       <title>logo icon</title>
-      <g fill-rule="evenodd" stroke-width=".1"><path d="M15 40l15 10V30L15 20z" fill="#4c9225" stroke="#4c9225"/><path d="M15 40L0 50V30l15-10z" fill="#539f29" stroke="#539f29"/><path d="M0 50l15 10V40L0 30z" fill="#4c9225" stroke="#4c9225"/><path d="M15 60l15-10V30L15 40v20z" fill="#55a32a" stroke="#55a32a"/><path d="M0 30l15-10V0L0 10z" fill="#55a32a" stroke="#55a32a"/></g>
+      <g fill-rule="evenodd" stroke-width=".1"><path d="M15 40l15 10V30L15 20z" fill="#4c9225" stroke="#4c9225"/><path d="M15 40L0 50V30l15-10z" fill="#539f29" stroke="#539f29"/><path d="M0 50l15 10V40L0 30z" fill="#4c9225" stroke="#4c9225"/><path d="M15 60l15-10V30L15 40v20zM0 30l15-10V0L0 10z" fill="#55a32a" stroke="#55a32a"/></g>
     </symbol>
     <symbol id="map-marker" viewBox="0 0 24 24">
       <title>map-marker icon</title>
