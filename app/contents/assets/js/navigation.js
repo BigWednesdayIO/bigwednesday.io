@@ -6,15 +6,15 @@
 			subNavElements = {},
 			transitionendEvent;
 
-		transitionendEvent = (function whichTransitionEvent(){
+		transitionendEvent = (function whichTransitionEvent () {
 			var t,
-			el = document.createElement("fakeelement");
+				el = document.createElement('fakeelement');
 
 			var transitions = {
-				"transition" : "transitionend",
-				"OTransition" : "oTransitionEnd",
-				"MozTransition" : "transitionend",
-				"WebkitTransition": "webkitTransitionEnd"
+				transition : 'transitionend',
+				OTransition : 'oTransitionEnd',
+				MozTransition : 'transitionend',
+				WebkitTransition: 'webkitTransitionEnd'
 			}
 
 			for (t in transitions) {
