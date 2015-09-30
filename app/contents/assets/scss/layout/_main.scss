@@ -1,3 +1,8 @@
+body {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
 .content-wrap {
 	max-width: $max-width;
 	margin-left: auto;
@@ -7,6 +12,7 @@
 .page-body {
 	position: relative;
 	padding: $pad $pad 0;
+	flex-grow: 1;
 
 	@media (min-width: $bp-medium) {
 		padding-top: $pad-double;
