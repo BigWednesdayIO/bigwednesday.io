@@ -32,6 +32,11 @@ h3 {
 	margin-top: 0;
 }
 
+.tagline {
+	margin: -1em 0 1em;
+	font-size: em(18);
+}
+
 p {
 	margin: 0;
 
@@ -72,6 +77,7 @@ a {
 	cursor: pointer;
 	text-transform: uppercase;
 	text-decoration: none;
+	white-space: nowrap;
 
 	& + & {
 		margin-left: $pad-half;
@@ -85,6 +91,7 @@ a {
 	border: $ui-primary-border;
 
 	&:hover {
+		color: $ui-primary-text;
 		background: $ui-primary-highlight;
 	}
 }
@@ -99,6 +106,19 @@ a {
 		color: $ui-secondary-text;
 		background: $ui-secondary-highlight;
 		border-color: $ui-secondary-highlight-border-color;
+	}
+}
+
+.button--subtle {
+	@extend %button;
+	background: #8FA4AE;
+	color: $ui-primary-text;
+	box-shadow: 0 0 0 transparent;
+	transition: box-shadow .2s;
+
+	&:hover {
+		color: $ui-primary-text;
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0px 4px rgba(0, 0, 0, 0.12);
 	}
 }
 
@@ -117,6 +137,18 @@ a {
 	align-items: center;
 	box-sizing: content-box;
 	height: 1.5em; // button's line-height
+}
+
+.icon-tile {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 6.6rem;
+	width: 6rem;
+	flex-shrink: 0;
+	color: $ui-primary-text;
+	background: url('/assets/images/icons/hexagon.svg') no-repeat 50% 50%;
+	background-size: cover;
 }
 
 input {
@@ -165,6 +197,12 @@ label {
 	}
 }
 
+.bulleted {
+	list-style-type: disc;
+	padding-left: 1.2em;
+	margin: $pad-half 0;
+}
+
 %clearfix {
 	&::before,
 	&::after {
@@ -174,5 +212,13 @@ label {
 
 	&::after {
 		clear: both;
+	}
+}
+
+.inline-list {
+	margin: 0;
+
+	> li {
+		display: inline;
 	}
 }

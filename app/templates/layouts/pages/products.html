@@ -8,7 +8,7 @@
 			<h2 id="{{ section.name | lower | replace(' ', '-') }}" class="media-group__heading">{{ section.name }}</h2>
 			<ul class="media-group__listing">
 				{% for product in section.products %}
-					<li class="media-item">
+					<li class="media-item media-item--highlight">
 						<div class="media-item__icon">
 							<svg height="28" width="28">
 								<use xlink:href="#{{ product.icon }}"></use>

@@ -10,8 +10,9 @@
 		font-size: 4.1rem;
 		margin-bottom: .2em;
 
-		span {
+		em {
 			color: lighten($brand, 5%);
+			font-style: normal;
 		}
 	}
 

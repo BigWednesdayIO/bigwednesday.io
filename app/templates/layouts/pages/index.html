@@ -1,11 +1,56 @@
-{% extends "layouts/default.html" %}
+{% extends "layouts/default-with-featured.html" %}
 
 {% set hero_style = 'hero--homepage' %}
 
 {% block hero %}
 <div class="hero__text-left">
-	<h1>Fixing <span>enterprise software</span>, one application at a time.</h1>
-	<p>Personalise &amp; tailor every interaction with your customer to maximize the impact.</p>
+	<h1>Fixing <em>enterprise software</em>, one application at a time.</h1>
+	<p>Providing the building blocks to enable the rapid creation of of powerful commerce applications for your industry</p>
 	<p><button class="button--primary button--hero">Get started now for FREE</button></p>
 </div>
+{% endblock %}
+
+{% block featured %}
+{% include "includes/pub-buying-club-feature.html" %}
+{% endblock %}
+
+{% block content %}
+<h2>Feature-packed commerce</h2>
+<p class="tagline">A flexible set of tools and functionality for modern commerce.</p>
+
+<ul class="grid-list grid-list--full info-grid">
+	<li class="media-item">
+		<div class="media-item__icon">
+			<svg height="28" width="28">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#toolkit"></use>
+			</svg>
+		</div>
+		<div class="media-item__text">
+			<h3 class="media-item__title">Powerful toolkit</h3>
+			<p class="media-item__preview">Works with any type of business</p>
+		</div>
+	</li>
+	<li class="media-item">
+		<div class="media-item__icon">
+			<svg height="28" width="28">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#scale"></use>
+			</svg>
+		</div>
+		<div class="media-item__text">
+			<h3 class="media-item__title">Perfectly scaled</h3>
+			<p class="media-item__preview">Robust support for companies of all sizes</p>
+		</div>
+	</li>
+	<li class="media-item">
+		<div class="media-item__icon">
+			<svg height="28" width="28">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock-outline"></use>
+			</svg>
+		</div>
+		<div class="media-item__text">
+			<h3 class="media-item__title">Seamless security</h3>
+			<p class="media-item__preview">Trusted, secure and headache-free</p>
+		</div>
+	</li>
+</ul>
 {% endblock %}

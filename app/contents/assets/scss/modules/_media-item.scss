@@ -3,19 +3,13 @@
 	align-items: center;
 	padding: $pad;
 
-	&__icon {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		height: 6.6rem;
-		width: 6rem;
-		flex-shrink: 0;
-		margin-right: $pad;
-	}
-
 	&__text {
 		// needed for IE 10
 		flex-shrink: 1;
+	}
+
+	&__icon {
+		margin-right: $pad;
 	}
 
 	&__title {

@@ -1,7 +1,9 @@
 ---
-template: layouts/default.html
+template: layouts/product.html
 title: Export API
+tagline: Export data into your own BI solution.
+icon: code
 section: products
 ---
 
-Export data into your own BI solution.
+

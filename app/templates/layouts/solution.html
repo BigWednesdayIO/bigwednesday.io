@@ -1,0 +1,13 @@
+{% extends "layouts/default.html" %}
+
+{% block hero %}
+<div class="logo-header">
+	<span class="logo-header__icon">
+		<img src="{{ assets }}/images/{{ page.metadata.logo }}" alt="{{ page.metadata.title }} Logo" />
+	</span>
+	<div class="logo-header__text">
+		<h1>{{ page.metadata.title }}</h1>
+		<p>{{ page.metadata.tagline }}</p>
+	</div>
+</div>
+{% endblock %}
