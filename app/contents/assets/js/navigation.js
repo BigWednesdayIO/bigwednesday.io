@@ -52,7 +52,7 @@
 					visibleSibling.removeEventListener(transitionendEvent, showNewSubNav, false);
 				}
 
-				if (!isHovered(subNavLinks[id]) && !isHovered(subNavLinks[id])) {
+				if (!isHovered(subNavLinks[id]) && !isHovered(subNavElements[id])) {
 					// if this element is no longer being hovered, don't show
 					return;
 				}

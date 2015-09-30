@@ -1,9 +1,26 @@
 .icon-header {
-	@extend %clearfix;
+	display: flex;
 
 	&__icon {
-		float: left;
-		margin-right: $pad*.75;
+		margin-right: 1.4rem;
 		color: $brand;
+
+		.hero & {
+			color: inherit;
+		}
+	}
+
+	.hero & {
+		align-items: center;
+	}
+}
+
+#{$no-flexbox} {
+	.icon-header {
+		@extend %clearfix;
+
+		&__icon {
+			float: left;
+		}
 	}
 }
