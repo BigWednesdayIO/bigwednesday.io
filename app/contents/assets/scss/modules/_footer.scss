@@ -1,7 +1,16 @@
-
-
 .site-footer {
-	padding: $pad-half $pad;
+	&__navigation {
+		padding: $pad $pad $pad*3;
+
+		&__inner {
+			margin-left: -$pad-and-half;
+			margin-right: -$pad-and-half;
+		}
+	}
+
+	&__lower {
+		padding: $pad-half $pad;
+	}
 
 	&__inner {
 		display: flex;

@@ -1,11 +1,14 @@
 {% extends "layouts/base.html" %}
+
 {% block page %}
 <div class="page-body">
 	<div class="content-wrap">
 		<div class="page-body__inner">
 			<main class="page-body__primary">
 				{% block content %}
-					{{ page.html }}
+					<div class="markdown">
+						{{ page.html }}
+					</div>
 				{% endblock %}
 			</main>
 		</div>

@@ -39,9 +39,9 @@ body {
 		&__secondary {
 			width: (1/3)*100%;
 
-			&:empty {
-				display: none;
-			}
+			// &:empty {
+			// 	display: none;
+			// }
 		}
 	}
 }

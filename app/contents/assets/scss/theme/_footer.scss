@@ -1,7 +1,16 @@
 .site-footer {
 	font-family: $font-primary;
-	background: $gradient;
+	background: $light-grey-one;
 	border-top: $border;
+
+	&__navigation {
+		background: transparent !important;
+	}
+
+	&__lower {
+		background: $light-grey-two;
+		border-top: $border;
+	}
 
 	&__inner {
 		font-size: 1.2rem;

@@ -23,7 +23,9 @@
 		<div class="page-body__inner">
 			<main class="page-body__primary">
 				{% block content %}
-					{{ page.html }}
+					<div class="markdown">
+						{{ page.html }}
+					</div>
 				{% endblock %}
 			</main>
 			<aside class="page-body__secondary">{% block aside %}{% endblock %}</aside>

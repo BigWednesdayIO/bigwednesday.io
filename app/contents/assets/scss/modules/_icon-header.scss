@@ -5,6 +5,11 @@
 		margin-right: 1.4rem;
 		color: $brand;
 
+		svg,
+		img {
+			display: block;
+		}
+
 		.hero & {
 			color: inherit;
 		}
@@ -12,6 +17,23 @@
 
 	.hero & {
 		align-items: center;
+	}
+}
+
+.logo-header {
+	@extend .icon-header;
+
+	&__icon {
+		margin-right: 1.8rem;
+
+		svg,
+		img {
+			display: block;
+		}
+	}
+
+	& &__text h1 {
+		margin-bottom: 0;
 	}
 }
 
