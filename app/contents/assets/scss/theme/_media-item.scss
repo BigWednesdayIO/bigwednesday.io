@@ -5,17 +5,19 @@
 	margin-right: -1px;
 	transition: border-color .15s, transform .15s;
 
-	&:hover {
-		box-shadow: $section-shadow;
-		border-color: $ui-primary;
-		color: $ui-primary;
-		transform: translateY(-2px);
-	}
+	&--highlight {
+		&:hover {
+			box-shadow: $section-shadow;
+			border-color: $ui-primary;
+			color: $ui-primary;
+			transform: translateY(-2px);
+		}
 
-	&:hover & {
-		&__title,
-		&__preview {
-			color: inherit;
+		&:hover & {
+			&__title,
+			&__preview {
+				color: inherit;
+			}
 		}
 	}
 
