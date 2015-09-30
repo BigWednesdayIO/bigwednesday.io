@@ -1,11 +1,20 @@
-{% extends "layouts/default.html" %}
+{% extends "layouts/default-with-featured.html" %}
 
 {% set hero_style = 'hero--homepage' %}
 
 {% block hero %}
 <div class="hero__text-left">
 	<h1>Fixing <span>enterprise software</span>, one application at a time.</h1>
-	<p>Personalise &amp; tailor every interaction with your customer to maximize the impact.</p>
+	<p>Providing the building blocks to enable the rapid creation of of powerful commerce applications for your industry</p>
 	<p><button class="button--primary button--hero">Get started now for FREE</button></p>
 </div>
+{% endblock %}
+
+{% block featured %}
+<div class="featured__logo"><img src="{{assets}}/images/pub-buying-club.svg" alt="Pub Buying Club Logo" /></div>
+<div class="featured__text">
+	<h3 class="featured__title">Introducing Pub Buying Club</h3>
+	<p class="featured__preview">Our online marketplace provides a one-stop-shop for pub lessees wanting to access a wide range of products and services provided by multiple suppliers.</p>
+</div>
+<a href="/solutions/pub-buying-club" class="button--subtle featured__action">Learn more</a>
 {% endblock %}

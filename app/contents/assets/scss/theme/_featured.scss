@@ -1,0 +1,15 @@
+.featured {
+	background: $featured;
+	box-shadow: $section-shadow;
+
+
+	&__title,
+	&__text {
+		font-weight: 300;
+		color: $featured-text;
+	}
+
+	&__preview {
+		line-height: 1.4;
+	}
+}

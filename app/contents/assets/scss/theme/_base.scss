@@ -72,6 +72,7 @@ a {
 	cursor: pointer;
 	text-transform: uppercase;
 	text-decoration: none;
+	white-space: nowrap;
 
 	& + & {
 		margin-left: $pad-half;
@@ -85,6 +86,7 @@ a {
 	border: $ui-primary-border;
 
 	&:hover {
+		color: $ui-primary-text;
 		background: $ui-primary-highlight;
 	}
 }
@@ -99,6 +101,19 @@ a {
 		color: $ui-secondary-text;
 		background: $ui-secondary-highlight;
 		border-color: $ui-secondary-highlight-border-color;
+	}
+}
+
+.button--subtle {
+	@extend %button;
+	background: #8FA4AE;
+	color: $ui-primary-text;
+	box-shadow: 0 0 0 transparent;
+	transition: box-shadow .2s;
+
+	&:hover {
+		color: $ui-primary-text;
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0px 4px rgba(0, 0, 0, 0.12);
 	}
 }
 
