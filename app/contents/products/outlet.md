@@ -1,6 +1,7 @@
 ---
-template: layouts/default.html
+template: layouts/product.html
 title: Outlet
+icon: map-marker
 section: products
 ---
 

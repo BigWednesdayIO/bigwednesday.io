@@ -1,7 +1,9 @@
 ---
-template: layouts/default.html
+template: layouts/product.html
 title: User
+tagline: An intuitive app used for the maintenance and management of users.
+icon: emoticon-neutral
 section: products
 ---
 
-Nunc non enim sapien. Donec tristique finibus leo sed tincidunt. Duis maximus non arcu et tempus. Donec fermentum, erat ut faucibus sollicitudin, justo lectus blandit risus, in iaculis nunc nisi eu dui. Nullam non volutpat mi. Suspendisse dignissim sodales tempus. Proin ac volutpat urna. Vestibulum ac ligula nec tortor mollis sodales sed sit amet lorem
+Assign users a role such as lessee, business relationship manager, customer service agent, sales agent or administrator giving each different access to and use of management apps: give business relationship managers or customer service agents the same view of products and promotions as specific customers but without the ability to actually place orders; give sales agents the same view of products and promotions as specific customers with the ability to place orders too.

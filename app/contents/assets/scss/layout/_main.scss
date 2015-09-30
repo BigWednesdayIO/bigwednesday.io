@@ -11,11 +11,11 @@ body {
 
 .page-body {
 	position: relative;
-	padding: $pad $pad 0;
+	padding: $pad;
 	flex-grow: 1;
 
 	@media (min-width: $bp-medium) {
-		padding-top: $pad-double;
+		padding: $pad-double $pad;
 
 		&__inner {
 			display: flex;

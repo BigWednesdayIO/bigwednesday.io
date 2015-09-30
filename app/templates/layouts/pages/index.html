@@ -4,19 +4,14 @@
 
 {% block hero %}
 <div class="hero__text-left">
-	<h1>Fixing <span>enterprise software</span>, one application at a time.</h1>
+	<h1>Fixing <em>enterprise software</em>, one application at a time.</h1>
 	<p>Providing the building blocks to enable the rapid creation of of powerful commerce applications for your industry</p>
 	<p><button class="button--primary button--hero">Get started now for FREE</button></p>
 </div>
 {% endblock %}
 
 {% block featured %}
-<div class="featured__logo"><img src="{{assets}}/images/pub-buying-club.svg" alt="Pub Buying Club Logo" /></div>
-<div class="featured__text">
-	<h2 class="featured__title">Introducing Pub Buying Club</h2>
-	<p class="featured__preview">Our online marketplace provides a one-stop-shop for pub lessees wanting to access a wide range of products and services provided by multiple suppliers.</p>
-</div>
-<a href="/solutions/pub-buying-club" class="button--subtle featured__action">Learn more</a>
+{% include "includes/pub-buying-club-feature.html" %}
 {% endblock %}
 
 {% block content %}

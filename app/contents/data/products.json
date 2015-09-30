@@ -19,7 +19,8 @@
 			}, {
 				"name": "Product",
 				"href": "/products/product",
-				"icon": "package-variant-closed"
+				"icon": "package-variant-closed",
+				"description": "Acquire, manage, and publish accurate product information to all channels."
 			}, {
 				"name": "Promote",
 				"href": "/products/promote",
@@ -47,7 +48,8 @@
 			}, {
 				"name": "User",
 				"href": "/products/user",
-				"icon": "emoticon-neutral"
+				"icon": "emoticon-neutral",
+				"description": "An intuitive app used for the maintenance and management of users"
 			}, {
 				"name": "Report",
 				"href": "/products/report",

@@ -22,10 +22,7 @@
 	}
 
 	&__icon {
-		// TODO test for polygon support and use it if possible
-		color: $ui-primary-text;
-		background: url('/assets/images/icons/hexagon.svg') no-repeat 50% 50%;
-		background-size: cover;
+		@extend .icon-tile;
 	}
 
 	&__title {
