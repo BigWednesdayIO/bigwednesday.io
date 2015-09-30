@@ -13,8 +13,37 @@
 {% block featured %}
 <div class="featured__logo"><img src="{{assets}}/images/pub-buying-club.svg" alt="Pub Buying Club Logo" /></div>
 <div class="featured__text">
-	<h3 class="featured__title">Introducing Pub Buying Club</h3>
+	<h2 class="featured__title">Introducing Pub Buying Club</h2>
 	<p class="featured__preview">Our online marketplace provides a one-stop-shop for pub lessees wanting to access a wide range of products and services provided by multiple suppliers.</p>
 </div>
 <a href="/solutions/pub-buying-club" class="button--subtle featured__action">Learn more</a>
+{% endblock %}
+
+{% block content %}
+<h2>Feature-packed commerce</h2>
+<p class="tagline">A flexible set of tools and functionality for modern commerce.</p>
+
+<ul class="grid-list grid-list--full info-grid">
+	<li>
+		<h3 class="icon-header">
+			<svg class="icon-header__icon" height="32" width="32"><use xlink:href="#toolkit"></use></svg>
+			<span class="icon-header__text">Powerful toolkit</span>
+		</h3>
+		<p>Works with any type of business</p>
+	</li>
+	<li>
+		<h3 class="icon-header">
+			<svg class="icon-header__icon" height="32" width="32"><use xlink:href="#scale"></use></svg>
+			<span class="icon-header__text">Perfectly scaled</span>
+		</h3>
+		<p>Robust support for companies of all sizes</p>
+	</li>
+	<li>
+		<h3 class="icon-header">
+			<svg class="icon-header__icon" height="32" width="32"><use xlink:href="#lock-outline"></use></svg>
+			<span class="icon-header__text">Seamless security</span>
+		</h3>
+		<p>Trusted, secure and headache-free</p>
+	</li>
+</ul>
 {% endblock %}

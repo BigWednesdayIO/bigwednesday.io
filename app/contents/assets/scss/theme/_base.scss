@@ -32,6 +32,10 @@ h3 {
 	margin-top: 0;
 }
 
+.tagline {
+	margin: $pad 0;
+}
+
 p {
 	margin: 0;
 
@@ -189,5 +193,13 @@ label {
 
 	&::after {
 		clear: both;
+	}
+}
+
+.inline-list {
+	margin: 0;
+
+	> li {
+		display: inline;
 	}
 }

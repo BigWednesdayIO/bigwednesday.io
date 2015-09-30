@@ -6,4 +6,16 @@
 	&__inner {
 		font-size: 1.2rem;
 	}
+
+	&__info {
+		> li + li {
+			&::before {
+				content: " · ";
+			}
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
 }
