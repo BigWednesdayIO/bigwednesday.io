@@ -11,6 +11,13 @@
     "wintersmith-nunjucks",
     "wintersmith-livereload"
   ],
+  "nunjucks": {  
+    "filterdir": "app/filters",
+    "filters": [
+      "split",
+      "id"
+    ]
+  },
   "require": {
     "moment": "moment",
     "_": "underscore",
