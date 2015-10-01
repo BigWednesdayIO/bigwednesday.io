@@ -1,0 +1,8 @@
+.section-links {
+	padding: $pad;
+	line-height: 1;
+
+	li + li {
+		margin-left: $pad-double;
+	}
+}

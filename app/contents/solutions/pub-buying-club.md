@@ -5,6 +5,7 @@ tagline: Feature-packed B2B Commerce
 logo: pub-buying-club-alt.svg
 hero: hero--pub.jpg
 section: solutions
+sections: Quick order, Similar products, Personalisation
 ---
 
 Your lessees want the convenience of being able to place their weekly orders when it suits them.
