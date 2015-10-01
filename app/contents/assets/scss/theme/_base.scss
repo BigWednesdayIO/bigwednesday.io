@@ -203,10 +203,22 @@ label {
 	}
 }
 
+.bulleted,
+.numbered {
+	padding-left: 1.5em;
+	margin: $pad-half 0;
+
+	li + li {
+		margin-top: $pad-half;
+	}
+}
+
 .bulleted {
 	list-style-type: disc;
-	padding-left: 1.2em;
-	margin: $pad-half 0;
+}
+
+.numbered {
+	list-style-type: decimal;
 }
 
 %clearfix {
