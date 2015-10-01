@@ -4,6 +4,7 @@
 			subNav = document.getElementById('sub-nav'),
 			subNavLinks = document.getElementsByClassName('with-sub-nav'),
 			subNavElements = {},
+			timers = {},
 			transitionendEvent;
 
 		transitionendEvent = (function whichTransitionEvent () {
@@ -35,43 +36,49 @@
 		}
 
 		function showSubNav (id) {
-			var visibleSibling = Object.keys(subNavElements).filter(function(key) {
-				// Siblings only
-				return key !== id;
-			}).map(function(key) {
-				// Now a list of the elements
-				return subNavElements[key]
-			}).filter(function(elem) {
-				// Only the visible ones
-				return elem.dataset.visible === 'true' || !elem.classList.contains('is-hidden');
-			})[0];
+			clearTimeout(timers[id]);
+			timers[id] = setTimeout(function() {
+				var visibleSibling = Object.keys(subNavElements).filter(function(key) {
+					// Siblings only
+					return key !== id;
+				}).map(function(key) {
+					// Now a list of the elements
+					return subNavElements[key]
+				}).filter(function(elem) {
+					// Only the visible ones
+					return elem.dataset.visible === 'true' || !elem.classList.contains('is-hidden');
+				})[0];
 
-			var showNewSubNav = function() {
-				// Fires once
+				var showNewSubNav = function() {
+					// Fires once
+					if (visibleSibling) {
+						visibleSibling.removeEventListener(transitionendEvent, showNewSubNav, false);
+					}
+
+					if (!isHovered(subNavLinks[id]) && !isHovered(subNavElements[id])) {
+						// if this element is no longer being hovered, don't show
+						return;
+					}
+
+					subNavLinks[id].classList.add('is-open');
+					subNavElements[id].classList.remove('is-hidden');
+					subNavElements[id].dataset.visible = true;
+				}
+
 				if (visibleSibling) {
-					visibleSibling.removeEventListener(transitionendEvent, showNewSubNav, false);
+					visibleSibling.addEventListener(transitionendEvent, showNewSubNav, false);
+				} else {
+					showNewSubNav();
 				}
-
-				if (!isHovered(subNavLinks[id]) && !isHovered(subNavElements[id])) {
-					// if this element is no longer being hovered, don't show
-					return;
-				}
-
-				subNavLinks[id].classList.add('is-open');
-				subNavElements[id].classList.remove('is-hidden');
-				subNavElements[id].dataset.visible = true;
-			}
-
-			if (visibleSibling) {
-				visibleSibling.addEventListener(transitionendEvent, showNewSubNav, false);
-			} else {
-				showNewSubNav();
-			}
+			}, 100);
 		}
 
 		function hideSubNav (id) {
-			subNavLinks[id].classList.remove('is-open');
-			subNavElements[id].classList.add('is-hidden');
+			clearTimeout(timers[id]);
+			timers[id] = setTimeout(function() {
+				subNavLinks[id].classList.remove('is-open');
+				subNavElements[id].classList.add('is-hidden');
+			}, 100);
 		}
 
 		if (subNavLinks.length) {
