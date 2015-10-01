@@ -24,11 +24,11 @@
 		"name": "Mix and Match",
 		"description": "Take your pick from our growing family of intuitive management apps and microservices to quickly enable the commerce features your business needs."
 	}, {
-		"icon": "camcorder",
+		"icon": "credit-card",
 		"name": "Accounting Integrations",
 		"description": "With real-time access to reporting data, you can connect with your existing accounting or ERP systems."
 	}, {
-		"icon": "credit-card",
+		"icon": "camcorder",
 		"name": "Audit",
 		"description": "All user actions will generate an audit record containing a summarised description of the action, the user and a timestamp."
 	}, {
