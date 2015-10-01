@@ -221,6 +221,10 @@ label {
 	list-style-type: decimal;
 }
 
+.centred {
+	text-align: center;
+}
+
 %clearfix {
 	&::before,
 	&::after {
