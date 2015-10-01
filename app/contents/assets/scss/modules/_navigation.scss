@@ -90,7 +90,7 @@
 
 .sub-nav {
 	overflow: hidden;
-	transition: .5s height .1s ease-in-out;
+	transition: .5s height ease-in-out;
 
 	&.measure-me {
 		z-index: -1;
