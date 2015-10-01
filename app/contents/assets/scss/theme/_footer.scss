@@ -5,6 +5,12 @@
 
 	&__navigation {
 		background: transparent !important;
+
+		.sub-nav__heading {
+			text-transform: none;
+			color: $nav;
+			font-size: 1.8rem;
+		}
 	}
 
 	&__lower {
