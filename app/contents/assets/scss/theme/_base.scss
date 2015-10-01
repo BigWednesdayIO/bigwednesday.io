@@ -181,15 +181,21 @@ label {
 }
 
 .panel {
-	padding: $pad 0 0;
+	padding: $pad;
+	background: $gradient;
+	border-bottom: $border;
+	box-shadow: $shadow;
+}
+
+.modal {
+	@extend .panel;
+
 	margin-left: auto;
 	margin-right: auto;
+	border: $border;
 
 	@media (min-width: $bp-tiny) {
 		padding: $pad-double;
-		background: $gradient;
-		border: $border;
-		box-shadow: $shadow;
 	}
 
 	&--narrow {
