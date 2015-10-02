@@ -33,7 +33,7 @@ h3 {
 }
 
 .tagline {
-	margin: -1em 0 1em;
+	margin: -$pad 0 $pad-double;
 	font-size: em(18);
 }
 
