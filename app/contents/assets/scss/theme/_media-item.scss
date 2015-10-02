@@ -24,6 +24,26 @@
 		@extend .icon-tile;
 	}
 
+	&__image {
+		clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+		/* Detect and fallback to:
+
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: url("/assets/images/team/frame.png") 50% 50% no-repeat;
+			background-size: 101% 101%;
+		} */
+	}
+
 	&__title {
 		font-size: 1.6rem;
 	}

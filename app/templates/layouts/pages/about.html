@@ -1,0 +1,44 @@
+{% extends "layouts/full.html" %}
+
+{% set team = contents.data['team.json'].metadata %}
+
+{% block content %}
+<h2>About Big Wednesday IO</h2>
+
+<p class="tagline">Big Wednesday IO provides the building blocks to enable the rapid creation of complex commerce applications online and in mobile apps.</p>
+
+<div class="content-wrap content-wrap--narrow">
+	<ul class="grid-list info-grid">
+		{% for member in team %}
+			<li class="media-item">
+				<div class="media-item__image"><img src="{% if member.image %}{{ assets }}/images/team/{{ member.image }}{% else %}//placehold.it/100x110{% endif %}" alt /></div>
+				<div class="media-item__text">
+					<h3 class="media-item__title">{{ member.name }}</h3>
+					<p class="media-item__preview">{{ member.role }}</p>
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+
+<h2>Who we are</h2>
+
+<p>We love the web and care about beautiful code, products and documentation. We think that building an internet business is above all about code craftsmanship and superb design.</p>
+
+<h2>Contact Us</h2>
+
+<ul class="grid-list grid-list--full info-grid">
+	<li>
+		<h3>Sales</h3>
+		<p><a href="mailto:sales@bigwednesday.io">sales@bigwednesday.io</a></p>
+	</li>
+	<li>
+		<h3>Help & Support</h3>
+		<p><a href="mailto:support@bigwednesday.io">support@bigwednesday.io</a></p>
+	</li>
+	<li>
+		<h3>General Enquiries</h3>
+		<p><a href="mailto:info@bigwednesday.io">info@bigwednesday.io</a></p>
+	</li>
+</ul>
+{% endblock %}
