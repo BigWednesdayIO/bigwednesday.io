@@ -8,16 +8,18 @@
 			<h2 id="{{ section.name | lower | replace(' ', '-') }}" class="media-group__heading">{{ section.name }}</h2>
 			<ul class="media-group__listing">
 				{% for product in section.products %}
-					<li class="media-item media-item--highlight">
-						<div class="media-item__icon">
-							<svg height="28" width="28">
-								<use xlink:href="#{{ product.icon }}"></use>
-							</svg>
-						</div>
-						<div class="media-item__text">
-							<h3 class="media-item__title">{{ product.name }}</h3>
-							{% if product.description %}<p class="media-item__preview">{{ product.description }}</p>{% endif %}
-						</div>
+					<li>
+						<a href="{{ product.href }}" class="media-item media-item--highlight">
+							<div class="media-item__icon">
+								<svg height="28" width="28">
+									<use xlink:href="#{{ product.icon }}"></use>
+								</svg>
+							</div>
+							<div class="media-item__text">
+								<h3 class="media-item__title">{{ product.name }}</h3>
+								{% if product.description %}<p class="media-item__preview">{{ product.description }}</p>{% endif %}
+							</div>
+						</a>
 					</li>
 				{% endfor %}
 			</ul>
