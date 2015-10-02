@@ -31,7 +31,7 @@
 	}, {
 		"icon": "camcorder",
 		"name": "Audit",
-		"description": "All user actions will generate an audit record containing a summarised description of the action, the user and a timestamp."
+		"description": "All user actions will generate an audit record containing a summary description of the action, the user and a timestamp."
 	}, {
 		"icon": "xml",
 		"name": "Built by developers for developers",
