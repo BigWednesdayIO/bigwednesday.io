@@ -94,7 +94,7 @@
 
 				subNavElements[id] = document.getElementById('sub-nav-' + id);
 
-				function show (e) {
+				function show () {
 					showSubNav(id);
 				}
 
@@ -110,7 +110,7 @@
 
 					if (isOpen(subNavElements[id])) {
 						hide();
-						document.body.removeEventListener('touchstart', tappedAway);
+						document.body.removeEventListener('touchend', tappedAway);
 					}
 				}
 
@@ -118,8 +118,8 @@
 					if (!isOpen(subNavElements[id])) {
 						e.preventDefault();
 					}
-					show(e);
-					document.body.addEventListener('touchstart', tappedAway, false);
+					show();
+					document.body.addEventListener('touchend', tappedAway, false);
 				}
 
 				subNavElements[id].style.height = subNavElements[id].getBoundingClientRect().height + 'px';
@@ -127,10 +127,10 @@
 				subNavElements[id].classList.remove('measure-me');
 
 				subNavLink.addEventListener('mouseenter', show, false);
-				subNavLink.addEventListener('touchstart', showTap, false);
+				subNavLink.addEventListener('touchend', showTap, false);
 				subNavLink.addEventListener('mouseleave', hide, false);
 				subNavElements[id].addEventListener('mouseenter', show, false);
-				subNavElements[id].addEventListener('touchstart', function(e) {
+				subNavElements[id].addEventListener('touchend', function(e) {
 					showTap(e);
 					nope = true;
 				}, false);
