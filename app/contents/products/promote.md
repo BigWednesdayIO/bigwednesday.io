@@ -1,7 +1,7 @@
 ---
 template: layouts/product.html
 title: Promote
-tagline: By allowing you easily to create personalised offers we have created a platform for increased customer spend.
+tagline: By allowing you easily to create personalised offers we have created a platform for increased customer spend
 icon: sale
 section: products
 ---

@@ -20,7 +20,7 @@
 				"name": "Product",
 				"href": "/products/product",
 				"icon": "package-variant-closed",
-				"description": "Acquire, manage, and publish accurate product information to all channels."
+				"description": "Acquire, manage, and publish accurate product information to all channels"
 			}, {
 				"name": "Promote",
 				"href": "/products/promote",
@@ -35,7 +35,7 @@
 				"name": "Service",
 				"href": "/products/service",
 				"icon": "odnoklassniki",
-				"description": "Empower agents. Wow customers."
+				"description": "Empower agents. Wow customers"
 			}, {
 				"name": "Customer",
 				"href": "/products/customer",
@@ -83,7 +83,7 @@
 				"name": "Customer Cloud",
 				"href": "/products/customer-cloud",
 				"icon": "cloud-outline",
-				"description": "Out of the box big data architecture, processing and storage giving you a golden record of your customer."
+				"description": "Out of the box big data architecture, processing and storage giving you a golden record of your customer"
 			}
 		]
 	}

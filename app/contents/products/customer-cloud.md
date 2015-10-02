@@ -1,7 +1,7 @@
 ---
 template: layouts/product.html
 title: Customer Cloud
-tagline: Out of the box big data architecture, processing and storage giving you a <strong>golden record</strong> of your customer.
+tagline: Out of the box big data architecture, processing and storage giving you a <strong>golden record</strong> of your customer
 icon: cloud-outline
 section: products
 ---

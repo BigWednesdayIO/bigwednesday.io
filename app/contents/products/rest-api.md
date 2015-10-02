@@ -1,7 +1,7 @@
 ---
 template: layouts/product.html
 title: REST API
-tagline: A suite of APIs that power commerce for businesses of all sizes.
+tagline: A suite of APIs that power commerce for businesses of all sizes
 icon: code
 section: products
 ---

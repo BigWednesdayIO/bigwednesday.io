@@ -1,7 +1,7 @@
 ---
 template: layouts/product.html
 title: Order
-tagline: Provides a centralized inventory, order promising and fulfillment hub to support omni-channel fulfillment enabling you to make better decisions about how to promise and fulfill customer orders, resulting in improved profitability and customer satisfaction.
+tagline: Provides a centralized inventory, order promising and fulfillment hub to support omni-channel fulfillment enabling you to make better decisions about how to promise and fulfill customer orders, resulting in improved profitability and customer satisfaction
 icon: cubes
 section: products
 ---

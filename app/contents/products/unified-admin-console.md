@@ -1,7 +1,7 @@
 ---
 template: layouts/product.html
 title: Unified Admin Console
-tagline: A powerful container for our management apps built using a modern, fast, intuitive UI framework.
+tagline: A powerful container for our management apps built using a modern, fast, intuitive UI framework
 icon: google-controller
 section: products
 ---
