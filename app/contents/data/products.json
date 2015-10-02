@@ -29,7 +29,7 @@
 			}, {
 				"name": "Order",
 				"href": "/products/order",
-				"icon": "cubes",
+				"icon": "order",
 				"description": ""
 			}, {
 				"name": "Service",
