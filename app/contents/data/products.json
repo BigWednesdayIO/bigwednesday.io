@@ -65,12 +65,12 @@
 			{
 				"name": "Import API",
 				"href": "/products/import-api",
-				"icon": "code",
+				"icon": "import",
 				"description": "Import data from any external data source"
 			}, {
 				"name": "Export API",
 				"href": "/products/export-api",
-				"icon": "code",
+				"icon": "export",
 				"description": "Export data into your own BI solution"
 			}, {
 				"name": "REST API",
