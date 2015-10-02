@@ -1,7 +1,7 @@
 ---
 template: layouts/solution.html
 title: Pub Buying Club
-tagline: Feature-packed B2B Commerce
+tagline: A marketplace providing a one-stop-shop for lessees wanting to access a wide range of products and services online
 logo: pub-buying-club-alt.svg
 hero: hero--pub.jpg
 section: solutions
@@ -52,6 +52,8 @@ With real-time access to reporting data, you can connect with your existing acco
 
 ## Promotions
 
+A new industry-leading promotion engine providing greatly enhanced functionality.
+
 Promotion eligibility based on any attribute or set of attributes from the hundreds available in the Customer Cloud.
 
 Time-dependent promotions are supported e.g. “buy a minimum quantity (or volume) or product x over three weeks and in week four get product y free”.
@@ -70,4 +72,6 @@ Features all aspects of the lessee’s outlet details, contacts, agreements, tie
 
 Automatic product recommendations. You control who sees which recommendations by creating simple business rules for orthogonal or overlapping user segments.
 
-You decide how recommendations should look and where to show them: with instant search results and/or on your product and basket pages. 
+You decide how recommendations should look and where to show them: with instant search results and/or on your product and basket pages.
+
+We give you detailed statistics and data about how your recommendations are performing.

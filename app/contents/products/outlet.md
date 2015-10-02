@@ -1,6 +1,7 @@
 ---
 template: layouts/product.html
-title: Outlet
+title: Outlet,
+tagline: An intuitive app used for the maintenance and management of outlet, territory, region and area information
 icon: store
 section: products
 ---

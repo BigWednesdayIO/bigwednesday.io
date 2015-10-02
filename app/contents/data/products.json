@@ -10,7 +10,8 @@
 			}, {
 				"name": "Dashboard",
 				"href": "/products/dashboard",
-				"icon": "view-dashboard"
+				"icon": "view-dashboard",
+				"description": "An actionable dashboard of your sales, orders, and traffic helps you make the right choices for your business"
 			}, {
 				"name": "Personalisation",
 				"href": "/products/personalisation",
@@ -25,12 +26,12 @@
 				"name": "Promote",
 				"href": "/products/promote",
 				"icon": "sale",
-				"description": "Promotions supercharged with the power of Customer Cloud"
+				"description": "Our new industry-leading promotion engine powers increased customer spend"
 			}, {
 				"name": "Order",
 				"href": "/products/order",
 				"icon": "order",
-				"description": ""
+				"description": "Bringing together all the information your teams need to provide the best customer service experience with increased sales volumes"
 			}, {
 				"name": "Service",
 				"href": "/products/service",
@@ -44,17 +45,18 @@
 			}, {
 				"name": "Outlet",
 				"href": "/products/outlet",
-				"icon": "store"
+				"icon": "store",
+				"description": "An intuitive app used for the maintenance and management of outlet, territory, region and area information"
 			}, {
 				"name": "User",
 				"href": "/products/user",
 				"icon": "accessibility",
-				"description": "An intuitive app used for the maintenance and management of users"
+				"description": "An intuitive app used for the maintenance and management of users and roles"
 			}, {
 				"name": "Report",
 				"href": "/products/report",
 				"icon": "file-chart",
-				"description": "Produce reports that give a holistic view of your operation’s performance across all sales channels"
+				"description": "What do you know about your customers today?"
 			}
 		]
 	}, {
@@ -73,7 +75,8 @@
 			}, {
 				"name": "REST API",
 				"href": "/products/rest-api",
-				"icon": "code"
+				"icon": "code",
+				"description": "API driven data, delivered everywhere. Welcome to the post-browser era"
 			}
 		]
 	}, {
