@@ -1,0 +1,20 @@
+.api-snippet {
+	display: block;
+	padding: $pad-and-half $pad-double;
+	margin-right: $pad*3;
+	border: $border;
+	border-radius: $pad-half;
+	background: $gradient;
+	font-family: monospace;
+	font-size: 1.2em;
+
+	.method {
+		font-weight: bold;
+	}
+
+	& + & {
+		margin: -$pad 0 0 $pad*3;
+		background: $body-bg;
+		box-shadow: $shadow;
+	}
+}
