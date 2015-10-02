@@ -14,6 +14,10 @@ body {
 	padding: $pad;
 	flex-grow: 1;
 
+	&__primary + &__secondary {
+		margin: $pad-double 0 0;
+	}
+
 	@media (min-width: $bp-medium) {
 		padding: $pad-double $pad;
 
@@ -29,7 +33,7 @@ body {
 		}
 
 		&__primary + &__secondary {
-			margin-left: $pad-double;
+			margin: 0 0 0 $pad-double;
 		}
 
 		&__primary {

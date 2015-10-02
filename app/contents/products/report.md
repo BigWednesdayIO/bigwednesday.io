@@ -1,9 +1,9 @@
 ---
 template: layouts/product.html
 title: Report
-tagline: Produce reports that give a holistic view of your operation’s performance across all sales channels
+tagline: What do you know about your customers today?
 icon: file-chart
 section: products
 ---
 
-Use omnichannel analytics to analyse your data across multiple devices.
+Reports will help you understand them more deeply by telling you things like their Total Spend, Average Order Value and Time Between Purchases. Use these insights to supercharge the sales and marketing interactions you are having with your customers.

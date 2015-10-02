@@ -1,7 +1,7 @@
 ---
 template: layouts/product.html
 title: Personalisation
-tagline: Every customer has unique needs. Use personalisation and targeting to optimally engage with every customer.
+tagline: Every customer has unique needs. Use personalisation and targeting to optimally engage with every customer
 icon: google-circles
 section: products
 ---

@@ -1,7 +1,7 @@
 ---
 template: layouts/product.html
 title: Product
-tagline: Acquire, manage, and publish accurate product information to all channels.
+tagline: Acquire, manage, and publish accurate product information to all channels
 icon: package-variant-closed
 section: products
 ---

@@ -11,3 +11,10 @@
 </h1>
 <p>{{ page.metadata.tagline }}</p>
 {% endblock %}
+
+
+{% block aside %}
+{% if page.metadata.aside %}
+{% include "includes/" + page.metadata.aside %}
+{% endif %}
+{% endblock %}
