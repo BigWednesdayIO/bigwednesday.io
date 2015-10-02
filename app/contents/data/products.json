@@ -39,16 +39,16 @@
 			}, {
 				"name": "Customer",
 				"href": "/products/customer",
-				"icon": "account-location",
+				"icon": "diamond",
 				"description": "An intuitive app used for the maintenance and management of customer, account and agreement information"
 			}, {
 				"name": "Outlet",
 				"href": "/products/outlet",
-				"icon": "map-marker"
+				"icon": "store"
 			}, {
 				"name": "User",
 				"href": "/products/user",
-				"icon": "emoticon-neutral",
+				"icon": "accessibility",
 				"description": "An intuitive app used for the maintenance and management of users"
 			}, {
 				"name": "Report",

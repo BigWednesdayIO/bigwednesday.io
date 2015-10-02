@@ -12,7 +12,7 @@
 		"name": "Increase User Engagement",
 		"description": "Your customers and your employees expect to find what they’re looking for fast along with quick and efficient order placement. Meet their expectations with our apps and services which all feature instant search and instant search refinements."
 	}, {
-		"icon": "tablet-ipad",
+		"icon": "device-management",
 		"name": "Beautiful Everywhere",
 		"description": "We are obsessive about all of our products looking great on all devices, from desktop to tablets to smartphones."
 	}, {
@@ -20,7 +20,7 @@
 		"name": "Console and Administration",
 		"description": "See and manage all of your applications from a single console. View the performance of your applications and manage your account and billing with a simple interface."
 	}, {
-		"icon": "package-variant",
+		"icon": "jigsaw",
 		"name": "Mix and Match",
 		"description": "Take your pick from our growing family of intuitive management apps and microservices to quickly enable the commerce features your business needs."
 	}, {

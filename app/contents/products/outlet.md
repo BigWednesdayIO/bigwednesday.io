@@ -1,7 +1,7 @@
 ---
 template: layouts/product.html
 title: Outlet
-icon: map-marker
+icon: store
 section: products
 ---
 
