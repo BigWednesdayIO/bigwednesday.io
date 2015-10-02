@@ -31,8 +31,12 @@
 			});
 		}
 
-		function isHovered (elm) {
-			return !!(elm.querySelector(":hover") || elm.parentNode.querySelector(":hover") === elm);
+		function isHovered (elem) {
+			return !!(elem.querySelector(":hover") || elem.parentNode.querySelector(":hover") === elem);
+		}
+
+		function isOpen (elem) {
+			return elem.dataset.visible === 'true' || !elem.classList.contains('is-hidden');
 		}
 
 		function showSubNav (id) {
@@ -46,7 +50,7 @@
 					return subNavElements[key]
 				}).filter(function(elem) {
 					// Only the visible ones
-					return elem.dataset.visible === 'true' || !elem.classList.contains('is-hidden');
+					return isOpen(elem);
 				})[0];
 
 				var showNewSubNav = function() {
@@ -83,7 +87,9 @@
 
 		if (subNavLinks.length) {
 			subNavLinks = Array.prototype.reduce.call(subNavLinks, function(linksMap, subNavLink) {
-				var id = subNavLink.getAttribute('data-sub-nav');
+				var id = subNavLink.getAttribute('data-sub-nav'),
+					nope = false;
+
 				linksMap[id] = subNavLink;
 
 				subNavElements[id] = document.getElementById('sub-nav-' + id);
@@ -96,13 +102,38 @@
 					hideSubNav(id);
 				}
 
+				function tappedAway () {
+					if (nope) {
+						nope = !nope;
+						return;
+					}
+
+					if (isOpen(subNavElements[id])) {
+						hide();
+						document.body.removeEventListener('touchend', tappedAway);
+					}
+				}
+
+				function showTap (e) {
+					if (!isOpen(subNavElements[id])) {
+						e.preventDefault();
+					}
+					show();
+					document.body.addEventListener('touchend', tappedAway, false);
+				}
+
 				subNavElements[id].style.height = subNavElements[id].getBoundingClientRect().height + 'px';
 				subNavElements[id].classList.add('is-hidden');
 				subNavElements[id].classList.remove('measure-me');
 
 				subNavLink.addEventListener('mouseenter', show, false);
+				subNavLink.addEventListener('touchend', showTap, false);
 				subNavLink.addEventListener('mouseleave', hide, false);
 				subNavElements[id].addEventListener('mouseenter', show, false);
+				subNavElements[id].addEventListener('touchend', function(e) {
+					showTap(e);
+					nope = true;
+				}, false);
 				subNavElements[id].addEventListener('mouseleave', hide, false);
 				subNavElements[id].addEventListener(transitionendEvent, function() {
 					subNavElements[id].dataset.visible = !subNavElements[id].classList.contains('is-hidden');
