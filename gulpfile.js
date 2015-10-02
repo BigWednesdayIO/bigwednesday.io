@@ -67,6 +67,10 @@ gulp.task('build:assets', ['build:copy'], function() {
 				uglify(),
 				rev()
 			],
+			headjs: [
+				uglify(),
+				rev()
+			],
 			assetsDir: 'tmp/contents/',
 			outputRelativePath: '../../contents/'
 		}))
