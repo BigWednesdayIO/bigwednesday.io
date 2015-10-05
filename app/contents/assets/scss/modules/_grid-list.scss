@@ -8,7 +8,6 @@
 	}
 
 	> li {
-		display: flex;
 		padding: 0 $pad;
 		margin-bottom: $pad*3;
 
@@ -27,6 +26,12 @@
 
 	&--well-padded {
 		margin-top: $pad*3;
+	}
+}
+
+.card-list {
+	> li {
+		display: flex;
 	}
 }
 
