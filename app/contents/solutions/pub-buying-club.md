@@ -1,7 +1,7 @@
 ---
 template: layouts/solution.html
 title: Pub Buying Club
-tagline: A marketplace providing a one-stop-shop for lessees wanting to access a wide range of products and services online
+tagline: A B2B marketplace providing a one-stop-shop for lessees to access products and services
 logo: pub-buying-club-alt.svg
 hero: hero--pub.jpg
 section: solutions
