@@ -244,3 +244,15 @@ label {
 		display: inline;
 	}
 }
+
+.card {
+	width: 100%;
+	padding: $pad;
+	border: $border;
+	box-shadow: $section-shadow;
+
+	&__link {
+		display: block;
+		text-decoration: none;
+	}
+}
