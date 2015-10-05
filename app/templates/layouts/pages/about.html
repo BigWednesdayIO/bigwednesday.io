@@ -1,45 +1,126 @@
-{% extends "layouts/full.html" %}
-
-{% block hero %}
-<h1>About Big Wednesday IO</h1>
-<p>Big Wednesday IO provide the building blocks to enable the rapid creation of complex commerce applications</p>
-{% endblock %}
+{% extends "layouts/base.html" %}
 
 {% set team = contents.data['team.json'].metadata %}
 
-{% block content %}
-<div class="content-wrap content-wrap--narrow">
-	<ul class="grid-list info-grid">
-		{% for member in team %}
-			<li class="media-item">
-				<div class="media-item__image"><img src="{% if member.image %}{{ assets }}/images/team/{{ member.image }}{% else %}//placehold.it/100x110{% endif %}" alt /></div>
-				<div class="media-item__text">
-					<h3 class="media-item__title">{{ member.name }}</h3>
-					<p class="media-item__preview">{{ member.role }}</p>
-				</div>
-			</li>
-		{% endfor %}
-	</ul>
+{% block page %}
+<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero if page.metadata.hero else 'hero--default.jpg' }}" alt />
+<div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero if page.metadata.hero else 'hero--default.jpg' }})">
+	<div class="content-wrap">
+		<h1>About Big Wednesday IO</h1>
+		<p>Big Wednesday IO enables the rapid creation of complex commerce applications</p>
+	</div>
 </div>
 
-<h2>Who we are</h2>
+{% set sections = "About Big Wednesday IO, Our Team, Contact, Press" %}
+<div class="section-links panel">
+	<div class="content-wrap">
+		<ul class="section-links__inner inline-list">
+			{% for section in sections|split(', ') %}
+				<li><a href="#{{ section | id }}">{{ section }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
 
-<p>We love the web and care about beautiful code, products and documentation. We think that building an internet business is above all about code craftsmanship and superb design.</p>
+<main>
+	<section class="page-body">
+		<div class="content-wrap">
+			<h2 id="about-big-wednesday-io" class="centred">About Big Wednesday IO</h2>
 
-<h2>Contact Us</h2>
+			<ul class="grid-list">
+				<li>
+					<p>Big Wednesday IO enables people to create complex commerce applications that work for them.</p>
+					<p>Developer-friendly APIs, intuitive management apps and data-backed personalisation... everywhere.</p>
+					<p>Beautiful code, great products, superb documentation.</p>
+				</li>
+				<li>
+					<p>Whether using our Management Apps, Customer Cloud or one or more of our composable APIs you can integrate our platform with third-party tools and platforms to create complex commerce applications in the way that works best for you.</p>
+				</li>
+			</ul>
+		</div>
+	</section>
 
-<ul class="grid-list grid-list--full info-grid">
-	<li>
-		<h3>Sales</h3>
-		<p><a href="mailto:sales@bigwednesday.io">sales@bigwednesday.io</a></p>
-	</li>
-	<li>
-		<h3>Help & Support</h3>
-		<p><a href="mailto:support@bigwednesday.io">support@bigwednesday.io</a></p>
-	</li>
-	<li>
-		<h3>General Enquiries</h3>
-		<p><a href="mailto:info@bigwednesday.io">info@bigwednesday.io</a></p>
-	</li>
-</ul>
+	<section class="panel">
+		<div class="content-wrap">
+			<h2 id="our-team" class="centred">Our Team</h2>
+		</div>
+		<div class="content-wrap content-wrap--narrow">
+			<ul class="grid-list grid-list--well-padded">
+				{% for member in team %}
+					<li class="media-item">
+						<div class="media-item__image"><img src="{% if member.image %}{{ assets }}/images/team/{{ member.image }}{% else %}//placehold.it/100x110{% endif %}" alt /></div>
+						<div class="media-item__text">
+							<h3 class="media-item__title">{{ member.name }}</h3>
+							<p class="media-item__preview">{{ member.role }}</p>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+
+	<section class="page-body">
+		<div class="content-wrap centred">
+			<h2 id="contact">Contact</h2>
+
+			<h3>Our London office</h3>
+			<p>20 Ropemaker Street, London EC2Y 9AR.</p>
+
+			<ul class="grid-list grid-list--full grid-list--well-padded">
+				<li>
+					<h3 class="icon-header">
+						<svg class="icon-header__icon" height="32" width="32"><use xlink:href="#phone"></use></svg>
+						<span class="icon-header__text">Sales</span>
+					</h3>
+					<p><a href="mailto:sales@bigwednesday.io">sales@bigwednesday.io</a></p>
+				</li>
+				<li>
+					<h3 class="icon-header">
+						<svg class="icon-header__icon" height="32" width="32"><use xlink:href="#life-ring"></use></svg>
+						<span class="icon-header__text">Help &amp; Support</span>
+					</h3>
+					<p><a href="mailto:support@bigwednesday.io">support@bigwednesday.io</a></p>
+				</li>
+				<li>
+					<h3 class="icon-header">
+						<svg class="icon-header__icon" height="32" width="32"><use xlink:href="#info"></use></svg>
+						<span class="icon-header__text">General Enquiries</span>
+					</h3>
+					<p><a href="mailto:info@bigwednesday.io">info@bigwednesday.io</a></p>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="panel">
+		<div class="content-wrap">
+			<h2 id="press" class="centred">Press</h2>
+			<ul class="press-list">
+				<li>
+					<div class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#logo"></use></svg>
+						<span class="press-list__text">Founded in August 2015</span>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#globe"></use></svg>
+						<span class="press-list__text">HQ in London</span>
+					</a>
+				</li>
+				<li>
+					<div class="press-list__item press-list__item--disable">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#newspaper"></use></svg>
+						<span class="press-list__text">Media resources</span>
+					</div>
+				</li>
+				<li>
+					<a href="mailto:press@bigwednesday.io" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#email-outline"></use></svg>
+						<span class="press-list__text">press@bigwednesday.io</span>
+					</a>
+				</li>
+			</ul>
+	</section>
+</main>
 {% endblock %}

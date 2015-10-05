@@ -1,0 +1,12 @@
+.press-list {
+	border: $border-strong;
+	border-radius: 3px;
+
+	&__item {
+		text-decoration: none;
+	}
+
+	> li + li {
+		border-top: $border-strong;
+	}
+}
