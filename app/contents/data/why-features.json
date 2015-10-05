@@ -10,13 +10,17 @@
 	}, {
 		"icon": "line-chart",
 		"name": "Increase User Engagement",
-		"description": "Your customers and your employees expect to find what they’re looking for fast along with quick and efficient order placement. Meet their expectations with our apps and services which all feature instant search and instant search refinements."
+		"description": "Focus on the user by personalising every aspect of the user journey using behavioural data,  purchase history and cognitive science: create demand by showing low stock notifications for relevant products; create urgency by creating countdown timers that work towards specific dates or times of the day; provide social endorsements by showing user activity or by surfacing relevant reviews."
+	}, {
+		"icon": "image-filter-center-focus",
+		"name": "Build Unique Experiences",
+		"description": "Use our apps and services to deliver personalised customer experiences - placing the right products and promotions in front of highly qualified buyers."
 	}, {
 		"icon": "google-controller",
 		"name": "Console and Administration",
 		"description": "Review and manage all activity across all your sales channels from a single intuitive management console: while you’re monitoring the performance of your sales team in real-time your digital marketing team are preparing next week’s sales promotions for your review."
 	}, {
-		"icon": "jigsaw-pieces",
+		"icon": "jigsaw",
 		"name": "Mix and Match",
 		"description": "Take your pick from our growing family of intuitive management apps and composable services to quickly enable the commerce features you need."
 	}, {
@@ -28,7 +32,7 @@
 		"name": "Performance you can count on",
 		"description": "Every millisecond of latency matters, our infrastructure gives you consistent CPU, memory and disk performance. Our network and edge caches serve responses rapidly to your users."
 	}, {
-		"icon": "credit-card",
+		"icon": "jigsaw-pieces",
 		"name": "Accounting Integrations",
 		"description": "With real-time access to reporting data, you can connect with your existing accounting or ERP systems."
 	}, {
