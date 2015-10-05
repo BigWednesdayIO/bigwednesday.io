@@ -7,6 +7,15 @@
 		text-decoration: none;
 	}
 
+	&__icon--color {
+		filter: saturate(0) brightness(0.75) contrast(200%);
+		transition: filter .2s;
+	}
+
+	&__item:hover &__icon--color {
+		filter: saturate(100%) brightness(1) contrast(100%);
+	}
+
 	> li + li {
 		border-top: $border-strong;
 	}
