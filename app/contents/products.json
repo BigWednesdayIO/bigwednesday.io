@@ -1,5 +1,6 @@
 {
 	"template": "layouts/pages/products.html",
 	"title": "Products",
+	"tagline": "Take your pick from our growing family of intuitive management apps and composable services",
 	"section": "products"
 }

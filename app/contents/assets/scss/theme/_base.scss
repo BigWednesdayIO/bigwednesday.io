@@ -36,8 +36,7 @@ h3 {
 	margin: 0 0 $pad-double;
 	font-size: em(18);
 
-	h2 + &,
-	& + & {
+	h2 + & {
 		margin-top: -$pad;
 	}
 }
