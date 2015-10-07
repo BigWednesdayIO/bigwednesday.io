@@ -1,7 +1,7 @@
 ---
 template: layouts/pages/pub-buying-club.html
 title: Pub Buying Club
-tagline: A one-stop-shop for lessees to order products and services
+tagline: A one-stop-shop for lessees to access products and services
 logo: pub-buying-club-alt.svg
 hero: hero--pub.jpg
 section: solutions
