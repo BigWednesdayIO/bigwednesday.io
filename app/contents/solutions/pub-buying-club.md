@@ -1,77 +1,37 @@
 ---
-template: layouts/solution.html
+template: layouts/pages/pub-buying-club.html
 title: Pub Buying Club
-tagline: A B2B marketplace providing a one-stop-shop for lessees to access products and services
+tagline: A one-stop-shop for lessees to order products and services
 logo: pub-buying-club-alt.svg
 hero: hero--pub.jpg
 section: solutions
-sections: Quick order, Similar products, Personalisation
+sections: Why, Features
 ---
 
-Your lessees want the convenience of being able to place their weekly orders when it suits them.
+## Why
 
-They want to do this and you want to oblige but you don't want them to miss out on the great discounts you have to offer them or miss the opportunity to continue developing relationship with the customer that the weekly call from their dedicated sales agent affords.
+### You want to enable quick ordering for your lessees
 
-Your lessees want to be able to update their order not from their office or back room on a desktop drive but from their cellar with their mobile or tablet device.
+Your lessee’s want to their ordering experience to be quick and easy. Powered by their personal ordering patterns combined with targeted promotions, product ranking adjustments and other business rules you can help them place their weekly order in minutes while controlling exactly which products and offers are presented to them - and all  with customer- and outlet-specific product pricing and price adjustments.
 
-You want to make it easy for your lessees to place an order for their usual wet goods and to take advantage of the great offers you have for them
+### You want to increase sales volumes
 
-You have complex product pricing rules: you have a range of price bands, price-effective dates and a whole range of pub- and depot-specific price adjustments too. You need a better way to manage this complexity.
+You want to create demand by personalising every aspect of the user journey using behavioural data, purchase history and cognitive science: create demand by showing low stock notifications for relevant products; create urgency by creating countdown timers that work towards specific dates or times of the day; provide social endorsement by showing user activity or by surfacing relevant reviews and target customers with promotions unique to them.
 
-Your lessees are busy people - they want the convenience of being able to build orders quickly and easily, and not necessarily have to compile their full shopping list together in one go, particularly if unexpected peaks of sale happen. We have extensive experience delivering B2B ordering systems in this sector; we can provide a solution that makes ordering for your lessees  simple and straight-forward, with the ability to build orders over several days, and include features such as customised pricing, promotions, depot availability, lead times and ordering heuristics - all to the individual level, and all with the aim of making restocking as simple and easy as possible, whenever your lessees want, with no need to have complex call-centre operations involved. 
+### Your lessees want to re-order from their cellar
 
-## Quick Order
+Your lessees want to be able to update their order not from their office but from their cellar using their smartphone or their tablet device.
 
-The lessee’s primary inventory replenishment mechanism. Your lessee’s want to handle replenishment is efficiently as possible. Powered by their personal ordering patterns combined with targeted promotions, product ranking adjustments and other business rules an unprecedented level of control over exactly what products and and offers get presented along with customer- and outlet-specific product prices.
+### You want an easy way to manage your negotiated or banded price lists and price adjustments
 
-## Product Categories
+You have negotiated price lists and complex pricing rules: you have a range of price bands, price-effective dates and a whole range of pub- and depot-specific price adjustments too. You need a better way to manage this complexity.
 
-Fully dynamic product categorisation and full support for wet and non-wet catalogue(s) and alternate suppliers. Search refinements and promotions can be defined and managed per category and segmented by user, products can be badged and all by business users with a few mouse-clicks.
+### You need inventory transparency
 
-## Product Details
+You want your lessees to know which products are available to order today and which products will be available to order next Tuesday based on depot availability taking into account delivery lead times where appropriate and where a product suddenly become unavailable you want to inform your lessees about this in real-time.
 
-Extended information on each product with the ability to define product types with their own infinitely extensible set of attributes such as allergen information for drinks or food.
+### You’d like to get continuous improvements
 
-## Similar Products
+We are constantly developing **Pub Buying Club** and our **Cloud Platform** and want to innovate for you.
 
-Cross-sell other, similar products
-
-Amazon reports that more than 30% of its revenues were as a direct result of its up- and cross-selling efforts. Studies have shown that 60% of customers will buy an additional product worth 60% of the one they just bought when offered an up- or cross-sell.
-
-## Price Effective Dates
-
-Price effective date information by price band may be imported. Where a future price exists for a product from a specific date then products scheduled for delivery on or after that date will have the price effective on that date rather than today’s price.
-
-## Accounting Integrations
-
-With real-time access to reporting data, you can connect with your existing accounting or ERP systems.
-
-## Personalisation
-
-## Guided Selling
-
-## Promotions
-
-A new industry-leading promotion engine providing greatly enhanced functionality.
-
-Promotion eligibility based on any attribute or set of attributes from the hundreds available in the Customer Cloud.
-
-Time-dependent promotions are supported e.g. “buy a minimum quantity (or volume) or product x over three weeks and in week four get product y free”.
-
-Channel-specific promotions: only offer this promotion to users of the Pub Buying Club or only offer this promotion to a sales agent placing an order via the Orders management app.
-
-## My Account
-
-Features all aspects of the lessee’s outlet details, contacts, agreements, ties, F&F, deposits and T&Cs. Previous order history can be reviewed, paperless documents downloaded. Ability to view account details, machine reports. Ability to make ad-hoc account and rental payments.
-
-## Checkout
-
-## Future Orders
-
-## Recommendations
-
-Automatic product recommendations. You control who sees which recommendations by creating simple business rules for orthogonal or overlapping user segments.
-
-You decide how recommendations should look and where to show them: with instant search results and/or on your product and basket pages.
-
-We give you detailed statistics and data about how your recommendations are performing.
+## Features
