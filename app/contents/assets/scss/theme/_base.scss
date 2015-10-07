@@ -33,8 +33,12 @@ h3 {
 }
 
 .tagline {
-	margin: -$pad 0 $pad-double;
+	margin: 0 0 $pad-double;
 	font-size: em(18);
+
+	h2 + & {
+		margin-top: -$pad;
+	}
 }
 
 p {
@@ -183,7 +187,7 @@ label {
 .panel {
 	padding: $pad;
 	background: $gradient;
-	border-bottom: $border;
+	border: $border;
 	box-shadow: $shadow;
 }
 
@@ -242,5 +246,23 @@ label {
 
 	> li {
 		display: inline;
+	}
+}
+
+.card {
+	width: 100%;
+	padding: $pad;
+	border: $border;
+	box-shadow: $section-shadow;
+	text-align: left;
+
+	&__title {
+		text-transform: uppercase;
+		line-height: 1.1;
+	}
+
+	&__link {
+		display: block;
+		text-decoration: none;
 	}
 }

@@ -6,4 +6,4 @@ icon: file-chart
 section: products
 ---
 
-Reports will help you understand them more deeply by telling you things like their Total Spend, Average Order Value and Time Between Purchases. Use these insights to supercharge the sales and marketing interactions you are having with your customers.
+Reports help you understand your customers more deeply by telling you their total spend, average order value, sales volume variance and time between purchases. Use these actionable insights to supercharge the sales and marketing interactions you are having with your customers.
