@@ -46,6 +46,10 @@
 
 	&__title {
 		font-size: 1.6rem;
+
+		&--soft {
+			text-transform: none !important;
+		}
 	}
 
 	&__preview {
@@ -72,7 +76,7 @@
 
 .media-item__title,
 .media-group__heading {
-	color: #606060;
+	color: $body-heading;
 	text-transform: uppercase;
 }
 

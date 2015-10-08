@@ -267,6 +267,12 @@ label {
 	}
 }
 
+.rounded {
+	display: inline-block;
+	border-radius: 50%; height: 100px;
+	overflow: hidden;
+}
+
 table {
 	width: 100%;
 	margin: $pad 0;
