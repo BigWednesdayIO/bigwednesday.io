@@ -169,5 +169,7 @@ Promise.all([getFiles(pagesDirectory), getFiles(productsDirectory)])
         console.log('Indexing products from ' + productsDirectory + '/ to ' + productsIndexUri);
 
         return Promise.all(createIndexJobs(products, productsIndexUri, buildProductObject));
+      }, function() {
+        process.exit(1);
       });
   });
