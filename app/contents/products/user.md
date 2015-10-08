@@ -2,7 +2,7 @@
 template: layouts/product.html
 title: User
 tagline: An intuitive app used for the maintenance and management of users and roles
-icon: emoticon-neutral
+icon: accessibility
 section: products
 ---
 

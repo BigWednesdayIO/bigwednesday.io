@@ -1,5 +1,6 @@
 {
 	"template": "layouts/pages/solutions.html",
 	"title": "Solutions",
+	"tagline": "Creating incredible solutions for the unique demands of your business",
 	"section": "solutions"
 }

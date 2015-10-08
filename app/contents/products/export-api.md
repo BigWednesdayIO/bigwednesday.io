@@ -2,7 +2,7 @@
 template: layouts/product.html
 title: Export API
 tagline: Export data into your own BI solution
-icon: code
+icon: export
 section: products
 ---
 

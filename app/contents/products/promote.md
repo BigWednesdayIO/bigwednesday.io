@@ -1,7 +1,7 @@
 ---
 template: layouts/product.html
 title: Promote
-tagline: By allowing you easily to create personalised offers we have created a platform for increased customer spend
+tagline: Our industry-leading promotion engine designed to power increased customer spend
 icon: sale
 section: products
 sections: Why, Features
@@ -13,7 +13,7 @@ sections: Why, Features
 
 You want to allow your customers to choose a brand or brands from a selection of brands and receive a 10% discount on all products from the selected brands or pick, say, 10 products from the hundreds available and receive a value or percentage discount. 
 
-### You want more shipping discoun+t options
+### You want more shipping discount options
 
 Discount by shipping method and create other shipment specific discounts using shipment expressions. Do you have multiple shipments? We let you qualify a discount on a per-shipment basis so you don't lose money.
 

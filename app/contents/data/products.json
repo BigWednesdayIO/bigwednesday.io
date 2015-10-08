@@ -26,7 +26,7 @@
 				"name": "Promote",
 				"href": "/products/promote",
 				"icon": "sale",
-				"description": "Our new industry-leading promotion engine powers increased customer spend"
+				"description": "Our industry-leading promotion engine - designed to power increased customer spend"
 			}, {
 				"name": "Order",
 				"href": "/products/order",
@@ -86,7 +86,7 @@
 				"name": "Customer Cloud",
 				"href": "/products/customer-cloud",
 				"icon": "cloud-outline",
-				"description": "Out of the box big data architecture, processing and storage giving you a golden record of your customer"
+				"description": "Out of the box big data architecture, processing and storage giving you a real-time golden record of your customer"
 			}
 		]
 	}
