@@ -266,3 +266,24 @@ label {
 		text-decoration: none;
 	}
 }
+
+table {
+	width: 100%;
+	margin: $pad 0;
+	border-collapse: collapse;
+
+	td, th {
+		border: $border-strong;
+		padding: $pad-half;
+	}
+
+	th {
+		color: $body-heading-alt;
+		font-weight: 300;
+		font-size: 1.6rem;
+	}
+
+	tr:nth-child(even) {
+		background: $gradient;
+	}
+}
