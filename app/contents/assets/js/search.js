@@ -8,8 +8,9 @@
 			callback(responseData);
 		});
 
-		oReq.open('POST', 'http://localhost:9001/1/indexes/big-wednesday-io-pages/query');
+		oReq.open('POST', 'https://api.bigwednesday.io/1/search/indexes/big-wednesday-io-pages/query');
 		oReq.setRequestHeader('Content-Type', 'application/json')
+		oReq.setRequestHeader('Authorization', 'Bearer NG0TuV~u2ni#BP|')
 		oReq.send(JSON.stringify(search_params));
 	}
 
