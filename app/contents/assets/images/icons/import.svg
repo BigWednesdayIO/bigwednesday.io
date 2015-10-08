@@ -50,12 +50,12 @@
      id="Label" /><g
      id="Icon"><g
        id="g6"><path
-         style="fill:#000000;fill-opacity:1"
+         style="fill-opacity:1"
          d="M 40.095703 13.783203 L 40.095703 15.923828 L 45.835938 15.923828 L 40.095703 13.783203 z M 7.9042969 13.796875 L 2.171875 15.923828 L 7.9042969 15.923828 L 7.9042969 13.796875 z "
          id="polygon8" /><g
          id="g10"><g
            id="g12"><path
-             style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.69999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             style="fill-opacity:1;stroke:none;stroke-width:0.69999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
              d="m 11.171875,0 c -1.417,0 -2.5683594,1.1475 -2.5683594,2.5625 l 0,13.361328 30.7910154,0 0,-5.675781 L 29.132812,0 Z M 27.532,2.3 l 9.764,9.548 -9.775,0 z"
              id="path14"
              inkscape:connector-curvature="0"
@@ -112,7 +112,7 @@
            id="g74"><g
              id="g76"><g
                id="g78"><path
-                 style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.69999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                 style="fill-opacity:1;stroke:none;stroke-width:0.69999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                  d="M 0.24609375 16.623047 L 0.24609375 45.035156 C 0.24609375 46.672156 1.5748438 48 3.2148438 48 L 44.783203 48 C 46.423203 48 47.753906 46.672156 47.753906 45.035156 L 47.753906 16.623047 L 0.24609375 16.623047 z M 18.0625 22.552734 L 29.939453 22.552734 C 31.032453 22.552734 31.917969 23.438297 31.917969 24.529297 C 31.917969 25.621297 31.0305 26.505859 29.9375 26.505859 L 18.0625 26.505859 C 16.9695 26.505859 16.082031 25.621297 16.082031 24.529297 C 16.082031 23.438297 16.9705 22.552734 18.0625 22.552734 z M 20.634766 30.080078 L 20.634766 34.148438 L 32.271484 34.148438 L 32.271484 38.0625 L 20.634766 38.0625 L 20.634766 42.130859 L 14.599609 36.105469 L 20.634766 30.080078 z "
                  id="path80" /></g><g
                id="g82"

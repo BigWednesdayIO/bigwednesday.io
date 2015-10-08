@@ -3,6 +3,7 @@ template: layouts/product.html
 title: Order
 tagline: Bringing together all the information your teams need to provide the best customer service experience with increased sales volumes
 icon: order
+hero: hero--warehouse.jpg
 section: products
 ---
 

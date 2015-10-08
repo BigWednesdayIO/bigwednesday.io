@@ -3,8 +3,12 @@
 {% set team = contents.data['team.json'].metadata %}
 
 {% block page %}
-<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero if page.metadata.hero else 'hero--default.jpg' }}" alt />
-<div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero if page.metadata.hero else 'hero--default.jpg' }})">
+{% if page.metadata.hero %}
+<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero }}" alt />
+<div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero }})">
+{% else %}
+<div class="hero">
+{% endif %}
 	<div class="content-wrap">
 		<h1>About</h1>
 		<p>Enabling the rapid creation of complex commerce applications</p>
