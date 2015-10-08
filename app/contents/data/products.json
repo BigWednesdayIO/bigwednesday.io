@@ -1,0 +1,93 @@
+[
+	{
+		"name": "Managements Apps",
+		"products": [
+			{
+				"name": "Unified Admin Console",
+				"href": "/products/unified-admin-console",
+				"icon": "google-controller",
+				"description": "A powerful container for our management apps built using a modern, fast, intuitive UI framework"
+			}, {
+				"name": "Dashboard",
+				"href": "/products/dashboard",
+				"icon": "view-dashboard",
+				"description": "An actionable dashboard of your sales, orders, and traffic helps you make the right choices for your business"
+			}, {
+				"name": "Personalisation",
+				"href": "/products/personalisation",
+				"icon": "google-circles",
+				"description": "Every customer has unique needs. Use personalisation and targeting to optimally engage with every customer"
+			}, {
+				"name": "Product",
+				"href": "/products/product",
+				"icon": "package-variant-closed",
+				"description": "Acquire, manage, and publish accurate product information to all channels"
+			}, {
+				"name": "Promote",
+				"href": "/products/promote",
+				"icon": "sale",
+				"description": "Our industry-leading promotion engine - designed to power increased customer spend"
+			}, {
+				"name": "Order",
+				"href": "/products/order",
+				"icon": "order",
+				"description": "Bringing together all the information your teams need to provide the best customer service experience with increased sales volumes"
+			}, {
+				"name": "Service",
+				"href": "/products/service",
+				"icon": "odnoklassniki",
+				"description": "Empower agents. Wow customers"
+			}, {
+				"name": "Customer",
+				"href": "/products/customer",
+				"icon": "diamond",
+				"description": "An intuitive app used for the maintenance and management of customer, account and agreement information"
+			}, {
+				"name": "Outlet",
+				"href": "/products/outlet",
+				"icon": "store",
+				"description": "An intuitive app used for the maintenance and management of outlet, territory, region and area information"
+			}, {
+				"name": "User",
+				"href": "/products/user",
+				"icon": "accessibility",
+				"description": "An intuitive app used for the maintenance and management of users and roles"
+			}, {
+				"name": "Report",
+				"href": "/products/report",
+				"icon": "file-chart",
+				"description": "What do you know about your customers today?"
+			}
+		]
+	}, {
+		"name": "Services",
+		"products": [
+			{
+				"name": "Import API",
+				"href": "/products/import-api",
+				"icon": "import",
+				"description": "Import data from any external data source"
+			}, {
+				"name": "Export API",
+				"href": "/products/export-api",
+				"icon": "export",
+				"description": "Export data into your own BI solution"
+			}, {
+				"name": "REST API",
+				"href": "/products/rest-api",
+				"icon": "code",
+				"description": "API driven data, delivered everywhere. Welcome to the post-browser era"
+			}
+		]
+	}, {
+		"name": "Big Data",
+		"products": [
+			{
+				"name": "Customer Cloud",
+				"href": "/products/customer-cloud",
+				"icon": "cloud-outline",
+				"description": "Out of the box big data architecture, processing and storage giving you a real-time golden record of your customer"
+			}
+		]
+	}
+]

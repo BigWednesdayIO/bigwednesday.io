@@ -1,0 +1,135 @@
+.nav-bar {
+	&__actions {
+		position: relative;
+		z-index: 99;
+		background: inherit;
+
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding: $pad-half $pad;
+	}
+
+	&__menu-button {
+		.no-js & {
+			display: none;
+		}
+	}
+
+	@media (min-width: $bp-medium) {
+		padding: 0 $pad;
+
+		&__actions {
+			padding: $pad-half 0;
+		}
+
+		&__inner {
+			display: flex;
+			flex-flow: row-reverse nowrap;
+			justify-content: space-between;
+		}
+
+		&__menu-button {
+			display: none;
+		}
+	}
+}
+
+#{$no-flexbox} {
+	.nav-bar {
+		@extend %clearfix;
+
+		@media (min-width: $bp-medium) {
+			&__actions {
+				float: right;
+			}
+		}
+	}
+}
+
+.primary-navigation {
+	padding: 0 $pad;
+	
+	a {
+		display: block;
+		padding: $pad-half 0;
+	}
+
+	@media (min-width: $bp-medium) {
+		display: inline-flex;
+		align-items: stretch;
+		max-height: none !important;
+		overflow: visible;
+
+		padding: 0;
+
+		a {
+			display: inline-flex;
+			align-items: center;
+		}
+
+		a + a {
+			margin-left: $pad;
+		}
+	}
+}
+
+@media (min-width: $bp-medium) {
+	#{$no-flexbox} {
+		.primary-navigation {
+			a {
+				display: inline-block;
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.sub-nav {
+	overflow: hidden;
+	transition: .5s height ease-in-out;
+
+	&.measure-me {
+		z-index: -1;
+		position: absolute;
+		left: 0;
+		right: 0;
+		transition: none;
+		visibility: hidden;
+	}
+
+	&.is-hidden {
+		height: 0 !important;
+	}
+
+	&__inner {
+		display: flex;
+	}
+
+	&__heading {
+		margin: 0;
+	}
+
+	&__section {
+		flex-grow: 1;
+		padding: $pad $pad-and-half;
+
+		&.is-wide {
+			flex-grow: 2;
+
+			ul {
+				column-count: 2;
+				column-gap: $pad-double;
+			}
+		}
+	}
+}
+
+#{$no-flexbox} {
+	.sub-nav {
+		display: none;
+	}
+}

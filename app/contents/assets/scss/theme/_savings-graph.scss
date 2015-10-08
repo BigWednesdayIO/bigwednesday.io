@@ -1,0 +1,79 @@
+.savings-graph {
+	margin-bottom: $pad-and-half;
+
+	&__old,
+	&__new {
+		height: 1.5em;
+		text-indent: -999em;
+		overflow: hidden;
+		margin-bottom: $pad/4;
+	}
+
+	&__old {
+		background: $ui-secondary-border-color;
+	}
+
+	&__new {
+		display: flex;
+		align-items: center;
+	}
+
+	&__reduction {
+		position: relative;
+		flex-grow: 1;
+		height: 2px;
+		background: grey;
+		margin-right: $pad-half;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: -9px;
+			right: -2px;
+			border: 9px solid transparent;
+			border-right-width: 0;
+			border-left-color: $body-heading;
+			margin-top: 1px;
+			z-index: -1;
+		}
+
+		&::after {
+			border-left-color: white;
+			right: 1px;
+		}
+	}
+
+	&__cost {
+		align-self: stretch;
+		background: $brand;
+	}
+
+	&__tagline {
+		text-align: right;
+		line-height: 1.3;
+		margin-top: $pad-half;
+
+		&__key-point {
+			display: block;
+			font-weight: 300;
+			font-size: 1.6em;
+		}
+	}
+}
+
+#{$no-flexbox} {
+	.savings-graph {
+		&__new {
+			@extend %clearfix;
+		}
+
+		&__reduction {
+			display: none;
+		}
+
+		&__cost {
+			float: right;
+		}
+	}
+}

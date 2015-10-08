@@ -1,0 +1,24 @@
+{% extends "layouts/solution.html" %}
+
+{% set features = contents.data['pub-buying-club-features.json'].metadata %}
+
+{% block content %}
+<div class="markdown">
+	{{ page.html }}
+</div>
+
+<ul{# class="left-and-right-content"#}>
+	{% for feature in features %}
+		<li class="markdown">
+			<div class="text-wrapper">
+				<h3>{{ feature.name }}</h3>
+				<p>{{ feature.description }}</p>
+			</div>
+			{# <div class="image-wrapper">
+				<img src="{% if feature.image %}{{ assets }}/images/{{ feature.image }}{% else %}//placehold.it/350x250{% endif %}" alt />
+			</div> #}
+		</li>
+	{% endfor %}
+</ul>
+
+{% endblock %}

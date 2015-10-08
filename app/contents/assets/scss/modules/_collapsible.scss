@@ -1,0 +1,12 @@
+.collapsible {
+	overflow: hidden;
+	max-height: 100vh;
+	transition: max-height .25s ease-in;
+
+	&.is-hidden {
+		&:not(:hover) {
+			max-height: 0;
+			transition: max-height .25s ease-out;
+		}
+	}
+}

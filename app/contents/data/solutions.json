@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Pub Buying Club",
+		"href": "/solutions/pub-buying-club",
+		"logo": "pub-buying-club.svg",
+		"icon": "store",
+		"description": "A one-stop-shop for lessees to access products and services"
+	}, {
+		"name": "Searchful",
+		"href": "/solutions/searchful",
+		"icon": "searchful",
+		"description": "Delivering instant personalized search results...everywhere"
+	}
+]

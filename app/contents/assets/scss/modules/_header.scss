@@ -1,0 +1,25 @@
+.site-header {
+	position: relative;
+	z-index: 99;
+	padding: $pad;
+}
+
+.logo {
+	display: flex;
+
+	&__icon {
+		margin-right: $pad*.75;
+	}
+}
+
+@media (min-width: $bp-medium) {
+	#{$no-flexbox} {
+		.logo {
+			&__icon,
+			&__text {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+}

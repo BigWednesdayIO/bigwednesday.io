@@ -1,0 +1,60 @@
+.grid-list {
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 0 $pad*-1;
+
+	@media (min-width: $bp-small) {
+		flex-flow: row wrap;
+	}
+
+	> li {
+		padding: 0 $pad;
+		margin-bottom: $pad*3;
+
+		@media (min-width: $bp-small) {
+			width: 50%;
+		}
+	}
+
+	&--full {
+		> li {
+			@media (min-width: $bp-medium) {
+				width: (1/3)*100%;
+			}
+		}
+	}
+
+	&--well-padded {
+		margin-top: $pad*3;
+
+		> li:nth-last-child(n+3) {
+			margin-bottom: $pad*4;
+		}
+	}
+}
+
+.card-list {
+	> li {
+		display: flex;
+	}
+}
+
+@media (min-width: $bp-medium) {
+	#{$no-flexbox} {
+		.grid-list {
+			> li {
+				float: left;
+
+				&:nth-child(odd) {
+					clear: both;
+				}
+			}
+		}
+
+		// Leaving this for now, https://github.com/Modernizr/Modernizr/issues/1675
+		/* &.no-nthchild .grid-list > li {
+			float: none;
+			width: 100%;
+		} */
+	}
+}

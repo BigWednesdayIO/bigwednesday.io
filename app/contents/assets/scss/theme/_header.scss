@@ -1,0 +1,27 @@
+.site-header {
+	font-family: $font-primary;
+	background: $gradient;
+	border-bottom: $border;
+}
+
+.logo {
+	text-decoration: none;
+
+	&__text {
+		font-size: 1.7em;
+		font-weight: 400;
+		color: $body-heading;
+
+		span {
+			color: #888;
+		}
+
+		&:hover {
+			color: $body-heading;
+		}
+	}
+
+	&__icon {
+		color: $brand;
+	}
+}

@@ -1,0 +1,40 @@
+{% extends "layouts/base.html" %}
+{% block page %}
+{% if page.metadata.hero %}
+<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero }}" alt />
+<div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero }})">
+{% else %}
+<div class="hero">
+{% endif %}
+	<div class="content-wrap">
+		{% block hero %}
+			<h1>{{ page.title }}</h1>
+			{% if page.metadata.tagline %}<p>{{ page.metadata.tagline }}</p>{% endif %}
+		{% endblock %}
+	</div>
+</div>
+<aside class="featured panel">
+	<div class="content-wrap content-wrap--narrow">
+		<div class="featured__inner">
+			{% block featured %}{% endblock %}
+		</div>
+	</div>
+</aside>
+
+<div class="page-body">
+	<div class="content-wrap">
+		{% block header %}{% endblock %}
+
+		<div class="page-body__inner">
+			<main class="page-body__primary">
+				{% block content %}
+					<div class="markdown">
+						{{ page.html }}
+					</div>
+				{% endblock %}
+			</main>
+			<aside class="page-body__secondary">{% block aside %}{% endblock %}</aside>
+		</div>
+	</div>
+</div>
+{% endblock %}

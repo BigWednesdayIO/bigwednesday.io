@@ -1,0 +1,61 @@
+{% extends "layouts/default-with-featured.html" %}
+
+{% block hero %}
+<div class="page-body__inner">
+	<div class="page-body__primary">
+		<h1>Why Our Cloud Platform</h1>
+		<p>We provide the building blocks that allow you to rapidly create powerful commerce applications for your industry</p>
+	</div>
+	<div class="page-body__secondary">
+		<ul class="bulleted">
+			<li>Reduce operating costs</li>
+			<li>Gain business value quickly</li>
+			<li>Enable rapid business growth</li>
+		</ul>
+	</div>
+</div>
+{% endblock %}
+
+{% block featured %}
+{% include "includes/pub-buying-club-feature.html" %}
+{% endblock %}
+
+{% block header %}
+<h2>Features</h2>
+{% endblock %}
+
+{% set features = contents.data['why-features.json'].metadata %}
+
+{% block content %}
+<ul class="grid-list">
+	{% for feature in features %}
+		<li>
+			<h3 class="icon-header">
+				<svg class="icon-header__icon" height="32" width="32"><use xlink:href="#{{ feature.icon }}"></use></svg>
+				<span class="icon-header__text">{{ feature.name }}</span>
+			</h3>
+			{% if feature.description %}<p>{{ feature.description }}</p>{% endif %}
+		</li>
+	{% endfor %}
+</ul>
+{% endblock %}
+
+{% block aside %}
+<div class="savings-graph">
+	<div class="savings-graph__old">Old cost (100%).</div>
+	<div class="savings-graph__new">
+		<div class="savings-graph__reduction">Reduced by up to 75%.</div>
+		<div class="savings-graph__cost" style="width: 25%;">New cost as little as 25%.</div>
+	</div>
+	<div class="savings-graph__tagline">Lower hosting costs by up to <strong class="savings-graph__tagline__key-point">75%</strong></div>
+</div>
+
+<div class="savings-graph">
+	<div class="savings-graph__old">Old cost (100%).</div>
+	<div class="savings-graph__new">
+		<div class="savings-graph__reduction">Reduced by up to 95%.</div>
+		<div class="savings-graph__cost" style="width: 5%;">New cost as little as 5%.</div>
+	</div>
+	<div class="savings-graph__tagline">Cut your deployment time by up to <strong class="savings-graph__tagline__key-point">95%</strong></div>
+</div>
+{% endblock %}

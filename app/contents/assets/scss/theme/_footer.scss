@@ -1,0 +1,36 @@
+.site-footer {
+	font-family: $font-primary;
+	background: $light-grey-one;
+	border-top: $border;
+
+	&__navigation {
+		background: transparent !important;
+
+		.sub-nav__heading {
+			text-transform: none;
+			color: $nav;
+			font-size: 1.8rem;
+		}
+	}
+
+	&__lower {
+		background: $light-grey-two;
+		border-top: $border;
+	}
+
+	&__inner {
+		font-size: 1.2rem;
+	}
+
+	&__info {
+		> li + li {
+			&::before {
+				content: " · ";
+			}
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+}

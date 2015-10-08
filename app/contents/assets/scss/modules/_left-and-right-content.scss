@@ -1,0 +1,38 @@
+.left-and-right-content {
+	> li {
+		display: flex;
+		flow: column;
+	}
+
+	@media (min-width: $bp-medium) {
+		> li {
+			flow: row nowrap;
+			margin: 0 $pad-half*-1;
+		}
+
+		.image-wrapper,
+		.text-wrapper {
+			flex: 1;
+			margin: 0 $pad $pad*3;
+		}
+
+		.image-wrapper > img {
+			display: block;
+			width: 100%;
+		}
+
+		.text-wrapper {
+			padding-top: $pad;
+
+			> :first-child {
+				margin-top: 0;
+			}
+		}
+
+		> li:nth-child(even) {
+			.text-wrapper {
+				order: 2;
+			}
+		}
+	}
+}

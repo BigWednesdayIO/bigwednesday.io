@@ -1,0 +1,38 @@
+.media-item {
+	display: flex;
+	align-items: center;
+	padding: $pad;
+
+	&__text {
+		// needed for IE 10
+		flex-shrink: 1;
+	}
+
+	&__icon,
+	&__image {
+		margin-right: $pad;
+	}
+
+	&__image {
+		> img {
+			display: block;
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		margin: 0;
+	}
+
+	&__preview {
+	}
+}
+
+.media-group {
+	margin-bottom: $pad-double;
+
+	&__heading,
+	&__listing {
+		margin: 0;
+	}
+}

@@ -1,0 +1,12 @@
+.featured {
+	&__title,
+	&__text {
+		font-weight: 300;
+		// color: $featured-text;
+		// color: $nav;
+	}
+
+	&__preview {
+		line-height: 1.4;
+	}
+}

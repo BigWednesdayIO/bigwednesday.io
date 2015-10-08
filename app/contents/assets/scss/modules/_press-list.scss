@@ -1,0 +1,19 @@
+.press-list {
+	max-width: em(480);
+	margin: $pad*3 auto;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: $pad;
+
+		/* &:hover {
+			background: $ui-primary;
+			color: $ui-primary-text;
+		} */
+	}
+
+	&__icon {
+		margin-right: $pad;
+	}
+}

@@ -1,0 +1,51 @@
+[
+	{
+		"name": "Search and browsing as-you-type",
+		"description": "Refresh full pages and filters as your users type creating a unique experience tailored to their inputs"
+	}, {
+		"name": "Supercharged promotions",
+		"description": "Our industry-leading promotions engine powers increased customer spend"
+	}, {
+		"name": "Mobile",
+		"description": "Empower your customers and employees to place orders on any device, any time",
+		"image": "pbc-mobile.jpg"
+	}, {
+		"name": "Advanced personalisation techniques",
+		"description": "Personalise every aspect of the user journey using behavioural data, purchase history and cognitive science"
+	}, {
+		"name": "Fast order entry",
+		"description": "Streamline re-orders: quick order enables lessees to place orders in minutes - making it their primary inventory replenishment mechanism"
+	}, {
+		"name": "Negotiated pricing terms",
+		"description": "Personalize each customer account or outlet with pre-negotiated price lists and terms",
+		"image": "pbc-code.jpg"
+	}, {
+		"name": "Price-effective dates",
+		"description": "Where a future price exists for a product from a specified date then products scheduled for delivery on or after that date will have the price effective on that date",
+		"image": "pbc-code.jpg"
+	}, {
+		"name": "Curated products",
+		"description": "Extended information on each product with the ability to define product types - each with an infinitely extensible set of product attributes. Fully dynamic product categorisation as well as support for wet and non-wet catalogue(s) and alternate suppliers. Search refinements and promotions can be defined and managed per category and segmented by user and products can be automatically badged"
+	}, {
+		"name": "Flexible payments",
+		"description": "More ways to pay include cash-with-order card payments, on-account payments, coupon payments and flexibility for your lessees about when they pay their rent or make ad-hoc account payments"
+	}, {
+		"name": "Recommendations",
+		"description": "Automatic and curated recommendations. You control who sees which recommendations (targeting orthogonal or overlapping user segments), how recommendations should look and where to show them - with instant search results; on product details pages, basket and checkout pages."
+	}, {
+		"name": "Shopping cart",
+		"description": "Instant order processing with real-time stock and depot availability checks, personalised pricing and discounts."
+	}, {
+		"name": "Similar products",
+		"description": "Cross-sell or upsell other similar products"
+	}, {
+		"name": "Account Management",
+		"description": "Empower administrators to manage accounts easily"
+	}, {
+		"name": "Accounting Integrations",
+		"description": "Seamlessly integrate with your backend systems with real-time access to all your data"
+	}, {
+		"name": "My account",
+		"description": "Feature all aspects of the lessee’s outlet, contacts, agreements, ties, fixtures and fittings, deposits and terms and conditions. Previous order history and machine reports can be reviewed and paperless documents downloaded. Make ad-hoc account and rental payments."
+	}
+]

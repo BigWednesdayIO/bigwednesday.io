@@ -1,0 +1,130 @@
+{% extends "layouts/base.html" %}
+
+{% set team = contents.data['team.json'].metadata %}
+
+{% block page %}
+{% if page.metadata.hero %}
+<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero }}" alt />
+<div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero }})">
+{% else %}
+<div class="hero">
+{% endif %}
+	<div class="content-wrap">
+		<h1>About</h1>
+		<p>Enabling the rapid creation of complex commerce applications</p>
+	</div>
+</div>
+
+{% set sections = "The Founders, Contact Us, Press" %}
+<div class="section-links panel">
+	<div class="content-wrap">
+		<ul class="section-links__inner inline-list">
+			{% for section in sections|split(', ') %}
+				<li><a href="#{{ section | id }}">{{ section }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+
+<main>
+	<section class="page-body">
+		<div class="content-wrap centred">
+			<h2 id="the-founders">The Founders</h2>
+			<p class="tagline">The Big Wednesday IO team brings years of experience in advanced data structures and algorithms, data security and privacy, consumer advocacy, retail sales and B2B ecommerce. We used to help FTSE 500 companies solve their complex ecommerce and integration problems. Now, we're out to unleash powerful technology for businesses everywhere to use.</p>
+		</div>
+	</section>
+	<section class="panel">
+		<div class="content-wrap content-wrap--narrow">
+			<ul class="grid-list grid-list--well-padded">
+				{% for member in team %}
+					<li class="centred">
+						<div class="rounded">
+							<img src="{% if member.image %}{{ assets }}/images/team/{{ member.image }}{% else %}//placehold.it/100x110{% endif %}" alt style="display: block;" />
+						</div>
+						<div class="media-item__text">
+							<h3 class="media-item__title media-item__title--soft">{{ member.name }}</h3>
+							<p class="media-item__preview">{{ member.role }}</p>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+
+	<section class="page-body">
+		<div class="content-wrap centred">
+			<h2 id="contact-us">Contact Us</h2>
+
+			<h3>Our London office</h3>
+			<p class="tagline">20 Ropemaker Street, London EC2Y 9AR.</p>
+
+			<ul class="press-list">
+				<li>
+					<a href="mailto:sales@bigwednesday.io" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#bullhorn"></use></svg>
+						<span class="press-list__text">sales@bigwednesday.io</span>
+					</a>
+				</li>
+				<li>
+					<a href="mailto:support@bigwednesday.io" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#life-ring"></use></svg>
+						<span class="press-list__text">support@bigwednesday.io</span>
+					</a>
+				</li>
+				<li>
+					<a href="mailto:info@bigwednesday.io" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#info-circle"></use></svg>
+						<span class="press-list__text">info@bigwednesday.io</span>
+					</a>
+				</li>
+			</ul>
+
+			<p class="tagline">VAT Number: GB 219 5868 68</p>
+
+		</div>
+	</section>
+
+	<img class="prefetch" src="{{ assets }}/images/hero--press.jpg" alt />
+	<div class="hero hero--top" style="background-image: url({{ assets }}/images/hero--press.jpg); min-height: 200px;"></div>
+
+	<section class="page-body">
+		<div class="content-wrap centred">
+			<h2>Press</h2>
+			<p class="tagline">Big Wednesday IO enables businesses to create complex commerce applications rapidly by providing composable, developer-friendly APIs, intuitive modern management apps and data-backed personalisation...everywhere. Think beautiful code, great products and superb documentation.</p>
+
+			<ul class="press-list">
+				<li>
+					<div class="press-list__item">
+						<svg class="press-list__icon press-list__icon--color" height="32" width="32"><use xlink:href="#logo"></use></svg>
+						<span class="press-list__text">Founded in August 2015</span>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#globe"></use></svg>
+						<span class="press-list__text">HQ in London</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#newspaper"></use></svg>
+						<span class="press-list__text">Media resources</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#radio-tower"></use></svg>
+						<span class="press-list__text">Product updates</span>
+					</a>
+				</li>
+				<li>
+					<a href="mailto:press@bigwednesday.io" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#email-outline"></use></svg>
+						<span class="press-list__text">press@bigwednesday.io</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+</main>
+{% endblock %}

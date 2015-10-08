@@ -1,0 +1,19 @@
+.section-nav {
+	font-family: $font-primary;
+	font-size: 1.4rem;
+	background: $body-bg;
+
+	&__item + &__item {
+		border-top: $border;
+	}
+
+	&__link {
+		color: rgb(110,110,122);
+		text-decoration: none;
+
+		&:hover {
+			color: $ui-primary;
+			background: $gradient;
+		}
+	}
+}

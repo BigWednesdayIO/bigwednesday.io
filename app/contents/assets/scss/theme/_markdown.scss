@@ -1,0 +1,30 @@
+.markdown {
+	ul {
+		@extend .bulleted;
+	}
+
+	ol {
+		@extend .numbered;
+	}
+
+	h2, h3 {
+		color: $body-heading-alt;
+		font-weight: 300;
+		margin: 1.2em 0 .8em;
+	}
+
+	h2 {
+		font-size: 2.4rem;
+	}
+
+	h3 {
+		font-size: 2.1rem;
+	}
+
+	p > img {
+		display: block;
+		margin: 3em auto;
+		width: 100%;
+		max-width: 500px;
+	}
+}

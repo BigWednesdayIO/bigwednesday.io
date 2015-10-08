@@ -1,0 +1,11 @@
+.section-links {
+	font-weight: 300;
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			color: $nav;
+		}
+	}
+}
