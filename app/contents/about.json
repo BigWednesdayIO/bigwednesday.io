@@ -1,5 +1,6 @@
 {
 	"title": "About",
 	"hero": "hero--about.jpg",
-	"template": "layouts/pages/about.html"
+	"template": "layouts/pages/about.html",
+	"section": "about"
 }

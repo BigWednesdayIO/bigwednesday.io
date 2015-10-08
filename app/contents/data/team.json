@@ -2,25 +2,25 @@
 	{
 		"id": 1,
 		"name": "Alex Knights",
-		"role": "CEO & Co-founder",
+		"role": "CEO",
 		"image": "alex.jpg",
 		"bio": ""
 	}, {
 		"id": 2,
 		"name": "Michael Strutt",
-		"role": "Product Engineer & Co-founder",
+		"role": "Product Engineer",
 		"image": "michael.jpg",
 		"bio": ""
 	}, {
 		"id": 3,
 		"name": "Toby Stableford",
-		"role": "Product Engineer & Co-founder",
+		"role": "Product Engineer",
 		"image": "toby.jpg",
 		"bio": ""
 	}, {
 		"id": 4,
 		"name": "Chris Impey",
-		"role": "Product Engineer & Co-founder",
+		"role": "Product Engineer",
 		"image": "chris-the-new-and-improved.jpg",
 		"bio": ""
 	}

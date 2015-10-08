@@ -26,6 +26,10 @@
 
 	&--well-padded {
 		margin-top: $pad*3;
+
+		> li:nth-last-child(n+3) {
+			margin-bottom: $pad*4;
+		}
 	}
 }
 

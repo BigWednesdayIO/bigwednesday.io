@@ -7,11 +7,11 @@
 <div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero if page.metadata.hero else 'hero--default.jpg' }})">
 	<div class="content-wrap">
 		<h1>About</h1>
-		<p>Big Wednesday IO enables the rapid creation of complex commerce applications</p>
+		<p>Enabling the rapid creation of complex commerce applications</p>
 	</div>
 </div>
 
-{% set sections = "About Us, Our Team, Contact, Press" %}
+{% set sections = "The Founders, Contact Us, Press" %}
 <div class="section-links panel">
 	<div class="content-wrap">
 		<ul class="section-links__inner inline-list">
@@ -25,28 +25,18 @@
 <main>
 	<section class="page-body">
 		<div class="content-wrap">
-			<h2 id="about-us" class="centred">About Us</h2>
-
-			<ul class="grid-list">
-				<li class="tagline">
-					<p>Big Wednesday IO enables people to create complex commerce applications that work for them. Developer-friendly APIs, intuitive management apps and data-backed personalisation... everywhere. Beautiful code, great products, superb documentation.</p>
-				</li>
-				<li class="tagline">
-					<p>Whether using our Management Apps, Customer Cloud or one or more of our composable APIs you can integrate our platform with third-party tools and platforms to create complex commerce applications in the way that works best for you.</p>
-				</li>
-			</ul>
+			<h2 id="the-founders" class="centred">The Founders</h2>
+			<p class="tagline">The Big Wednesday IO team brings years of experience in advanced data structures and algorithms, data security and privacy, consumer advocacy, retail sales and B2B ecommerce. We used to help FTSE 500 companies solve their complex ecommerce and integration problems. Now, we're out to unleash powerful technology for businesses everywhere to use.</p>
 		</div>
 	</section>
-
 	<section class="panel">
-		<div class="content-wrap">
-			<h2 id="our-team" class="centred">Our Team</h2>
-		</div>
 		<div class="content-wrap content-wrap--narrow">
 			<ul class="grid-list grid-list--well-padded">
 				{% for member in team %}
-					<li class="media-item">
-						<div class="media-item__image"><img src="{% if member.image %}{{ assets }}/images/team/{{ member.image }}{% else %}//placehold.it/100x110{% endif %}" alt /></div>
+					<li class="centred">
+						<div class="rounded">
+							<img src="{% if member.image %}{{ assets }}/images/team/{{ member.image }}{% else %}//placehold.it/100x110{% endif %}" alt style="display: block;" />
+						</div>
 						<div class="media-item__text">
 							<h3 class="media-item__title">{{ member.name }}</h3>
 							<p class="media-item__preview">{{ member.role }}</p>
@@ -59,44 +49,45 @@
 
 	<section class="page-body">
 		<div class="content-wrap centred">
-			<h2 id="contact">Contact</h2>
+			<h2 id="contact-us">Contact Us</h2>
 
 			<h3>Our London office</h3>
 			<p class="tagline">20 Ropemaker Street, London EC2Y 9AR.</p>
 
-			<ul class="grid-list grid-list--full grid-list--well-padded card-list">
+			<ul class="press-list">
 				<li>
-					<div class="card">
-						<h3 class="card__title">Sales</h3>
-						<p>
-							<span class="">+44 (0) 1972 701012</span>
-							<a class="card__link" href="mailto:sales@bigwednesday.io">sales@bigwednesday.io</a>
-						</p>
-					</div>
+					<a href="mailto:sales@bigwednesday.io" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#bullhorn"></use></svg>
+						<span class="press-list__text">sales@bigwednesday.io</span>
+					</a>
 				</li>
 				<li>
-					<div class="card">
-						<h3 class="card__title">Help &amp; Support</h3>
-						<p>
-							<span class="">+44 (0) 1972 701012</span>
-							<a class="card__link" href="mailto:support@bigwednesday.io">support@bigwednesday.io</a>
-						</p>
-					</div>
+					<a href="mailto:support@bigwednesday.io" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#life-ring"></use></svg>
+						<span class="press-list__text">support@bigwednesday.io</span>
+					</a>
 				</li>
 				<li>
-					<div class="card">
-						<h3 class="card__title">General Enquiries</h3>
-						<p>
-							<span class="">+44 (0) 1972 701012</span>
-							<a class="card__link" href="mailto:info@bigwednesday.io">info@bigwednesday.io</a>
-						</p>
-					</div>
+					<a href="mailto:info@bigwednesday.io" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#info-circle"></use></svg>
+						<span class="press-list__text">info@bigwednesday.io</span>
+					</a>
 				</li>
 			</ul>
 
 			<p class="tagline">VAT Number: GB 219 5868 68</p>
 
-			<h2 id="press" class="centred">Press</h2>
+		</div>
+	</section>
+
+	<img class="prefetch" src="{{ assets }}/images/hero--press.jpg" alt />
+	<div class="hero hero--top" style="background-image: url({{ assets }}/images/hero--press.jpg); min-height: 200px;"></div>
+
+	<section class="page-body">
+		<div class="content-wrap centred">
+			<h2>Press</h2>
+			<p class="tagline">Big Wednesday IO enables businesses to create complex commerce applications rapidly by providing composable, developer-friendly APIs, intuitive modern management apps and data-backed personalisation... everywhere. Think beautiful code, great products and superb documentation.</p>
+
 			<ul class="press-list">
 				<li>
 					<div class="press-list__item">
@@ -111,10 +102,16 @@
 					</a>
 				</li>
 				<li>
-					<div class="press-list__item press-list__item--disable">
+					<a href="#" class="press-list__item">
 						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#newspaper"></use></svg>
 						<span class="press-list__text">Media resources</span>
-					</div>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="press-list__item">
+						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#radio-tower"></use></svg>
+						<span class="press-list__text">Product updates</span>
+					</a>
 				</li>
 				<li>
 					<a href="mailto:press@bigwednesday.io" class="press-list__item">
@@ -123,6 +120,7 @@
 					</a>
 				</li>
 			</ul>
+		</div>
 	</section>
 </main>
 {% endblock %}
