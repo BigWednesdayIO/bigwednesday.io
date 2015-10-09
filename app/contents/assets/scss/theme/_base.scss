@@ -229,7 +229,7 @@ label {
 	text-align: center;
 }
 
-%clearfix {
+@mixin clearfix {
 	&::before,
 	&::after {
 		content: " ";
@@ -239,6 +239,10 @@ label {
 	&::after {
 		clear: both;
 	}
+}
+
+%clearfix {
+	@include clearfix;
 }
 
 .inline-list {

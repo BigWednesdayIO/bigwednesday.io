@@ -43,7 +43,8 @@
 }
 
 #{$no-flexbox} {
-	.icon-header {
+	.icon-header,
+	.logo-header {
 		@extend %clearfix;
 
 		&__icon {

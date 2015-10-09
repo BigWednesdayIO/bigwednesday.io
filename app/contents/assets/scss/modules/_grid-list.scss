@@ -42,6 +42,8 @@
 @media (min-width: $bp-medium) {
 	#{$no-flexbox} {
 		.grid-list {
+			@include clearfix;
+
 			> li {
 				float: left;
 
