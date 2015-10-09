@@ -15,15 +15,11 @@ var gulp = require('gulp'),
 
 var assetsDir = 'app/contents/assets';
 
-function handleError (err) {
-	console.log(err.toString());
-	this.emit('end');
-}
-
 gulp.task('sass', function() {
 	return gulp
 		.src(assetsDir + '/scss/app.scss')
 		.pipe(sourcemaps.init())
+		.pipe(sass())
 		.pipe(autoprefixer({
 			browsers: ['last 3 versions', '> 1% in GB'],
 		}))
