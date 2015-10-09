@@ -34,6 +34,13 @@ gulp.task('build:preclean', function() {
 	]);
 });
 
+gulp.task('build:postclean', function() {
+	return del([
+		'build.json',
+		'tmp'
+	]);
+});
+
 gulp.task('build:icons', function() {
 	return gulp.src(assetsDir + '/images/icons/*.svg')
 		.pipe(svgSymbols({
@@ -82,16 +89,13 @@ gulp.task('build:config', function() {
 });
 
 gulp.task('build:html', ['build:assets', 'build:config'], function(cb) {
-	return runWintersmith.build(cb);
+	return runWintersmith.build(function() {
+		console.log('Wintersmith finished building...');
+		cb();
+	});
 });
 
-gulp.task('build', ['build:html'], function() {
-	// Clean up once it's all done
-	return del([
-		'build.json',
-		'tmp'
-	]);
-});
+gulp.task('build', ['build:html']);
 
 gulp.task('lint', function() {
 	return gulp
