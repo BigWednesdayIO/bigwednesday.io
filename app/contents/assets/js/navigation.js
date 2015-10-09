@@ -7,6 +7,11 @@
 			timers = {},
 			transitionendEvent;
 
+		if (!navElement.classList) {
+			// Doesn't cut the mustard
+			return;
+		}
+
 		transitionendEvent = (function whichTransitionEvent () {
 			var t,
 				el = document.createElement('fakeelement');
@@ -36,7 +41,7 @@
 		}
 
 		function isOpen (elem) {
-			return elem.dataset.visible === 'true' || !elem.classList.contains('is-hidden');
+			return elem.getAttribute('data-visible') === 'true' || !elem.classList.contains('is-hidden');
 		}
 
 		function showSubNav (id) {
@@ -66,7 +71,7 @@
 
 					subNavLinks[id].classList.add('is-open');
 					subNavElements[id].classList.remove('is-hidden');
-					subNavElements[id].dataset.visible = true;
+					subNavElements[id].setAttribute('data-visible', true);
 				}
 
 				if (visibleSibling) {
@@ -136,7 +141,7 @@
 				}, false);
 				subNavElements[id].addEventListener('mouseleave', hide, false);
 				subNavElements[id].addEventListener(transitionendEvent, function() {
-					subNavElements[id].dataset.visible = !subNavElements[id].classList.contains('is-hidden');
+					subNavElements[id].setAttribute('data-visible', !subNavElements[id].classList.contains('is-hidden'));
 				}, false);
 
 				return linksMap;
