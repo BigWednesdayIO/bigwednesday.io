@@ -24,7 +24,6 @@ gulp.task('sass', function() {
 	return gulp
 		.src(assetsDir + '/scss/app.scss')
 		.pipe(sourcemaps.init())
-		.pipe(sass().on('error', handleError))
 		.pipe(autoprefixer({
 			browsers: ['last 3 versions', '> 1% in GB'],
 		}))
