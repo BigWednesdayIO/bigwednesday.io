@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
 	// Plugins:
 	autoprefixer = require('gulp-autoprefixer'),
-	clean = require('gulp-clean'),
+	del = require('del'),
 	eslint = require('gulp-eslint'),
 	extend = require('gulp-extend'),
 	minifyCss = require('gulp-minify-css'),
@@ -33,12 +33,10 @@ gulp.task('sass', function() {
 });
 
 gulp.task('build:preclean', function() {
-	return gulp
-		.src([
-			'tmp',
-			'build'
-		], {read: false})
-		.pipe(clean());
+	return del([
+		'tmp',
+		'build'
+	]);
 });
 
 gulp.task('build:icons', function() {
@@ -94,12 +92,10 @@ gulp.task('build:html', ['build:assets', 'build:config'], function(cb) {
 
 gulp.task('build', ['build:html'], function() {
 	// Clean up once it's all done
-	return gulp
-		.src([
-			'build.json',
-			'tmp'
-		], {read: false})
-		.pipe(clean());
+	return del([
+		'build.json',
+		'tmp'
+	]);
 });
 
 gulp.task('lint', function() {
