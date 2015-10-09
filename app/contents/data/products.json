@@ -75,7 +75,7 @@
 			}, {
 				"name": "REST API",
 				"href": "/products/rest-api",
-				"icon": "code",
+				"icon": "xml",
 				"description": "API driven data, delivered everywhere. Welcome to the post-browser era"
 			}
 		]

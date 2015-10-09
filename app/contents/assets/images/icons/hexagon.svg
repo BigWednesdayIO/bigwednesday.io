@@ -1,31 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   viewBox="0 0 50.000012 55.00001"
-   height="55.000011"
-   width="50.000011"
-   version="1.1"
-   id="svg3400">
-  <metadata
-     id="metadata3406">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs
-     id="defs3404" />
-  <path
-     id="path4316"
-     d="m 25.000006,55.000006 -25.0000010000001,-15 0,-25 L 25.000006,5.8309517e-6 50.000005,15.000006 l 0,25 -24.999999,15 z"
-     style="fill:#55A32A;fill-opacity:1;fill-rule:evenodd;stroke:#55A32A;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+<svg id="svg3400" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="55" width="50" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 50.000012 55.00001">
+ <path id="path4316" d="m25 55-25-15v-25l25-15 25 15v25l-25 15z" fill-rule="evenodd" stroke-width="0" fill="#55A32A"/>
 </svg>

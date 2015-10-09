@@ -2,7 +2,7 @@
 template: layouts/product.html
 title: REST API
 tagline: API driven data, delivered everywhere. Welcome to the post-browser era
-icon: code
+icon: xml
 section: products
 aside: rest-api-graphic.html
 ---
