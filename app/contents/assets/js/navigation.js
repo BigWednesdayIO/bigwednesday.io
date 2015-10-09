@@ -160,11 +160,5 @@
 		if (checkLargeScreen.matches) {
 			setUpSubNavs();
 		}
-
-		/*checkLargeScreen.addListener(function(e) {
-			if (e.matches) {
-				setUpSubNavs();
-			}
-		}, true);*/
 	});
 })();
