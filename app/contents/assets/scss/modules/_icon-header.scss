@@ -26,14 +26,31 @@
 
 .logo-header {
 	@extend .icon-header;
+	flex-flow: column nowrap;
 
 	&__icon {
 		flex-shrink: 0;
-		margin-right: 1.8rem;
+		margin-bottom: $pad-half;
 
 		svg,
 		img {
 			display: block;
+		}
+	}
+
+	&__text {
+		text-align: center;
+	}
+
+	@media (min-width: $bp-small) {
+		flex-direction: row;
+
+		&__icon {
+			margin: 0 1.8rem 0 0;
+		}
+
+		&__text {
+			text-align: left;
 		}
 	}
 
@@ -43,7 +60,8 @@
 }
 
 #{$no-flexbox} {
-	.icon-header {
+	.icon-header,
+	.logo-header {
 		@extend %clearfix;
 
 		&__icon {

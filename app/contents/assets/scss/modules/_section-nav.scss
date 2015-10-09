@@ -1,5 +1,8 @@
 .section-nav {
+	display: none;
+
 	@media (min-width: $bp-medium) {
+		display: block;
 		position: sticky;
 		top: 2rem;
 		margin: 0;

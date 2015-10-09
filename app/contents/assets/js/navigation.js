@@ -1,13 +1,13 @@
 (function() {
-	document.addEventListener('DOMContentLoaded', function(event) {
-		var navElement = document.getElementsByClassName('primary-navigation')[0],
-			subNav = document.getElementById('sub-nav'),
-			subNavLinks = document.getElementsByClassName('with-sub-nav'),
-			subNavElements = {},
-			timers = {},
-			transitionendEvent;
+	var navElement,
+		subNav,
+		subNavLinks,
+		checkLargeScreen = window.matchMedia('(min-width: 768px)');;
 
-		transitionendEvent = (function whichTransitionEvent () {
+	function setUpSubNavs () {
+		var subNavElements = {},
+			timers = {};
+		var transitionendEvent = (function whichTransitionEvent () {
 			var t,
 				el = document.createElement('fakeelement');
 
@@ -25,18 +25,12 @@
 			}
 		})();
 
-		if (navElement) {
-			document.getElementById('navicon').addEventListener('click', function() {
-				navElement.classList.toggle('is-hidden');
-			});
-		}
-
 		function isHovered (elem) {
 			return !!(elem.querySelector(":hover") || elem.parentNode.querySelector(":hover") === elem);
 		}
 
 		function isOpen (elem) {
-			return elem.dataset.visible === 'true' || !elem.classList.contains('is-hidden');
+			return elem.getAttribute('data-visible') === 'true' || !elem.classList.contains('is-hidden');
 		}
 
 		function showSubNav (id) {
@@ -66,7 +60,7 @@
 
 					subNavLinks[id].classList.add('is-open');
 					subNavElements[id].classList.remove('is-hidden');
-					subNavElements[id].dataset.visible = true;
+					subNavElements[id].setAttribute('data-visible', true);
 				}
 
 				if (visibleSibling) {
@@ -85,62 +79,86 @@
 			}, 100);
 		}
 
-		if (subNavLinks.length) {
-			subNavLinks = Array.prototype.reduce.call(subNavLinks, function(linksMap, subNavLink) {
-				var id = subNavLink.getAttribute('data-sub-nav'),
-					nope = false;
+		subNavLinks = Array.prototype.reduce.call(subNavLinks, function(linksMap, subNavLink) {
+			var id = subNavLink.getAttribute('data-sub-nav'),
+				nope = false;
 
-				linksMap[id] = subNavLink;
+			linksMap[id] = subNavLink;
 
-				subNavElements[id] = document.getElementById('sub-nav-' + id);
+			subNavElements[id] = document.getElementById('sub-nav-' + id);
 
-				function show () {
-					showSubNav(id);
+			function show () {
+				showSubNav(id);
+			}
+
+			function hide () {
+				hideSubNav(id);
+			}
+
+			function tappedAway () {
+				if (nope) {
+					nope = !nope;
+					return;
 				}
 
-				function hide () {
-					hideSubNav(id);
+				if (isOpen(subNavElements[id])) {
+					hide();
+					document.body.removeEventListener('touchend', tappedAway);
 				}
+			}
 
-				function tappedAway () {
-					if (nope) {
-						nope = !nope;
-						return;
-					}
-
-					if (isOpen(subNavElements[id])) {
-						hide();
-						document.body.removeEventListener('touchend', tappedAway);
-					}
+			function showTap (e) {
+				if (!isOpen(subNavElements[id]) && checkLargeScreen.matches) {
+					// Prevent default if open, and if showing full menu (tablet+)
+					e.preventDefault();
 				}
+				show();
+				document.body.addEventListener('touchend', tappedAway, false);
+			}
 
-				function showTap (e) {
-					if (!isOpen(subNavElements[id])) {
-						e.preventDefault();
-					}
-					show();
-					document.body.addEventListener('touchend', tappedAway, false);
-				}
+			subNavElements[id].style.height = subNavElements[id].getBoundingClientRect().height + 'px';
+			subNavElements[id].classList.add('is-hidden');
+			subNavElements[id].classList.remove('measure-me');
 
-				subNavElements[id].style.height = subNavElements[id].getBoundingClientRect().height + 'px';
-				subNavElements[id].classList.add('is-hidden');
-				subNavElements[id].classList.remove('measure-me');
+			subNavLink.addEventListener('mouseenter', show, false);
+			subNavLink.addEventListener('touchend', showTap, false);
+			subNavLink.addEventListener('mouseleave', hide, false);
+			subNavElements[id].addEventListener('mouseenter', show, false);
+			subNavElements[id].addEventListener('touchend', function(e) {
+				showTap(e);
+				nope = true;
+			}, false);
+			subNavElements[id].addEventListener('mouseleave', hide, false);
+			subNavElements[id].addEventListener(transitionendEvent, function() {
+				subNavElements[id].setAttribute('data-visible', !subNavElements[id].classList.contains('is-hidden'));
+			}, false);
 
-				subNavLink.addEventListener('mouseenter', show, false);
-				subNavLink.addEventListener('touchend', showTap, false);
-				subNavLink.addEventListener('mouseleave', hide, false);
-				subNavElements[id].addEventListener('mouseenter', show, false);
-				subNavElements[id].addEventListener('touchend', function(e) {
-					showTap(e);
-					nope = true;
-				}, false);
-				subNavElements[id].addEventListener('mouseleave', hide, false);
-				subNavElements[id].addEventListener(transitionendEvent, function() {
-					subNavElements[id].dataset.visible = !subNavElements[id].classList.contains('is-hidden');
-				}, false);
+			return linksMap;
+		}, {});
+	}
 
-				return linksMap;
-			}, {});
+	document.addEventListener('DOMContentLoaded', function(event) {
+		navElement = document.getElementsByClassName('primary-navigation')[0];
+		subNav = document.getElementById('sub-nav');
+		subNavLinks = document.getElementsByClassName('with-sub-nav');
+
+		if (!navElement.classList) {
+			// Doesn't cut the mustard
+			return;
+		}
+
+		if (navElement) {
+			document.getElementById('navicon').addEventListener('click', function() {
+				navElement.classList.toggle('is-hidden');
+			});
+		}
+
+		if (!subNavLinks.length) {
+			return;
+		}
+
+		if (checkLargeScreen.matches) {
+			setUpSubNavs();
 		}
 	});
 })();

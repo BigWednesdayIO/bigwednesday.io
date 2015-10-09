@@ -186,6 +186,7 @@ label {
 
 .panel {
 	padding: $pad;
+	background: $gradient-fallback;
 	background: $gradient;
 	border: $border;
 	box-shadow: $shadow;
@@ -229,7 +230,7 @@ label {
 	text-align: center;
 }
 
-%clearfix {
+@mixin clearfix {
 	&::before,
 	&::after {
 		content: " ";
@@ -239,6 +240,10 @@ label {
 	&::after {
 		clear: both;
 	}
+}
+
+%clearfix {
+	@include clearfix;
 }
 
 .inline-list {

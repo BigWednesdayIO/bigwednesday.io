@@ -26,7 +26,9 @@
 	&--homepage {
 		@media (min-width: $bp-medium) {
 			padding-top: 10%;
+			padding-top: 10vw;
 			padding-bottom: 15%;
+			padding-bottom: 15vw;
 		}
 
 		@media (max-width: $bp-medium - (1em/16em)) {

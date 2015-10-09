@@ -1,5 +1,6 @@
 .site-header {
 	font-family: $font-primary;
+	background: $gradient-fallback;
 	background: $gradient;
 	border-bottom: $border;
 }
@@ -12,8 +13,13 @@
 		font-weight: 400;
 		color: $body-heading;
 
-		span {
+		&--highlight {
 			color: #888;
+		}
+
+		&__block {
+			// Stops breaking mid-phrase
+			display: inline-block;
 		}
 
 		&:hover {

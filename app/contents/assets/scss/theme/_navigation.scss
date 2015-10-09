@@ -20,6 +20,7 @@
 }
 
 .primary-navigation {
+	background: $gradient-fallback;
 	background: $gradient;
 	box-shadow: inset $shadow;
 	border-bottom: $border;
@@ -79,6 +80,7 @@
 
 .sub-nav {
 	display: none;
+	background: $gradient-fallback;
 	background: $gradient;
 	box-shadow: $shadow;
 

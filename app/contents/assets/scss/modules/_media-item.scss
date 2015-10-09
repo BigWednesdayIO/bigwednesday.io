@@ -25,6 +25,24 @@
 	}
 
 	&__preview {
+
+	}
+
+	#{$no-flexbox} & {
+		display: block;
+		text-align: left;
+		@extend %clearfix;
+
+		&__icon,
+		&__image,
+		&__text {
+			display: block;
+		}
+
+		&__icon,
+		&__image {
+			float: left;
+		}
 	}
 }
 

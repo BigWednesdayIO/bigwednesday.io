@@ -87,6 +87,7 @@
 	&__heading {
 		font-size: 2rem;
 		padding: 1.6rem;
+		background: $gradient-fallback;
 		background: $gradient;
 		border-bottom: $border;
 	}

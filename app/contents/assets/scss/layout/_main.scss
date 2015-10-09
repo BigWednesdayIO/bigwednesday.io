@@ -57,7 +57,7 @@ body {
 @media (min-width: $bp-medium) {
 	#{$no-flexbox} {
 		.page-body {
-			@extend %claerfix;
+			@include clearfix;
 
 			&__primary,
 			&__secondary {

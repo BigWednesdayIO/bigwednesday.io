@@ -16,4 +16,17 @@
 	&__icon {
 		margin-right: $pad;
 	}
+
+	#{$no-flexbox} & {
+		&__item {
+			display: block;
+			text-align: left;
+		}
+
+		&__icon,
+		&__text {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
 }

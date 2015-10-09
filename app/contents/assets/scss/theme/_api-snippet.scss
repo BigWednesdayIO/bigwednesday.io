@@ -4,6 +4,7 @@
 	margin-right: $pad*3;
 	border: $border;
 	border-radius: $pad-half;
+	background: $gradient-fallback;
 	background: $gradient;
 	font-family: monospace;
 	font-size: 1.2em;
