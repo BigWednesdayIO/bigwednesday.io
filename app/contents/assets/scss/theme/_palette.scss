@@ -24,6 +24,7 @@ $border-color: #eee;
 $border-strong-color: #e0e0e0;
 
 $gradient: linear-gradient(to bottom, $light-grey-one, $light-grey-two);
+$gradient-fallback: mix($light-grey-one, $light-grey-two, 50%);
 $border: 1px solid $border-color;
 $border-strong: 1px solid $border-strong-color;
 $shadow: 0 1px 2px rgba(0, 0, 0, .08);

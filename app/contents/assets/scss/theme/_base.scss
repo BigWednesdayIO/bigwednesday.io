@@ -186,6 +186,7 @@ label {
 
 .panel {
 	padding: $pad;
+	background: $gradient-fallback;
 	background: $gradient;
 	border: $border;
 	box-shadow: $shadow;

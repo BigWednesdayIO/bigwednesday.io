@@ -13,6 +13,7 @@
 
 		&:hover {
 			color: $ui-primary;
+			background: $gradient-fallback;
 			background: $gradient;
 		}
 	}
