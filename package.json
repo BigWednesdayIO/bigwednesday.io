@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "app/index.html",
+  "engines": {
+    "node": ">=4.1.1",
+    "npm": ">=3.3.3"
+  },
   "devDependencies": {
     "cheerio": "^0.19.0",
+    "del": "^2.0.2",
     "glob": "^5.0.15",
     "gulp": "^3.9.0",
     "gulp-add-src": "^0.2.0",
-    "gulp-autoprefixer": "^3.0.2",
-    "gulp-clean": "^0.3.1",
+    "gulp-autoprefixer": "2.3.1",
     "gulp-connect": "^2.2.0",
     "gulp-eslint": "^1.0.0",
     "gulp-extend": "^0.2.0",

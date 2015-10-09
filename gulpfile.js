@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
 	// Plugins:
 	autoprefixer = require('gulp-autoprefixer'),
-	clean = require('gulp-clean'),
+	del = require('del'),
 	eslint = require('gulp-eslint'),
 	extend = require('gulp-extend'),
 	minifyCss = require('gulp-minify-css'),
@@ -15,16 +15,11 @@ var gulp = require('gulp'),
 
 var assetsDir = 'app/contents/assets';
 
-function handleError (err) {
-	console.log(err.toString());
-	this.emit('end');
-}
-
 gulp.task('sass', function() {
 	return gulp
 		.src(assetsDir + '/scss/app.scss')
 		.pipe(sourcemaps.init())
-		.pipe(sass().on('error', handleError))
+		.pipe(sass())
 		.pipe(autoprefixer({
 			browsers: ['last 3 versions', '> 1% in GB'],
 		}))
@@ -33,12 +28,17 @@ gulp.task('sass', function() {
 });
 
 gulp.task('build:preclean', function() {
-	return gulp
-		.src([
-			'tmp',
-			'build'
-		], {read: false})
-		.pipe(clean());
+	return del([
+		'tmp',
+		'build'
+	]);
+});
+
+gulp.task('build:postclean', function() {
+	return del([
+		'build.json',
+		'tmp'
+	]);
 });
 
 gulp.task('build:icons', function() {
@@ -89,18 +89,13 @@ gulp.task('build:config', function() {
 });
 
 gulp.task('build:html', ['build:assets', 'build:config'], function(cb) {
-	return runWintersmith.build(cb);
+	return runWintersmith.build(function() {
+		console.log('Wintersmith finished building...');
+		cb();
+	});
 });
 
-gulp.task('build', ['build:html'], function() {
-	// Clean up once it's all done
-	return gulp
-		.src([
-			'build.json',
-			'tmp'
-		], {read: false})
-		.pipe(clean());
-});
+gulp.task('build', ['build:html']);
 
 gulp.task('lint', function() {
 	return gulp
