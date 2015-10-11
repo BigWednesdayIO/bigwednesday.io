@@ -12,7 +12,7 @@ sections: Why, Features
 
 ### You want to enable quick ordering for your lessees
 
-Your lessee’s want their ordering experience to be quick and easy. Powered by their personal ordering patterns combined with targeted promotions, product ranking adjustments and other business rules you can help them place their weekly order in minutes while controlling exactly which products and offers are presented to them - and all  with customer- and outlet-specific product pricing and price adjustments.
+Your lessees want their ordering experience to be quick and easy. Powered by their personal ordering patterns combined with targeted promotions, product ranking adjustments and other business rules you can help them place their weekly order in minutes while controlling exactly which products and offers are presented to them - and all  with customer- and outlet-specific product pricing and price adjustments.
 
 ### You want to increase sales volumes
 
@@ -28,7 +28,7 @@ You have negotiated price lists and complex pricing rules: you have a range of p
 
 ### You need inventory transparency
 
-You want your lessees to know which products are available to order today and which products will be available to order next Tuesday based on depot availability taking into account delivery lead times where appropriate and where a product suddenly become unavailable you want to inform your lessees about this in real-time.
+You want your lessees to know which products are available to order today and which products will be available to order next Tuesday based on depot availability taking into account delivery lead times where appropriate and where a product suddenly becomes unavailable you want to inform your lessees about this in real-time.
 
 ### You’d like to get continuous improvements
 
