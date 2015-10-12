@@ -1,50 +1,54 @@
 {% extends "layouts/base.html" %}
 {% block page %}
-{% if page.metadata.hero %}
-<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero }}" alt />
-<div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero }})">
-{% else %}
-<div class="hero">
-{% endif %}
-	<div class="content-wrap">
-		{% block hero %}
-			<h1 class="icon-header">
-				<span class="icon-header__icon icon-tile">
-					<svg class="" height="32" width="32">
-						<use xlink:href="#{{ page.metadata.icon }}"></use>
-					</svg>
-				</span>
-				<span class="icon-header__text">{{ page.metadata.title }}</span>
-			</h1>
-			<p>{{ page.metadata.tagline }}</p>
-		{% endblock %}
-	</div>
-</div>
-{% if page.metadata.sections %}
-	<div class="section-links panel">
+<div itemscope itemtype="http://schema.org/Product">
+	<meta itemprop="category" content="{{ page.metadata.section }}" />
+	{% if page.metadata.hero %}
+		<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero }}" alt />
+		<div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero }})">
+	{% else %}
+		<div class="hero">
+	{% endif %}
 		<div class="content-wrap">
-			<ul class="section-links__inner inline-list">
-				{% for section in page.metadata.sections|split(', ') %}
-					<li><a href="#{{ section | id }}">{{ section }}</a></li>
-				{% endfor %}
-			</ul>
+			{% block hero %}
+				<h1 class="icon-header">
+
+					<span class="icon-header__icon icon-tile">
+						<svg class="" height="32" width="32" itemprop="logo">
+							<use xlink:href="#{{ page.metadata.icon }}"></use>
+						</svg>
+					</span>
+					<span class="icon-header__text" itemprop="name">{{ page.metadata.title }}</span>
+				</h1>
+				<p itemprop="description">{{ page.metadata.tagline }}</p>
+			{% endblock %}
 		</div>
 	</div>
-{% endif %}
+	{% if page.metadata.sections %}
+		<div class="section-links panel">
+			<div class="content-wrap">
+				<ul class="section-links__inner inline-list">
+					{% for section in page.metadata.sections|split(', ') %}
+						<li><a href="#{{ section | id }}">{{ section }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	{% endif %}
 
-<div class="page-body">
-	<div class="content-wrap">
-		{% block header %}{% endblock %}
+	<div class="page-body">
+		<div class="content-wrap">
+			{% block header %}{% endblock %}
 
-		<div class="page-body__inner">
-			<main class="page-body__primary">
-				{% block content %}
-					<div class="markdown">
-						{{ page.html }}
-					</div>
-				{% endblock %}
-			</main>
-			<aside class="page-body__secondary">{% if page.metadata.aside %}{% include "includes/" + page.metadata.aside %}{% endif %}</aside>
+			<div class="page-body__inner">
+				<main class="page-body__primary" itemprop="description">
+					{% block content %}
+						<div class="markdown">
+							{{ page.html }}
+						</div>
+					{% endblock %}
+				</main>
+				<aside class="page-body__secondary">{% if page.metadata.aside %}{% include "includes/" + page.metadata.aside %}{% endif %}</aside>
+			</div>
 		</div>
 	</div>
 </div>
