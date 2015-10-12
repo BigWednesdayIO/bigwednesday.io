@@ -53,4 +53,14 @@
 	&__listing {
 		margin: 0;
 	}
+
+	&--condensed {
+		margin: 0;
+	}
+
+	&--condensed & {
+		&__list {
+			margin: 0;
+		}
+	}
 }

@@ -122,8 +122,9 @@ var buildProductObject = function(productPage, path) {
 
   return {
     href: toHref(path),
-    name: $('h1').text(),
-    description: $('meta[name=description]').attr('content'),
+    name: $('h1').text().replace(/\W+/gm, ' ').trim(),
+    description: $('.hero p').text(),
+    icon: $('h1 svg > use').attr('xlink:href').substring(1)
   };
 }
 
