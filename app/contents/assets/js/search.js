@@ -34,10 +34,7 @@
 	}
 
 	function generatePreview (textBody, length, query) {
-		var preview;
-
-		textBody = textBody.replace(/\W+/mg, ' ').trim();
-		preview = textBody.match(new RegExp('.{0,' + length + '}\\b'));
+		var preview = textBody.match(new RegExp('.{0,' + length + '}\\b'));
 
 		if (!preview) {
 			return null;
