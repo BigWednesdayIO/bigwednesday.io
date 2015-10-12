@@ -1,10 +1,12 @@
 (function() {
 	function getSearchResults (search_params, callback) {
-		var oReq = new XMLHttpRequest();
+		var oReq = new XMLHttpRequest(),
+			timestamp = new Date();
 
 		oReq.addEventListener('load', function(response) {
 			var responseData = JSON.parse(response.currentTarget.response);
 			responseData.meta = search_params;
+			responseData.meta.timestamp = timestamp;
 			callback(responseData);
 		});
 
@@ -15,7 +17,16 @@
 	}
 
 	function highlightMatches (query, textBody) {
-		var matchQuery = new RegExp('(\\W|\\b|-)(' + query.replace(/\W/g, '|') + ')(|-|s)(\\W|\\b)' , 'gi');
+		var matchQuery;
+
+		query = query.split(/\W/g);
+		query = query.map(function(word) {
+			if (word[word.length - 1] === 's') {
+				return word + '?';
+			}
+			return word;
+		});
+		matchQuery = new RegExp('(\\W|\\b|-)(' + query.join('|') + ')(|-|s)(\\W|\\b)' , 'gi');
 
 		return textBody.replace(matchQuery, function(match) {
 			return '<strong>' + match + '</strong>';
@@ -25,7 +36,7 @@
 	function generatePreview (textBody, length, query) {
 		var preview;
 
-		textBody = textBody.trim();
+		textBody = textBody.replace(/\W+/mg, ' ').trim();
 		preview = textBody.match(new RegExp('.{0,' + length + '}\\b'));
 
 		if (!preview) {
@@ -59,22 +70,22 @@
 		results.hits.forEach(function(result) {
 			var listItem, text, title, link, preview, previewHtml;
 			listItem = document.createElement('li');
-			listItem.className = 'media-item';
+
+			link = document.createElement('a');
+			link.className = 'media-item media-item--highlight';
+			link.href = result.href;
+			listItem.appendChild(link);
 
 			text = document.createElement('div');
 			text.className = 'media-item__text';
-			listItem.appendChild(text);
+			link.appendChild(text);
 
 			title = document.createElement('h3');
 			title.className = 'media-item__title';
+			title.innerHTML = highlightMatches(results.meta.query, result.title);
 			text.appendChild(title);
 
-			link = document.createElement('a');
-			link.href = result.href;
-			link.innerHTML = highlightMatches(results.meta.query, result.title);
-			title.appendChild(link);
-
-			preview = generatePreview(result.primary, 150, results.meta.query);
+			preview = generatePreview(result.primary, 140, results.meta.query);
 			if (preview) {
 				previewHtml = document.createElement('p');
 				previewHtml.className = 'media-item__preview';
@@ -82,9 +93,6 @@
 				text.appendChild(previewHtml)
 			}
 
-			listItem.addEventListener('click', function() {
-				link.click();
-			});
 			output.appendChild(listItem);
 		});
 
@@ -92,10 +100,22 @@
 	}
 
 	function setupInstantSearch (searchBox, instantResultsContainer) {
-		searchBox.addEventListener('keyup', function() {
+		var bigEnoughForSearch = window.matchMedia('(min-width: 768px)'),
+			closeInstantSearch = function() {
+				instantResultsContainer.innerHTML = '';
+				document.body.removeEventListener('click', closeInstantSearch);
+				console.log('body-click');
+			},
+			lastUpdated;
+
+		document.getElementById('search-box').addEventListener('click', function(e) {
+			e.stopPropagation();
+		});
+
+		searchBox.addEventListener('keyup', function(e) {
 			var query = searchBox.value;
 
-			if (query === '') {
+			if (query === '' || !bigEnoughForSearch.matches || (e.charCode || e.keyCode) === 27) {
 				instantResultsContainer.innerHTML = '';
 				return;
 			}
@@ -106,9 +126,11 @@
 			}, function(results) {
 				var newResults;
 
-				if (results.meta.query !== searchBox.value) {
+				if (lastUpdated && lastUpdated >= results.meta.timestamp) {
 					return;
 				}
+
+				lastUpdated = results.meta.timestamp;
 
 				newResults = instantResultsContainer.cloneNode();
 				newResults.appendChild(formatResults(results));
@@ -116,6 +138,8 @@
 				instantResultsContainer.parentNode.replaceChild(newResults, instantResultsContainer);
 				instantResultsContainer = newResults;
 			});
+
+			document.body.addEventListener('click', closeInstantSearch);
 		});
 	}
 
@@ -129,10 +153,15 @@
 		getSearchResults({
 			query: query
 		}, function(results) {
+			var title;
+
 			if (!results.hits.length) {
 				resultsContainer.innerHTML = 'No results matching "' + results.meta.query + '"';
 				return;
 			}
+
+			title = document.getElementsByTagName('h1')[0];
+			title.innerHTML = title.innerHTML + ' for "' + results.meta.query + '"';
 
 			resultsContainer.appendChild(formatResults(results));
 		});

@@ -5,8 +5,13 @@
 
 	&__inner {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		flex-flow: column nowrap;
+		align-items: stretch;
+
+		@media (min-width: $bp-medium) {
+			flex-direction: row;
+			align-items: center;
+		}
 	}
 }
 
