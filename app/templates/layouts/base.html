@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en-GB" class="no-js">
-	<head>
+	<head itemscope itemtype="http://schema.org/WebSite">
 		<meta charset="utf-8" />
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
 		<title>{{ page.title }} | Big Wednesday IO</title>
@@ -16,6 +16,9 @@
 		<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
 		<link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png">
 
+		<meta itemprop="name" content="Big Wednesday IO" />
+		<link rel="canonical" href="http://bigwednesday.io" itemprop="url" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<!-- build:headjs /assets/js/head.js -->
@@ -24,7 +27,9 @@
 
 		{{ env.helpers.livereload() | safe }}
 	</head>
-	<body class="{{ page.metadata.section }}">
+	<body class="{{ page.metadata.section }}" itemscope itemtype="http://schema.org/Organization">
+		<meta itemprop="url" content="http://bigwednesday.io" />
+		<meta itemprop="mainEntityOfPage" content="http://bigwednesday.io/about" />
 		{% include "includes/header.html" %}
 
 		{% block page %}{% endblock %}
