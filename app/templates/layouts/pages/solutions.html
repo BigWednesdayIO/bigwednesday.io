@@ -3,20 +3,22 @@
 {% set solutions = contents.data['solutions.json'].metadata %}
 
 {% block content %}
-	<section class="media-group">
-		<h2 id="solutions" class="media-group__heading">Solutions</h2>
+	<section class="media-group" itemscope itemtype="http://schema.org/SomeProducts">
+		<h2 id="solutions" class="media-group__heading" itemprop="category">Solutions</h2>
 		<ul class="media-group__listing">
 			{% for solution in solutions %}
-				<li>
-					<a href="{{ solution.href }}" class="media-item media-item--highlight">
+				<li itemscope itemtype="http://schema.org/Product">
+					<meta itemprop="category" content="Solutions" />
+					{% if solution.logo %}<meta itemprop="image" content="http://bigwednesday.io/assets/images/{{ solution.logo }}" />{% endif %}
+					<a href="{{ solution.href }}" class="media-item media-item--highlight" itemprop="url">
 						<div class="media-item__icon">
-							<svg height="28" width="28">
+							<svg height="28" width="28" itemprop="logo">
 								<use xlink:href="#{{ solution.icon }}"></use>
 							</svg>
 						</div>
 						<div class="media-item__text">
-							<h3 class="media-item__title">{{ solution.name }}</h3>
-							{% if solution.description %}<p class="media-item__preview">{{ solution.description }}</p>{% endif %}
+							<h3 class="media-item__title" itemprop="name">{{ solution.name }}</h3>
+							{% if solution.description %}<p class="media-item__preview" itemprop="description">{{ solution.description }}</p>{% endif %}
 						</div>
 					</a>
 				</li>

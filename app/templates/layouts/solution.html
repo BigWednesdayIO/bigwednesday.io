@@ -1,62 +1,64 @@
 {% extends "layouts/base.html" %}
 
 {% block page %}
-{% if page.metadata.hero %}
-<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero }}" alt />
-<div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero }})">
-{% else %}
-<div class="hero">
-{% endif %}
-	<div class="content-wrap">
-		{% if page.metadata.logo %}
-			<div class="logo-header">
-				<span class="logo-header__icon">
-					<img src="{{ assets }}/images/{{ page.metadata.logo }}" alt="{{ page.metadata.title }} Logo" />
-				</span>
-				<div class="logo-header__text">
-					<h1>{{ page.metadata.title }}</h1>
-					<p>{{ page.metadata.tagline }}</p>
-				</div>
-			</div>
-		{% else  %}
-			<h1 class="icon-header">
-				<span class="icon-header__icon icon-tile">
-					<svg height="32" width="32">
-						<use xlink:href="#{{ page.metadata.icon }}"></use>
-					</svg>
-				</span>
-				<span class="icon-header__text">{{ page.metadata.title }}</span>
-			</h1>
-			<p>{{ page.metadata.tagline }}</p>
-		{% endif %}
-	</div>
-</div>
-
-{% if page.metadata.sections %}
-	<div class="section-links panel">
+<div itemscope itemtype="http://schema.org/Product">
+	{% if page.metadata.hero %}
+		<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero }}" alt />
+		<div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero }})">
+	{% else %}
+		<div class="hero">
+	{% endif %}
 		<div class="content-wrap">
-			<ul class="section-links__inner inline-list">
-				{% for section in page.metadata.sections|split(', ') %}
-					<li><a href="#{{ section | id }}">{{ section }}</a></li>
-				{% endfor %}
-			</ul>
+			{% if page.metadata.logo %}
+				<div class="logo-header">
+					<span class="logo-header__icon">
+						<img src="{{ assets }}/images/{{ page.metadata.logo }}" alt="{{ page.metadata.title }} Logo" itemprop="logo" itemprop="image" />
+					</span>
+					<div class="logo-header__text">
+						<h1 itemprop="name">{{ page.metadata.title }}</h1>
+						<p itemprop="description">{{ page.metadata.tagline }}</p>
+					</div>
+				</div>
+			{% else  %}
+				<h1 class="icon-header">
+					<span class="icon-header__icon icon-tile">
+						<svg height="32" width="32" itemprop="logo">
+							<use xlink:href="#{{ page.metadata.icon }}"></use>
+						</svg>
+					</span>
+					<span class="icon-header__text" itemprop="name">{{ page.metadata.title }}</span>
+				</h1>
+				<p itemprop="description">{{ page.metadata.tagline }}</p>
+			{% endif %}
 		</div>
 	</div>
-{% endif %}
 
-<div class="page-body">
-	<div class="content-wrap">
-		{% block header %}{% endblock %}
+	{% if page.metadata.sections %}
+		<div class="section-links panel">
+			<div class="content-wrap">
+				<ul class="section-links__inner inline-list">
+					{% for section in page.metadata.sections|split(', ') %}
+						<li><a href="#{{ section | id }}">{{ section }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	{% endif %}
 
-		<div class="page-body__inner">
-			<main class="page-body__primary">
-				{% block content %}
-					<div class="markdown">
-						{{ page.html }}
-					</div>
-				{% endblock %}
-			</main>
-			<aside class="page-body__secondary">{% block aside %}{% endblock %}</aside>
+	<div class="page-body">
+		<div class="content-wrap">
+			{% block header %}{% endblock %}
+
+			<div class="page-body__inner">
+				<main class="page-body__primary" itemprop="description">
+					{% block content %}
+						<div class="markdown">
+							{{ page.html }}
+						</div>
+					{% endblock %}
+				</main>
+				<aside class="page-body__secondary">{% block aside %}{% endblock %}</aside>
+			</div>
 		</div>
 	</div>
 </div>
