@@ -105,9 +105,9 @@ var buildPageObject = function(page, path) {
     href: toHref(path),
     title: $('head>title').text().replace(' | Big Wednesday IO', ''),
     meta_description: $('meta[name=description]').attr('content'),
-    primary: $('.page-body__primary').text(),
-    secondary: $('.page-body__secondary').text(),
-    hero: $('.hero').text(),
+    primary: $('main').text().replace(/\W+/gm, ' ').trim(),
+    secondary: $('aside').text().replace(/\W+/gm, ' ').trim(),
+    hero: $('.hero').text().replace(/\W+/gm, ' ').trim(),
   };
 
   if (!data.href) {
