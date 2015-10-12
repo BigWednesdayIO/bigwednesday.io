@@ -1,0 +1,18 @@
+[
+	{
+		"name": "Sales",
+		"type": "sales",
+		"icon": "bullhorn",
+		"email": "sales@bigwednesday.io"
+	}, {
+		"name": "Customer upport",
+		"type": "technical support",
+		"icon": "life-ring",
+		"email": "support@bigwednesday.io"
+	}, {
+		"name": "Info",
+		"type": "customer support",
+		"icon": "info-circle",
+		"email": "info@bigwednesday.io"
+	}
+]
