@@ -1,0 +1,45 @@
+.search-box {
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	margin: $pad-and-half 0 0;
+
+	@media (min-width: $bp-medium) {
+		flex: 1;
+		max-width: 52rem;
+		margin: 0 0 0 $pad-double;
+	}
+
+	@media (min-width: $bp-large) {
+		input {
+			padding: .4em;
+		}
+
+		button {
+			padding: .3em $pad-double;
+			height: auto;
+		}
+	}
+}
+
+.instant-search {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 5.2rem;
+	margin: 0;
+	z-index: 999;
+
+	@media (min-width: $bp-medium) {
+		display: block;
+	}
+
+	@media (min-width: $bp-large) {
+		right: 8rem;
+	}
+
+	&:empty {
+		display: none;
+	}
+}

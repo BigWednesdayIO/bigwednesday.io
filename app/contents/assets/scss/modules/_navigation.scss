@@ -1,9 +1,6 @@
 .nav-bar {
 	&__actions {
 		position: relative;
-		z-index: 99;
-		background: inherit;
-
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;

@@ -91,4 +91,19 @@
 		background: $gradient;
 		border-bottom: $border;
 	}
+
+	&--condensed {
+		box-shadow: none;
+
+		& + & {
+			border-top: 0 none;
+		}
+	}
+
+	&--condensed & {
+		&__heading {
+			font-size: inherit;
+			padding: $pad $pad*.75;
+		}
+	}
 }

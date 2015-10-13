@@ -105,9 +105,9 @@ var buildPageObject = function(page, path) {
     href: toHref(path),
     title: $('head>title').text().replace(' | Big Wednesday IO', ''),
     meta_description: $('meta[name=description]').attr('content'),
-    primary: $('.page-body__primary').text(),
-    secondary: $('.page-body__secondary').text(),
-    hero: $('.hero').text(),
+    primary: $('main').text().replace(/\W+/gm, ' ').trim(),
+    secondary: $('aside').text().replace(/\W+/gm, ' ').trim(),
+    hero: $('.hero').text().replace(/\W+/gm, ' ').trim(),
   };
 
   if (!data.href) {
@@ -122,8 +122,9 @@ var buildProductObject = function(productPage, path) {
 
   return {
     href: toHref(path),
-    name: $('h1').text(),
-    description: $('meta[name=description]').attr('content'),
+    name: $('h1').text().replace(/\W+/gm, ' ').trim(),
+    description: $('.hero p').text(),
+    icon: $('h1 svg > use').attr('xlink:href').substring(1)
   };
 }
 

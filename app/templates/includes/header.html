@@ -1,15 +1,43 @@
 <header>
 	<div class="site-header">
 		<div class="content-wrap">
-			<a href="/" class="logo">
-				<span class="image-link logo__icon" itemprop="brand">
-					<svg height="38" width="20" itemprop="logo">
-						<use xlink:href="#logo"></use>
-					</svg>
-					<meta itemprop="logo" content="http://bigwednesday.io/apple-touch-icon-precomposed.png" />
-				</span>
-				<span href="/" class="logo__text">bigwednesday<span class="logo__text--highlight">io</span> <span class="logo__text__block">Cloud Platform</span></span>
-			</a>
+			<div class="site-header__inner">
+				<a href="/" class="logo">
+					<span class="image-link logo__icon" itemprop="brand">
+						<svg height="38" width="20" itemprop="logo">
+							<use xlink:href="#logo"></use>
+						</svg>
+						<meta itemprop="logo" content="http://bigwednesday.io/apple-touch-icon-precomposed.png" />
+					</span>
+					<span href="/" class="logo__text">bigwednesday<span class="logo__text--highlight">io</span> <span class="logo__text__block">Cloud Platform</span></span>
+				</a>
+		
+				<div id="search-box" class="search-box">
+					<form action="/search">
+						<div class="form-row with-postfix">
+							<label class="visually-hidden" for="search">Search this site</label>
+							<input type="search" id="search" name="query" autocomplete="off" placeholder="Search this site" />
+							<button type="submit" class="button--primary button--icon postfix">
+								<svg width="22" height="22" viewbox="0 0 10 10">
+									<title>Go</title>
+									<use xlink:href="#magnify"></use>
+								</svg>
+							</button>
+						</div>
+					</form>
+
+					<div id="instant-search-results" class="instant-search" style="display: none;">
+						<section class="media-group media-group--condensed">
+							<h3 class="media-group__heading">Products</h3>
+							<ul data-index="products" class="media-group__list instant-search-results-container"></ul>
+						</section>
+						<section class="media-group media-group--condensed">
+							<h3 class="media-group__heading">Pages</h3>
+							<ul data-index="pages" class="media-group__list instant-search-results-container"></ul>
+						</section>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 

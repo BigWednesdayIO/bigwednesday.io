@@ -2,10 +2,22 @@
 	position: relative;
 	z-index: 99;
 	padding: $pad;
+
+	&__inner {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: stretch;
+
+		@media (min-width: $bp-medium) {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
 }
 
 .logo {
 	display: flex;
+	flex-grow: 0;
 
 	&__icon {
 		margin-right: $pad*.75;
