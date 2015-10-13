@@ -23,4 +23,34 @@
 	#{$no-flexbox} & {
 		@extend %clearfix;
 	}
+
+	&--with-video {
+		position: relative;
+		overflow: hidden;
+
+		.content-wrap {
+			position: relative;
+			z-index: 9;
+		}
+	}
+
+	&__video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		transform: translateX(-50%) translateY(-50%) scale(1);
+		-webkit-backface-visibility: hidden;
+
+		&__fallback {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-position: 50% 50%;
+			background-size: cover;
+		}
+	}
 }

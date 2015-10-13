@@ -35,4 +35,23 @@
 			background-image: url(/assets/images/hero--home-mobile.jpg) !important;
 		}
 	}
+
+	&--with-video {
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -$pad;
+			left: -$pad;
+			right: -$pad;
+			bottom: -$pad;
+			background: rgba(51, 51, 51, .8);
+		}
+	}
+
+	&__video {
+		&__fallback {
+			background-color: #333;
+		}
+	}
 }
