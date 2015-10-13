@@ -4,6 +4,7 @@ $black: #222;
 $light-grey-one: #fafafa;
 $light-grey-two: #f5f5f5;
 $light-grey-three: #f1f1f1;
+$dark-grey: #333;
 $error: mix(#dd665a, red, 62.5%);
 
 $nav: #444;
@@ -14,7 +15,7 @@ $link-hover: $brand;
 
 $body-text: rgb(110,110,122);
 $body-heading: #606060;
-$body-heading-alt: #333;
+$body-heading-alt: $dark-grey;
 $body-bg: white;
 
 $font-primary: Roboto, sans-serif;
@@ -45,6 +46,9 @@ $darken-bottom: (lightness($light-grey-three) - lightness(#FCFCFC)) * -1;
 $ui-primary-highlight: linear-gradient(to bottom, darken($ui-primary, $darken-top), darken($ui-primary, $darken-bottom));
 $ui-secondary-highlight: linear-gradient(to bottom, darken($ui-secondary, $darken-top), darken($ui-secondary, $darken-bottom));
 $ui-secondary-highlight-border-color: #e1e1e1;
+
+$hero-bg: $dark-grey;
+$hero-bg-wash: rgba($dark-grey, .8);
 
 // Padding
 $pad: 1em;

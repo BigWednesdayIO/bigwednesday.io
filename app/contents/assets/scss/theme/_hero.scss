@@ -1,8 +1,8 @@
 .hero {
 	font-size: 1.8rem;
 	// All the fallbacks
-	background-color: rgb(51, 51, 51);
-	background-color: rgba(51, 51, 51, 0.8);
+	background-color: $hero-bg;
+	background-color: $hero-bg-wash;
 	background-image: linear-gradient(to right, #333 0%, $brand 80%);
 	background-image: radial-gradient(circle farthest-corner at right bottom, $brand 20%, #333 100%);
 	color: white;
@@ -37,6 +37,8 @@
 	}
 
 	&--with-video {
+		background: $hero-bg;
+
 		&::after {
 			content: '';
 			display: block;
@@ -45,13 +47,7 @@
 			left: -$pad;
 			right: -$pad;
 			bottom: -$pad;
-			background: rgba(51, 51, 51, .8);
-		}
-	}
-
-	&__video {
-		&__fallback {
-			background-color: #333;
+			background: $hero-bg-wash;
 		}
 	}
 }
