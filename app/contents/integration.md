@@ -1,8 +1,8 @@
 ---
-template: layouts/default.html
+template: layouts/default-with-video-hero.html
 title: Integration
 tagline: Seamless integration with the wider business - providing real-time access to... everything
-hero: hero--integration.jpg
+video: integration
 section: integration
 ---
 
