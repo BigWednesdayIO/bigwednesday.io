@@ -1,2 +1,4 @@
 User-Agent: *
 Allow: /
+
+SITEMAP: http://bigwednesday.io/sitemap.xml
