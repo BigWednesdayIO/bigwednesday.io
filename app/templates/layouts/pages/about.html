@@ -5,7 +5,7 @@
 
 {% block page %}
 {% if page.metadata.hero %}
-<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero }}" alt />
+<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero }}" alt="" height="0" width="0" />
 <div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero }})">
 {% else %}
 <div class="hero">
@@ -40,7 +40,7 @@
 				{% for member in team %}
 					<li class="centred" itemprop="founder" itemscope itemtype="http://schema.org/Person">
 						<div class="rounded">
-							<img src="{{ assets }}/images/team/{{ member.image }}" alt style="display: block;" itemprop="image" />
+							<img src="{{ assets }}/images/team/{{ member.image }}" alt="" style="display: block;" itemprop="image" />
 						</div>
 						<div class="media-item__text">
 							<h3 class="media-item__title media-item__title--soft" itemprop="name">{{ member.name }}</h3>
@@ -85,7 +85,7 @@
 		</div>
 	</section>
 
-	<img class="prefetch" src="{{ assets }}/images/hero--press.jpg" alt />
+	<img class="prefetch" src="{{ assets }}/images/hero--press.jpg" alt="" height="0" width="0" />
 	<div class="hero hero--top" style="background-image: url({{ assets }}/images/hero--press.jpg); min-height: 200px;"></div>
 
 	<section class="page-body">
