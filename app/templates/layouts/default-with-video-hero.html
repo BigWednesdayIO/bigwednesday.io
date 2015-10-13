@@ -1,0 +1,33 @@
+{% extends "layouts/base.html" %}
+{% block page %}
+<div class="hero hero--with-video">
+	<video class="hero__video" autoplay loop>
+		<source src="{{ assets }}/videos/{{ page.metadata.video }}.webm" type="video/webm">
+        <source src="{{ assets }}/videos/{{ page.metadata.video }}.mp4" type="video/mp4">
+		<div class="hero__video__fallback" style="background-image: url({{ assets }}/videos/{{ page.metadata.video }}.jpg)"></div>
+	</video>
+	<div class="content-wrap">
+		{% block hero %}
+			<h1>{{ page.title }}</h1>
+			{% if page.metadata.tagline %}<p>{{ page.metadata.tagline }}</p>{% endif %}
+		{% endblock %}
+	</div>
+</div>
+
+<div class="page-body">
+	<div class="content-wrap">
+		{% block header %}{% endblock %}
+
+		<div class="page-body__inner">
+			<main class="page-body__primary">
+				{% block content %}
+					<div class="markdown">
+						{{ page.html }}
+					</div>
+				{% endblock %}
+			</main>
+			<aside class="page-body__secondary">{% block aside %}{% endblock %}</aside>
+		</div>
+	</div>
+</div>
+{% endblock %}
