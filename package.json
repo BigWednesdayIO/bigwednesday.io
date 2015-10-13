@@ -32,8 +32,10 @@
     "typogr": "0.6.x",
     "underscore": "1.8.x",
     "wintersmith": "^2.2.1",
+    "wintersmith-contents": "^0.1.4",
     "wintersmith-livereload": "^0.2.0",
-    "wintersmith-nunjucks": "^0.5.1"
+    "wintersmith-nunjucks": "^0.5.1",
+    "wintersmith-sitemap": "^0.2.1"
   },
   "scripts": {
     "test": "gulp lint"

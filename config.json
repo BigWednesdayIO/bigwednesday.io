@@ -9,7 +9,9 @@
   },
   "plugins": [
     "wintersmith-nunjucks",
-    "wintersmith-livereload"
+    "wintersmith-livereload",
+    "wintersmith-contents",
+    "wintersmith-sitemap"
   ],
   "nunjucks": {  
     "filterdir": "app/filters",
