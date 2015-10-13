@@ -1,6 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% set team = contents.data['team.json'].metadata %}
+{% set contact = contents.data['contact.json'].metadata %}
 
 {% block page %}
 {% if page.metadata.hero %}
@@ -37,13 +38,13 @@
 		<div class="content-wrap content-wrap--narrow">
 			<ul class="grid-list grid-list--well-padded">
 				{% for member in team %}
-					<li class="centred">
+					<li class="centred" itemprop="founder" itemscope itemtype="http://schema.org/Person">
 						<div class="rounded">
-							<img src="{% if member.image %}{{ assets }}/images/team/{{ member.image }}{% else %}//placehold.it/100x110{% endif %}" alt style="display: block;" />
+							<img src="{{ assets }}/images/team/{{ member.image }}" alt style="display: block;" itemprop="image" />
 						</div>
 						<div class="media-item__text">
-							<h3 class="media-item__title media-item__title--soft">{{ member.name }}</h3>
-							<p class="media-item__preview">{{ member.role }}</p>
+							<h3 class="media-item__title media-item__title--soft" itemprop="name">{{ member.name }}</h3>
+							<p class="media-item__preview" itemprop="jobTitle">{{ member.role }}</p>
 						</div>
 					</li>
 				{% endfor %}
@@ -56,30 +57,30 @@
 			<h2 id="contact-us">Contact Us</h2>
 
 			<h3>Our London office</h3>
-			<p class="tagline">20 Ropemaker Street, London EC2Y 9AR.</p>
+			<p class="tagline" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<meta itemprop="contactType" content="Head office" />
+				<span itemprop="streetAddress">20 Ropemaker Street</span>,
+				<span itemprop="addressRegion">London</span>
+				<span itemprop="postalCode">EC2Y 9AR</span>.
+			</p>
 
 			<ul class="press-list">
+				{% for channel in contact %}
 				<li>
-					<a href="mailto:sales@bigwednesday.io" class="press-list__item">
-						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#bullhorn"></use></svg>
-						<span class="press-list__text">sales@bigwednesday.io</span>
+					<a href="mailto:{{ channel.email }}" class="press-list__item" itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
+						<meta itemprop="url" content="http://bigwednesday.io/about" />
+						<meta itemprop="contactType" content="{{ channel.type }}" />
+						<svg class="press-list__icon" height="32" width="32">
+							<title>{{ channel.name }}</title>
+							<use xlink:href="#{{ channel.icon }}"></use>
+						</svg>
+						<span class="press-list__text" itemprop="email">{{ channel.email }}</span>
 					</a>
 				</li>
-				<li>
-					<a href="mailto:support@bigwednesday.io" class="press-list__item">
-						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#life-ring"></use></svg>
-						<span class="press-list__text">support@bigwednesday.io</span>
-					</a>
-				</li>
-				<li>
-					<a href="mailto:info@bigwednesday.io" class="press-list__item">
-						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#info-circle"></use></svg>
-						<span class="press-list__text">info@bigwednesday.io</span>
-					</a>
-				</li>
+				{% endfor %}
 			</ul>
 
-			<p class="tagline">VAT Number: GB 219 5868 68</p>
+			<p class="tagline">VAT Number: <span itemprop="vatID">GB 219 5868 68</span></p>
 
 		</div>
 	</section>
@@ -96,11 +97,11 @@
 				<li>
 					<div class="press-list__item">
 						<svg class="press-list__icon press-list__icon--color" height="32" width="32"><use xlink:href="#logo"></use></svg>
-						<span class="press-list__text">Founded in August 2015</span>
+						<span class="press-list__text">Founded in <time itemprop="http://schema.org/foundingDate" datetime="2015-08">August 2015</time></span>
 					</div>
 				</li>
-				<li>
-					<a href="#" class="press-list__item">
+				<li itemprop="location" itemscope itemtype="http://schema.org/Place">
+					<a href="https://www.google.co.uk/maps/place/20+Ropemaker+St,+London+EC2Y+9AR/@51.5196084,-0.0904344,17z/" class="press-list__item" itemprop="hasMap">
 						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#globe"></use></svg>
 						<span class="press-list__text">HQ in London</span>
 					</a>
@@ -119,7 +120,10 @@
 				</li>
 				<li>
 					<a href="mailto:press@bigwednesday.io" class="press-list__item">
-						<svg class="press-list__icon" height="32" width="32"><use xlink:href="#email-outline"></use></svg>
+						<svg class="press-list__icon" height="32" width="32">
+							<title>Press</title>
+							<use xlink:href="#email-outline"></use>
+						</svg>
 						<span class="press-list__text">press@bigwednesday.io</span>
 					</a>
 				</li>
