@@ -2,7 +2,7 @@
 	var navElement,
 		subNav,
 		subNavLinks,
-		checkLargeScreen = window.matchMedia('(min-width: 768px)');;
+		checkLargeScreen = ('matchMedia' in window) ? window.matchMedia('(min-width: 768px)') : {};
 
 	function setUpSubNavs () {
 		var subNavElements = {},

@@ -205,7 +205,7 @@
 			resultsContainers = document.getElementsByClassName('search-results-container'),
 			instantResultsContainer = document.getElementById('instant-search-results');
 
-		if (searchBox && instantResultsContainer) {
+		if (searchBox && instantResultsContainer && 'matchMedia' in window) {
 			setupInstantSearch(searchBox, instantResultsContainer);
 		}
 
