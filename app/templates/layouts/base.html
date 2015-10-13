@@ -19,6 +19,7 @@
 
 		<meta itemprop="name" content="Big Wednesday IO" />
 		<link rel="canonical" href="http://bigwednesday.io" itemprop="url" />
+		<link rel="alternate" href="http://bigwednesday.io" hreflang="en-gb" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -29,8 +30,8 @@
 		{{ env.helpers.livereload() | safe }}
 	</head>
 	<body class="{{ page.metadata.section }}" itemscope itemtype="http://schema.org/Organization">
-		<meta itemprop="url" content="http://bigwednesday.io" />
-		<meta itemprop="mainEntityOfPage" content="http://bigwednesday.io/about" />
+		<meta itemprop="url" content="http://bigwednesday.io/" />
+		<meta itemprop="mainEntityOfPage" content="http://bigwednesday.io/about/" />
 		{% include "includes/header.html" %}
 
 		{% block page %}{% endblock %}

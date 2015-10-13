@@ -46,7 +46,7 @@
 			<div class="nav-bar__inner">
 				<div class="nav-bar__actions">
 					{# <button class="button--primary">Get started</button> #}
-					<a class="button--secondary" href="/login">Login</a>
+					<a class="button--secondary" href="/login/">Login</a>
 					<button id="navicon" class="button--secondary button--icon nav-bar__menu-button">
 						<svg width="15" height="15">
 							<title>Menu</title>
@@ -56,12 +56,12 @@
 				</div>
 
 				<nav class="primary-navigation collapsible is-hidden">
-					<a href="/why"{% if page.metadata.section == 'why' %} class="active"{% endif %}><span>Why</span></a>
-					<a href="/products" class="with-sub-nav" data-sub-nav="products"><span>Products</span></a>
-					<a href="/solutions" class="with-sub-nav" data-sub-nav="solutions"><span>Solutions</span></a>
-					{# <a href="/industries" class="with-sub-nav" data-sub-nav="industries"><span>Industries</span></a> #}
-					<a href="/integration"><span>Integration</span></a>
-					<a href="/about"><span>About</span></a>
+					<a href="/why/"{% if page.metadata.section == 'why' %} class="active"{% endif %}><span>Why</span></a>
+					<a href="/products/" class="with-sub-nav" data-sub-nav="products"><span>Products</span></a>
+					<a href="/solutions/" class="with-sub-nav" data-sub-nav="solutions"><span>Solutions</span></a>
+					{# <a href="/industries/" class="with-sub-nav" data-sub-nav="industries"><span>Industries</span></a> #}
+					<a href="/integration/"><span>Integration</span></a>
+					<a href="/about/"><span>About</span></a>
 				</nav>
 			</div>
 		</div>
@@ -73,31 +73,31 @@
 				<section class="sub-nav__section is-wide">
 					<h2 class="sub-nav__heading">Management Apps</h2>
 					<ul>
-						<li><a href="/products/unified-admin-console">Unified Admin Console</a></li>
-						<li><a href="/products/dashboard">Dashboard</a></li>
-						<li><a href="/products/personalisation">Personalisation</a></li>
-						<li><a href="/products/product">Product</a></li>
-						<li><a href="/products/promote">Promote</a></li>
-						<li><a href="/products/order">Order</a></li>
-						<li><a href="/products/service">Service</a></li>
-						<li><a href="/products/customer">Customer</a></li>
-						<li><a href="/products/outlet">Outlet</a></li>
-						<li><a href="/products/user">User</a></li>
-						<li><a href="/products/report">Report</a></li>
+						<li><a href="/products/unified-admin-console/">Unified Admin Console</a></li>
+						<li><a href="/products/dashboard/">Dashboard</a></li>
+						<li><a href="/products/personalisation/">Personalisation</a></li>
+						<li><a href="/products/product/">Product</a></li>
+						<li><a href="/products/promote/">Promote</a></li>
+						<li><a href="/products/order/">Order</a></li>
+						<li><a href="/products/service/">Service</a></li>
+						<li><a href="/products/customer/">Customer</a></li>
+						<li><a href="/products/outlet/">Outlet</a></li>
+						<li><a href="/products/user/">User</a></li>
+						<li><a href="/products/report/">Report</a></li>
 					</ul>
 				</section>
 				<section class="sub-nav__section">
 					<h2 class="sub-nav__heading">Services</h2>
 					<ul>
-						<li><a href="/products/import-api">Import API</a></li>
-						<li><a href="/products/export-api">Export API</a></li>
-						<li><a href="/products/rest-api">REST API</a></li>
+						<li><a href="/products/import-api/">Import API</a></li>
+						<li><a href="/products/export-api/">Export API</a></li>
+						<li><a href="/products/rest-api/">REST API</a></li>
 					</ul>
 				</section>
 				<section class="sub-nav__section">
 					<h2 class="sub-nav__heading">Big Data</h2>
 					<ul>
-						<li><a href="/products/customer-cloud">Customer Cloud</a></a></li>
+						<li><a href="/products/customer-cloud/">Customer Cloud</a></a></li>
 					</ul>
 				</section>
 			</div>
@@ -109,25 +109,25 @@
 				<section class="sub-nav__section">
 					<h2 class="sub-nav__heading">Solutions</h2>
 					<ul>
-						<li><a href="/solutions/pub-buying-club">Pub Buying Club</a></li>
-						<li><a href="/solutions/searchful">Searchful</a></li>
+						<li><a href="/solutions/pub-buying-club/">Pub Buying Club</a></li>
+						<li><a href="/solutions/searchful/">Searchful</a></li>
 					</ul>
 				</section>
 			</div>
 		</div>
 	</div>
-	<div class="sub-nav measure-me" id="sub-nav-industries">
+	{#<div class="sub-nav measure-me" id="sub-nav-industries">
 		<div class="content-wrap">
 			<div class="sub-nav__inner">
 				<section class="sub-nav__section">
 					<h2 class="sub-nav__heading">Industries</h2>
 					<ul>
-						<li><a href="/industries/pub-companies"><span>Pub Companies</span></a></li>
-						<li><a href="/industries/b2b"><span>B2B</span></a></li>
-						<li><a href="/industries/retail"><span>Retail</span></a></li>
+						<li><a href="/industries/pub-companies/"><span>Pub Companies</span></a></li>
+						<li><a href="/industries/b2b/"><span>B2B</span></a></li>
+						<li><a href="/industries/retail/"><span>Retail</span></a></li>
 					</ul>
 				</section>
 			</div>
 		</div>
-	</div>
+	</div>#}
 </header>

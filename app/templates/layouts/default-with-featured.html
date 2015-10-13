@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 {% block page %}
 {% if page.metadata.hero %}
-<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero }}" alt />
+<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero }}" alt="" height="0" width="0" />
 <div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero }})">
 {% else %}
 <div class="hero">
