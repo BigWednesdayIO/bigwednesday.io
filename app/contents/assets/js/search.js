@@ -116,6 +116,7 @@
 		function closeInstantSearch () {
 			instantResultsContainer.style.display = 'none';
 			document.body.removeEventListener('click', closeInstantSearch);
+			document.body.removeEventListener('touchend', closeInstantSearch);
 		}
 
 		function performInstantSearch (e) {
@@ -157,6 +158,7 @@
 			});
 
 			document.body.addEventListener('click', closeInstantSearch);
+			document.body.addEventListener('touchend', closeInstantSearch);
 		}
 
 		document.getElementById('search-box').addEventListener('click', function(e) {
