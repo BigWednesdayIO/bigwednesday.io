@@ -73,6 +73,7 @@ a {
 
 %button {
 	padding: .4em $pad;
+	margin: 0;
 	line-height: 1.5em;
 	border-radius: 3px;
 	font-size: inherit;
@@ -158,6 +159,7 @@ a {
 input {
 	font-size: 1.4rem;
 	padding: $pad-half;
+	margin: 0;
 	font-family: $font-secondary;
 	color: inherit;
 	border: $border-strong;
