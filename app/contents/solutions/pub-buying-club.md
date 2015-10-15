@@ -12,7 +12,7 @@ sections: Why, Features
 
 ### You want to enable quick ordering for your lessees
 
-Your lessees want their ordering experience to be quick and easy. Powered by their personal ordering patterns combined with targeted promotions, product ranking adjustments and other business rules you can help them place their weekly order in minutes while controlling exactly which products and offers are presented to them - and all  with customer- and outlet-specific product pricing and price adjustments.
+Your lessees want their ordering experience to be quick and easy. Powered by their personal ordering patterns combined with targeted promotions, product ranking adjustments and other business rules, you can help them place their weekly order in minutes while controlling exactly which products and offers are presented to them - and all  with customer- and outlet-specific product pricing and price adjustments.
 
 ### You want to increase sales volumes
 
