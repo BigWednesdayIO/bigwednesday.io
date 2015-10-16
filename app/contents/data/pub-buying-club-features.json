@@ -31,7 +31,7 @@
 		"description": "More ways to pay include cash-with-order card payments, on-account payments, coupon payments and flexibility for your lessees about when they pay their rent or make ad-hoc account payments"
 	}, {
 		"name": "Recommendations",
-		"description": "Automatic and curated recommendations. You control who sees which recommendations (targeting orthogonal or overlapping user segments), how recommendations should look and where to show them - with instant search results; on product details pages, basket and checkout pages."
+		"description": "Use our collaborative filtering algorithm powered by events stored in the Customer Cloud to generate automatic recommendations or curate your own recommendations. You control who sees which recommendations (targeting orthogonal or overlapping user segments), how recommendations should look and where to show them - with instant search results; on product details pages, basket and checkout pages."
 	}, {
 		"name": "Shopping cart",
 		"description": "Instant order processing with real-time stock and depot availability checks, personalised pricing and discounts."
