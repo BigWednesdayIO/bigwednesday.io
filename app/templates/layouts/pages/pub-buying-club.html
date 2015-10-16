@@ -7,16 +7,16 @@
 	{{ page.html }}
 </div>
 
-<ul{# class="left-and-right-content"#}>
+<ul class="left-and-right-content">
 	{% for feature in features %}
 		<li class="markdown">
 			<div class="text-wrapper">
 				<h3>{{ feature.name }}</h3>
 				<p>{{ feature.description }}</p>
 			</div>
-			{# <div class="image-wrapper">
+			<div class="image-wrapper">
 				<img src="{% if feature.image %}{{ assets }}/images/{{ feature.image }}{% else %}//placehold.it/350x250{% endif %}" alt="" />
-			</div> #}
+			</div>
 		</li>
 	{% endfor %}
 </ul>
