@@ -11,7 +11,7 @@
 		"image": "pbc-mobile.jpg"
 	}, {
 		"name": "Advanced personalisation techniques",
-		"description": "Personalise every aspect of the user journey using behavioural data, purchase history and cognitive science"
+		"description": "Personalise every aspect of the user journey using behavioural data, purchase history and cognitive science.</p><p>Use outlet location data and integration with an open weather API to serve different messages to different users depending on the weather in their area. If it's sunny at the weekend a carousel shows the local weather forecast then serves a related offer"
 	}, {
 		"name": "Fast order entry",
 		"description": "Streamline re-orders: quick order enables lessees to place orders in minutes - making it their primary inventory replenishment mechanism"
