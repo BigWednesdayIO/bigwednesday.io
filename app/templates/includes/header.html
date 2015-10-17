@@ -68,38 +68,21 @@
 	</div>
 
 	<div class="sub-nav measure-me" id="sub-nav-products">
+
+		{% set sections = contents.data['products.json'].metadata %}
+
 		<div class="content-wrap">
 			<div class="sub-nav__inner">
-				<section class="sub-nav__section is-wide">
-					<h2 class="sub-nav__heading">Management Apps</h2>
-					<ul>
-						<li><a href="/products/unified-admin-console/">Unified Admin Console</a></li>
-						<li><a href="/products/dashboard/">Dashboard</a></li>
-						<li><a href="/products/personalisation/">Personalisation</a></li>
-						<li><a href="/products/product/">Product</a></li>
-						<li><a href="/products/promote/">Promote</a></li>
-						<li><a href="/products/order/">Order</a></li>
-						<li><a href="/products/service/">Service</a></li>
-						<li><a href="/products/customer/">Customer</a></li>
-						<li><a href="/products/outlet/">Outlet</a></li>
-						<li><a href="/products/user/">User</a></li>
-						<li><a href="/products/report/">Report</a></li>
-					</ul>
-				</section>
-				<section class="sub-nav__section">
-					<h2 class="sub-nav__heading">Services</h2>
-					<ul>
-						<li><a href="/products/import-api/">Import API</a></li>
-						<li><a href="/products/export-api/">Export API</a></li>
-						<li><a href="/products/rest-api/">REST API</a></li>
-					</ul>
-				</section>
-				<section class="sub-nav__section">
-					<h2 class="sub-nav__heading">Big Data</h2>
-					<ul>
-						<li><a href="/products/customer-cloud/">Customer Cloud</a></a></li>
-					</ul>
-				</section>
+				{% for section in sections %}
+					<section class="sub-nav__section{% if section.products.length > 6 %} is-wide{% endif %}">
+						<h2 class="sub-nav__heading">{{ section.name }}</h2>
+						<ul>
+							{% for product in section.products %}
+								<li><a href="{{ product.href }}">{{ product.name }}</a></li>
+							{% endfor %}
+						</ul>
+					</section>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
