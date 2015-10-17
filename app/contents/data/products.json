@@ -33,6 +33,11 @@
 				"icon": "order",
 				"description": "Bringing together all the information your teams need to provide the best customer service experience with increased sales volumes"
 			}, {
+				"name": "Sell",
+				"href": "/products/sell/",
+				"icon": "buy-button",
+				"description": "Check achievements through straightforward infographics to boost your team performances"
+			}, {
 				"name": "Service",
 				"href": "/products/service/",
 				"icon": "odnoklassniki",
