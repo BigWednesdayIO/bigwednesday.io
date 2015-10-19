@@ -1,5 +1,21 @@
 {% extends "layouts/solution.html" %}
 
+{% set hero_style = 'hero--poster' %}
+
+{% block hero %}
+<div class="hero__text-left">
+	<div class="logo-header">
+		<span class="logo-header__icon">
+			<img src="{{ assets }}/images/{{ page.metadata.logo }}" alt="{{ page.metadata.title }} Logo" itemprop="logo" itemprop="image" />
+		</span>
+		<div class="logo-header__text">
+			<h1 itemprop="name">{{ page.metadata.title }}</h1>
+			<p itemprop="description">{{ page.metadata.tagline }}</p>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
 {% set features = contents.data['pub-buying-club-features.json'].metadata %}
 
 {% block content %}

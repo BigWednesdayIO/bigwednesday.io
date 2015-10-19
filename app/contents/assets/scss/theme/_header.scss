@@ -27,6 +27,11 @@
 		}
 	}
 
+	&__no-format {
+		text-transform: lowercase;
+		word-spacing: em(-6, 1.7*16);
+	}
+
 	&__icon {
 		color: $brand;
 	}

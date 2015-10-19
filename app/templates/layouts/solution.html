@@ -9,27 +9,29 @@
 		<div class="hero">
 	{% endif %}
 		<div class="content-wrap">
-			{% if page.metadata.logo %}
-				<div class="logo-header">
-					<span class="logo-header__icon">
-						<img src="{{ assets }}/images/{{ page.metadata.logo }}" alt="{{ page.metadata.title }} Logo" itemprop="logo" itemprop="image" />
-					</span>
-					<div class="logo-header__text">
-						<h1 itemprop="name">{{ page.metadata.title }}</h1>
-						<p itemprop="description">{{ page.metadata.tagline }}</p>
+			{% block hero %}
+				{% if page.metadata.logo %}
+					<div class="logo-header">
+						<span class="logo-header__icon">
+							<img src="{{ assets }}/images/{{ page.metadata.logo }}" alt="{{ page.metadata.title }} Logo" itemprop="logo" itemprop="image" />
+						</span>
+						<div class="logo-header__text">
+							<h1 itemprop="name">{{ page.metadata.title }}</h1>
+							<p itemprop="description">{{ page.metadata.tagline }}</p>
+						</div>
 					</div>
-				</div>
-			{% else  %}
-				<h1 class="icon-header">
-					<span class="icon-header__icon icon-tile">
-						<svg height="32" width="32" itemprop="logo">
-							<use xlink:href="#{{ page.metadata.icon }}"></use>
-						</svg>
-					</span>
-					<span class="icon-header__text" itemprop="name">{{ page.metadata.title }}</span>
-				</h1>
-				<p itemprop="description">{{ page.metadata.tagline }}</p>
-			{% endif %}
+				{% else  %}
+					<h1 class="icon-header">
+						<span class="icon-header__icon icon-tile">
+							<svg height="32" width="32" itemprop="logo">
+								<use xlink:href="#{{ page.metadata.icon }}"></use>
+							</svg>
+						</span>
+						<span class="icon-header__text" itemprop="name">{{ page.metadata.title }}</span>
+					</h1>
+					<p itemprop="description">{{ page.metadata.tagline }}</p>
+				{% endif %}
+			{% endblock %}
 		</div>
 	</div>
 

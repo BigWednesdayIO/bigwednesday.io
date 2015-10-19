@@ -3,7 +3,7 @@ template: layouts/pages/pub-buying-club.html
 title: Pub Buying Club
 tagline: Empower your lessees with access to products and services
 logo: pub-buying-club-alt.svg
-hero: hero--pub.jpg
+hero: hero--pbc.jpg
 section: solutions
 sections: Why, Features
 ---
