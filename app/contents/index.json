@@ -2,5 +2,5 @@
 	"template": "layouts/pages/index.html",
 	"title": "Home",
 	"filename": "index.html",
-	"hero": "hero--pbc.jpg"
+	"hero": "hero--admin-console.jpg"
 }

@@ -1,107 +1,57 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/full-with-featured.html" %}
 
 {% set hero_style = 'hero--poster' %}
 
-{% block page %}
-<img class="prefetch" src="{{ assets }}/images/hero--pbc.jpg" alt="" height="0" width="0" />
-
-<div class="hero hero--poster">
-	<div class="content-wrap">
-		<div class="hero__text-left">
-			<h1>Commerce Infrastructure for the internet</h1>
-			<p>Whether you're building a B2B marketplace,  mobile app, online storefront or fast order entry web application Big Wednesday IO has the features you need.</p>
-		</div>
-	</div>
-</div>
-
-<div class="hero hero--poster" style="background: #fff">
-	<div class="content-wrap">
-		<div class="hero__text-left" style="color: #666; text-shadow: none;">
-			<h2>Commerce personalisation for platforms</h2>
-			<p>Marketplaces and platforms can use Big Wednesday IO to let sellers give their customers unique, personalised experiences.</p>
-		</div>
-	</div>
-</div>
-
-<div class="hero hero--poster">
-	<div class="content-wrap">
-		<div class="hero__text-left">
-			<h2>Web and mobile commerce, built for developers</h2>
-			<p>A set of unified APIs and tools that enable businesses to sell online.</p>
-		</div>
-	</div>
-</div>
-
-<div class="hero hero--poster" style="background-image: url({{ assets }}/images/hero--pbc.jpg)" data-small-hero="{{ assets }}/images/hero--pbc-mobile.jpg">
-	<div class="content-wrap">
-		<div class="hero__text-left">
-			<h2>Fixing <em>enterprise software</em>, one application at a time.</h2>
-			<p>We provide the building blocks and tools enabling you to create rapidly powerful commerce applications</p>
-		</div>
-	</div>
-</div>
-
-<aside class="featured panel">
-	<div class="content-wrap content-wrap--narrow">
-		<div class="featured__inner">
-			{% block featured %}
-				{% include "includes/pub-buying-club-feature.html" %}
-			{% endblock %}
-		</div>
-	</div>
-</aside>
-
-<div class="page-body">
-	<div class="content-wrap">
-		{% block header %}{% endblock %}
-
-		<div class="page-body__inner">
-			<main class="page-body__primary">
-				{% block content %}
-					<div class="centred">
-						<h2>Feature-packed commerce</h2>
-						<p class="tagline">A flexible set of tools and functionality for modern commerce.</p>
-					</div>
-
-					<ul class="grid-list grid-list--full">
-						<li class="media-item">
-							<div class="media-item__icon">
-								<svg height="28" width="28">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#toolkit"></use>
-								</svg>
-							</div>
-							<div class="media-item__text">
-								<h3 class="media-item__title">Powerful toolkit</h3>
-								<p class="media-item__preview">Works with any type of business</p>
-							</div>
-						</li>
-						<li class="media-item">
-							<div class="media-item__icon">
-								<svg height="28" width="28">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#timer"></use>
-								</svg>
-							</div>
-							<div class="media-item__text">
-								<h3 class="media-item__title">Perfectly scaled</h3>
-								<p class="media-item__preview">Robust support for companies of all sizes</p>
-							</div>
-						</li>
-						<li class="media-item">
-							<div class="media-item__icon">
-								<svg height="28" width="28">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#safe"></use>
-								</svg>
-							</div>
-							<div class="media-item__text">
-								<h3 class="media-item__title">Seamless security</h3>
-								<p class="media-item__preview">Trusted, secure and headache-free</p>
-							</div>
-						</li>
-					</ul>
-				{% endblock %}
-			</main>
-		</div>
-	</div>
+{% block hero %}
+<div class="hero__text-left">
+	<h1>Commerce infrastructure for the internet</h1>
+	<p>Whether you're building a B2B marketplace,  mobile app, online storefront or fast order entry web application Big Wednesday IO has the features you need.</p>
 </div>
 {% endblock %}
 
+{% block featured %}
+{% include "includes/pub-buying-club-feature.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="centred">
+	<h2>Feature-packed commerce</h2>
+	<p class="tagline">A flexible set of tools and functionality for modern commerce.</p>
+</div>
+
+<ul class="grid-list grid-list--full">
+	<li class="media-item">
+		<div class="media-item__icon">
+			<svg height="28" width="28">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#toolkit"></use>
+			</svg>
+		</div>
+		<div class="media-item__text">
+			<h3 class="media-item__title">Powerful toolkit</h3>
+			<p class="media-item__preview">Works with any type of business</p>
+		</div>
+	</li>
+	<li class="media-item">
+		<div class="media-item__icon">
+			<svg height="28" width="28">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#timer"></use>
+			</svg>
+		</div>
+		<div class="media-item__text">
+			<h3 class="media-item__title">Perfectly scaled</h3>
+			<p class="media-item__preview">Robust support for companies of all sizes</p>
+		</div>
+	</li>
+	<li class="media-item">
+		<div class="media-item__icon">
+			<svg height="28" width="28">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#safe"></use>
+			</svg>
+		</div>
+		<div class="media-item__text">
+			<h3 class="media-item__title">Seamless security</h3>
+			<p class="media-item__preview">Trusted, secure and headache-free</p>
+		</div>
+	</li>
+</ul>
+{% endblock %}
