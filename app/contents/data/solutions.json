@@ -3,12 +3,12 @@
 		"name": "Pub Buying Club",
 		"href": "/solutions/pub-buying-club/",
 		"logo": "pub-buying-club.svg",
-		"icon": "store",
+		"icon": "marketplace",
 		"description": "Empower your lessees with access to products and services"
 	}, {
 		"name": "Searchful",
 		"href": "/solutions/searchful/",
-		"icon": "searchful",
+		"icon": "magnify-alt",
 		"description": "Delivering instant personalized search results...everywhere"
 	}
 ]

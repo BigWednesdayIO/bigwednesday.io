@@ -2,7 +2,7 @@
 template: layouts/product.html
 title: Service
 tagline: Empower agents. Wow customers
-icon: odnoklassniki
+icon: service
 section: products
 ---
 
