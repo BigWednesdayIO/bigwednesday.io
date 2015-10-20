@@ -165,12 +165,17 @@ Promise.all([getFiles(pagesDirectory), getFiles(productsDirectory)])
 
     console.log('Indexing pages from ' + pagesDirectory + '/ to ' + pagesIndexUri);
 
-    return Promise.all(createIndexJobs(pages, pagesIndexUri, buildPageObject))
-      .then(function() {
+    return Promise.all(createIndexJobs([pages[0]], pagesIndexUri, buildPageObject))
+      .then(() => {
+        return Promise.all(createIndexJobs(pages.slice(1), pagesIndexUri, buildPageObject));
+      })
+      .then(() => {
         console.log('Indexing products from ' + productsDirectory + '/ to ' + productsIndexUri);
-
-        return Promise.all(createIndexJobs(products, productsIndexUri, buildProductObject));
-      }, function() {
+        return Promise.all(createIndexJobs([products[0]], productsIndexUri, buildProductObject));
+      })
+      .then(() => {
+        return Promise.all(createIndexJobs(products.slice(1), productsIndexUri, buildProductObject));
+      }, () => {
         process.exit(1);
       });
   });
