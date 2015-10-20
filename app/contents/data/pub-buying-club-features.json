@@ -13,8 +13,8 @@
 		"name": "Advanced personalisation techniques",
 		"description": "Personalise every aspect of the user journey using behavioural data, purchase history and cognitive science.</p><p>Use outlet location data and integration with an open weather API to serve different messages to different users depending on the weather in their area. If it's sunny at the weekend a carousel shows the local weather forecast then serves a related offer"
 	}, {
-		"name": "Fast order entry",
-		"description": "Streamline re-orders: quick order enables lessees to place orders in minutes - making it their primary inventory replenishment mechanism"
+		"name": "Ultra-fast order entry",
+		"description": "Using powerful learning algorithms your customer's purchasing patterns are analysed to predict the products your customer will wish to order next. This prediction data can be used by your customers to pre-populate a shopping cart for ultra-fast ordering experiences and shared by you with your fulfilment partners"
 	}, {
 		"name": "Negotiated pricing terms",
 		"description": "Personalize each customer account or outlet with pre-negotiated price lists and terms",
