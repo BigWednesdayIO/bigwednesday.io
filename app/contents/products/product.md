@@ -9,7 +9,7 @@ section: products
 
 ## Collaborate
 
-Web collaboration portal for retailers, distributors, and external data contributors, plus flexible data import capabilities
+Web collaboration portal for retailers, distributors, and external data contributors, plus flexible data import capabilities.
  
 ## Digital asset management
 
@@ -29,3 +29,7 @@ An intuitive interface makes it easy for your data management team to handle:-
 - product tagging
 - attribute metadata
 - pricing
+
+## Product Curation Service
+
+If you wish we can curate your product information for you - guaranteeing regulatory compliance - by sourcing, curating and managing all your product-related digital data and assets.
