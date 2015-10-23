@@ -34,10 +34,6 @@
 			padding-bottom: 15vw;
 		}
 
-		@media (max-width: $bp-medium - (1em/16em)) {
-			background-image: url(/assets/images/hero--home-mobile.jpg) !important;
-		}
-
 		& + & {
 			border-top: 1px solid #333;
 		}

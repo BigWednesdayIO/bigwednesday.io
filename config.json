@@ -17,7 +17,8 @@
     "filterdir": "app/filters",
     "filters": [
       "split",
-      "id"
+      "id",
+      "filename"
     ]
   },
   "require": {

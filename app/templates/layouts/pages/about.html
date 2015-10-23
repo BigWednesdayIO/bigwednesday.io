@@ -4,12 +4,8 @@
 {% set contact = contents.data['contact.json'].metadata %}
 
 {% block page %}
-{% if page.metadata.hero %}
-<img class="prefetch" src="{{ assets }}/images/{{ page.metadata.hero }}" alt="" height="0" width="0" />
-<div class="hero {{ hero_style }}" style="background-image: url({{ assets }}/images/{{ page.metadata.hero }})">
-{% else %}
-<div class="hero">
-{% endif %}
+{% include "includes/hero-prefetch.html" %}
+<div id="{{ page.metadata.hero | filename }}" class="hero {{ hero_style }}">
 	<div class="content-wrap">
 		<h1>About</h1>
 		<p>Enabling the rapid creation of complex commerce applications</p>
