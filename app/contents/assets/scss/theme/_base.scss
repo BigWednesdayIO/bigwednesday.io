@@ -318,5 +318,7 @@ table {
 }
 
 .pad-for-line-height {
-	padding-top: em(7);
+	@media (min-width: $bp-medium) {
+		padding-top: em(7);
+	}
 }
