@@ -53,4 +53,8 @@
 			background: $hero-bg-wash;
 		}
 	}
+
+	.page-body + & {
+		border: $border-strong;
+	}
 }

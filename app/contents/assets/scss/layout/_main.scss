@@ -11,6 +11,10 @@ body {
 	&--narrow {
 		max-width: 880px;
 	}
+
+	section + section {
+		margin-top: $pad*4;
+	}
 }
 
 .page-body {
