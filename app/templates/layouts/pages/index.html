@@ -44,16 +44,16 @@
 	<section class="page-body panel">
 		<div class="content-wrap">
 			<div class="integrations">
-				<a class="integration">
+				<a class="integrations__item">
 					<img src="{{assets}}/images/magento.png" alt="Magento" />
 				</a>
-				<a class="integration">
+				<a class="integrations__item">
 					<img src="{{assets}}/images/shopify.png" alt="Shopify" />
 				</a>
-				<a class="integration">
+				<a class="integrations__item">
 					<img src="{{assets}}/images/woocommerce.png" alt="WooCommerce" />
 				</a>
-				<a class="integration">
+				<a class="integrations__item">
 					<img src="{{assets}}/images/stripe.png" alt="Stripe" />
 				</a>
 			</div>
@@ -61,8 +61,23 @@
 	</section>
 
 	<section>
-		<img class="prefetch" src="{{ assets }}/images/hero--pbc.jpg" alt="" height="0" width="0" />
-		<div class="hero hero--poster" style="background-image: url({{ assets }}/images/hero--pbc.jpg)">
+		<picture class="prefetch">
+			<source srcset="{{ assets }}/images/hero--pbc.jpg" type="image/jpeg" media="(min-width: 48em)" />
+			<source srcset="{{ assets }}/images/hero--pbc-mobile.jpg" type="image/jpeg" />
+			<img src="{{ assets }}/images/hero--pbc.jpg" alt="" height="0" width="0" />
+		</picture>
+		<style>
+			#hero--pbc {
+				background-image: url({{ assets }}/images/hero--pbc.jpg);
+			}
+
+			@media (max-width: 47.9375em) {
+				#hero--pbc {
+					background-image: url({{ assets }}/images/hero--pbc-mobile.jpg);
+				}
+			}
+		</style>
+		<div id="hero--pbc" class="hero hero--poster">
 			<div class="content-wrap">
 				<div class="hero__text-left">
 					<h2>Fixing <em>Enterprise Software</em>, One Application at a Time</h2>
