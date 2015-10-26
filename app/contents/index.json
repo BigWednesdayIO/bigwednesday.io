@@ -2,6 +2,6 @@
 	"template": "layouts/pages/index.html",
 	"title": "Home",
 	"filename": "index.html",
-	"hero": "hero--product-list-alt.jpg",
-	"hero_mobile": "hero--product-list-mobile.jpg"
+	"hero": "hero--pbc.jpg",
+	"hero_mobile": "hero--pbc-mobile.jpg"
 }

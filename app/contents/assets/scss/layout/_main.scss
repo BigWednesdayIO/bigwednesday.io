@@ -12,7 +12,7 @@ body {
 		max-width: 880px;
 	}
 
-	section + section {
+	.page-body & section + section {
 		margin-top: $pad*5;
 	}
 }
