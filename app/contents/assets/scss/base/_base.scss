@@ -37,6 +37,10 @@ svg {
 	fill: currentColor;
 }
 
+video > img {
+	width: 100%;
+}
+
 // IE10 mainly
 main {
 	display: block;

@@ -27,6 +27,24 @@
 			if (video.getAttribute('controls') !== null && video.getAttribute('autoplay') !== null) {
 				video.addEventListener('play', removeControls);
 			}
-		})
+		});
+
+		if (Modernizr.video) {
+			return;
+		}
+
+		// Fallback
+		Array.prototype.forEach.call(videos, function(video) {
+			var path = video.getAttribute('data-fallback'),
+				fallback;
+
+			if (path === null) {
+				return;
+			}
+
+			var fallback = document.createElement('img');
+			fallback.src = path;
+			video.appendChild(fallback);
+		});
 	});
 })();
