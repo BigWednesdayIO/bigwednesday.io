@@ -1,4 +1,7 @@
 {% extends "layouts/base.html" %}
+
+{% set hero_style = page.metadata.hero_style %}
+
 {% block page %}
 <div itemscope itemtype="http://schema.org/Product">
 	<meta itemprop="category" content="{{ page.metadata.section }}" />
