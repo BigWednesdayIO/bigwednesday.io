@@ -15,6 +15,14 @@
 		}
 	}
 
+	&__text {
+		font-size: .75em;
+
+		@media (min-width: $bp-tiny) {
+			font-size: 1em;
+		}
+	}
+
 	.hero & {
 		align-items: center;
 	}
