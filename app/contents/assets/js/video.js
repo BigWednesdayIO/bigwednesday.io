@@ -42,7 +42,7 @@
 				return;
 			}
 
-			var fallback = document.createElement('img');
+			fallback = document.createElement('img');
 			fallback.src = path;
 			video.appendChild(fallback);
 		});
