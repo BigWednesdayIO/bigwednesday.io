@@ -1,0 +1,22 @@
+{% if page.metadata.hero %}
+	<picture class="prefetch">
+		{% if page.metadata.hero_mobile %}
+			<source srcset="{{ assets }}/images/{{ page.metadata.hero }}" type="image/jpeg" media="(min-width: 48em)" />
+			<source srcset="{{ assets }}/images/{{ page.metadata.hero_mobile }}" type="image/jpeg" />
+		{% endif %}
+		<img src="{{ assets }}/images/{{ page.metadata.hero }}" alt="" height="0" width="0" />
+	</picture>
+	<style>
+		#{{ page.metadata.hero | filename }} {
+			background-image: url({{ assets }}/images/{{ page.metadata.hero }});
+		}
+
+		{% if page.metadata.hero_mobile %}
+			@media (max-width: 47.9375em) {
+				#{{ page.metadata.hero | filename }} {
+					background-image: url({{ assets }}/images/{{ page.metadata.hero_mobile }});
+				}
+			}
+		{% endif %}
+	</style>
+{% endif %}

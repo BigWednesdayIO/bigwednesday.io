@@ -11,6 +11,10 @@ body {
 	&--narrow {
 		max-width: 880px;
 	}
+
+	.page-body & section + section {
+		margin-top: $pad*5;
+	}
 }
 
 .page-body {
@@ -36,7 +40,8 @@ body {
 			flex-shrink: 1;
 		}
 
-		&__primary + &__secondary {
+		&__primary + &__secondary,
+		&__secondary + &__primary {
 			margin: 0 0 0 $pad-double;
 		}
 
@@ -66,6 +71,30 @@ body {
 
 			&__secondary {
 				margin-left: 0;
+			}
+		}
+	}
+}
+
+.split-layout {
+	display: flex;
+	flex-flow: column nowrap;
+
+	@media (min-width: $bp-medium) {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	&__content {
+		& + & {
+			margin-top: $pad-double;
+		}
+
+		@media (min-width: $bp-medium) {
+			flex: 1;
+
+			& + & {
+				margin: 0 0 0 $pad*5;
 			}
 		}
 	}

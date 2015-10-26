@@ -1,57 +1,118 @@
-{% extends "layouts/full-with-featured.html" %}
-
-{% set hero_style = 'hero--poster' %}
-
-{% block hero %}
-<div class="hero__text-left">
-	<h1>Fixing <em>enterprise software</em>, one application at a time.</h1>
-	<p>Providing the building blocks to enable the rapid creation of powerful commerce applications</p>
+{% extends "layouts/base.html" %}
+{% block page %}
+{% include "includes/hero-prefetch.html" %}
+<div id="{{ page.metadata.hero | filename }}" class="hero hero--poster">
+	<div class="content-wrap">
+		{% block hero %}
+			<div class="hero__text-left--tight">
+				<h1>Commerce Infrastructure<br />for the Internet</h1>
+				<p>Built to scale and built to be fast - the best commerce experience with the lowest possible latency. API driven commerce, delivered everywhere. Welcome to the post-browser era.</p>
+			</div>
+		{% endblock %}
+	</div>
 </div>
-{% endblock %}
+<aside class="featured panel">
+	<div class="content-wrap content-wrap--narrow">
+		<div class="featured__inner">
+			{% block featured %}{% include "includes/pub-buying-club-feature.html" %}{% endblock %}
+		</div>
+	</div>
+</aside>
 
-{% block featured %}
-{% include "includes/pub-buying-club-feature.html" %}
-{% endblock %}
+<main>
+	<div class="page-body">
+		<div class="content-wrap">
+			<section>
+				<h2 class="centred" style="margin-bottom: 1.185em">APIs to Build All Your Commerce Experiences</h2>
+				<div class="split-layout">
+					<div class="split-layout__content">
+						<p class="tagline" style="margin: 0">Clean, composable and complete APIs can handle your company’s needs - from building a search feature for your website to powering marketplaces and everything in between. Big Wednesday IO gives you the flexibility to build your applications your way regardless of use case or industry.</p>
+					</div>
+					<div class="split-layout__content">
+						{% include "includes/rest-api-graphic.html" %}
+					</div>
+				</div>
+			</section>
 
-{% block content %}
-<div class="centred">
-	<h2>Feature-packed commerce</h2>
-	<p class="tagline">A flexible set of tools and functionality for modern commerce.</p>
-</div>
+			<section>
+				<h2 class="centred" style="margin-bottom: 1.185em">Commerce Personalisation for Platforms</h2>
+				<div class="split-layout">
+					<div class="split-layout__content">
+						<video class="feature-video" autoplay loop controls poster="{{ assets }}/videos/instant-search-thumb.jpg" data-fallback="{{ assets }}/videos/instant-search.gif">
+							<source id="webmsource" src="{{ assets }}/videos/instant-search.webm" type="video/webm">
+							<source id="mp4source" src="{{ assets }}/videos/instant-search.mp4" type="video/mp4">
+						</video>
+					</div>
+					<div class="split-layout__content">
+						<p class="tagline">Personalise everything, everywhere. Marketplaces and platforms can use the Big Wednesday IO Cloud Platform to let sellers give their customers unique, personalised commerce experiences.</p>
+				</div>
+			</section>
 
-<ul class="grid-list grid-list--full">
-	<li class="media-item">
-		<div class="media-item__icon">
-			<svg height="28" width="28">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#toolkit"></use>
-			</svg>
 		</div>
-		<div class="media-item__text">
-			<h3 class="media-item__title">Powerful toolkit</h3>
-			<p class="media-item__preview">Works with any type of business</p>
+	</div>
+
+	<section class="page-body panel">
+		<div class="content-wrap">
+			<div class="integrations">
+				<a class="integrations__item">
+					<img src="{{assets}}/images/magento.png" alt="Magento" />
+				</a>
+				<a class="integrations__item">
+					<img src="{{assets}}/images/shopify.png" alt="Shopify" />
+				</a>
+				<a class="integrations__item">
+					<img src="{{assets}}/images/woocommerce.png" alt="WooCommerce" />
+				</a>
+				<a class="integrations__item">
+					<img src="{{assets}}/images/stripe.png" alt="Stripe" />
+				</a>
+			</div>
 		</div>
-	</li>
-	<li class="media-item">
-		<div class="media-item__icon">
-			<svg height="28" width="28">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#timer"></use>
-			</svg>
+	</section>
+
+	<section class="page-body">
+		<div class="content-wrap">
+			<div class="centred">
+				<h2>Feature-packed commerce</h2>
+				<p class="tagline">A flexible set of tools and functionality for modern commerce.</p>
+			</div>
+
+			<ul class="grid-list grid-list--full">
+				<li class="media-item">
+					<div class="media-item__icon">
+						<svg height="28" width="28">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#toolkit"></use>
+						</svg>
+					</div>
+					<div class="media-item__text">
+						<h3 class="media-item__title">Powerful toolkit</h3>
+						<p class="media-item__preview">Works with any type of business</p>
+					</div>
+				</li>
+				<li class="media-item">
+					<div class="media-item__icon">
+						<svg height="28" width="28">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#timer"></use>
+						</svg>
+					</div>
+					<div class="media-item__text">
+						<h3 class="media-item__title">Perfectly scaled</h3>
+						<p class="media-item__preview">Robust support for companies of all sizes</p>
+					</div>
+				</li>
+				<li class="media-item">
+					<div class="media-item__icon">
+						<svg height="28" width="28">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#safe"></use>
+						</svg>
+					</div>
+					<div class="media-item__text">
+						<h3 class="media-item__title">Seamless security</h3>
+						<p class="media-item__preview">Trusted, secure and headache-free</p>
+					</div>
+				</li>
+			</ul>
 		</div>
-		<div class="media-item__text">
-			<h3 class="media-item__title">Perfectly scaled</h3>
-			<p class="media-item__preview">Robust support for companies of all sizes</p>
-		</div>
-	</li>
-	<li class="media-item">
-		<div class="media-item__icon">
-			<svg height="28" width="28">
-				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#safe"></use>
-			</svg>
-		</div>
-		<div class="media-item__text">
-			<h3 class="media-item__title">Seamless security</h3>
-			<p class="media-item__preview">Trusted, secure and headache-free</p>
-		</div>
-	</li>
-</ul>
+	</section>
+</main>
 {% endblock %}

@@ -192,6 +192,10 @@ label {
 	background: $gradient;
 	border: $border;
 	box-shadow: $shadow;
+
+	.hero + & {
+		border-top: $border-strong;
+	}
 }
 
 .modal {
@@ -310,5 +314,11 @@ table {
 
 	tr:nth-child(even) {
 		background: $gradient;
+	}
+}
+
+.pad-for-line-height {
+	@media (min-width: $bp-medium) {
+		padding-top: em(7);
 	}
 }

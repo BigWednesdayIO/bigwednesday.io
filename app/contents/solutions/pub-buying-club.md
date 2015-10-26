@@ -4,6 +4,7 @@ title: Pub Buying Club
 tagline: Empower your retail partners with access to products and services
 logo: pub-buying-club-alt.svg
 hero: hero--pbc.jpg
+hero_mobile: hero--pbc-mobile.jpg
 section: solutions
 sections: Why, Features
 ---

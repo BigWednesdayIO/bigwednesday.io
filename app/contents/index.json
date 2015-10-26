@@ -2,5 +2,6 @@
 	"template": "layouts/pages/index.html",
 	"title": "Home",
 	"filename": "index.html",
-	"hero": "hero--pbc.jpg"
+	"hero": "hero--pbc.jpg",
+	"hero_mobile": "hero--pbc-mobile.jpg"
 }
