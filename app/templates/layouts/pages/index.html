@@ -38,10 +38,8 @@
 				<h2 class="centred" style="margin-bottom: 1.185em">Commerce Personalisation for Platforms</h2>
 				<div class="split-layout">
 					<div class="split-layout__content">
-						<video class="feature-video" autoplay loop controls poster="{{ assets }}/videos/instant-search-thumb.jpg" data-fallback="{{ assets }}/videos/instant-search.gif">
-							<source id="webmsource" src="{{ assets }}/videos/instant-search.webm" type="video/webm">
-							<source id="mp4source" src="{{ assets }}/videos/instant-search.mp4" type="video/mp4">
-						</video>
+						{% set video = "instant-search" %}
+						{% include "includes/video.html" %}
 					</div>
 					<div class="split-layout__content">
 						<p class="tagline">Personalise everything, everywhere. Marketplaces and platforms can use the Big Wednesday IO Cloud Platform to let sellers give their customers unique, personalised commerce experiences.</p>
