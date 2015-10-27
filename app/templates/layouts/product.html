@@ -3,7 +3,7 @@
 {% set hero_style = page.metadata.hero_style %}
 
 {% block page %}
-<div itemscope itemtype="http://schema.org/Product">
+<div class="product-wrapper" itemscope itemtype="http://schema.org/Product">
 	<meta itemprop="category" content="{{ page.metadata.section }}" />
 	{% include "includes/hero-prefetch.html" %}
 	<div id="{{ page.metadata.hero | filename }}" class="hero {{ hero_style }}">
