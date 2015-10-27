@@ -7,6 +7,7 @@ hero: hero--pbc.jpg
 hero_mobile: hero--pbc-mobile.jpg
 section: solutions
 sections: Why, Features
+priority: 0.9
 ---
 
 ## Why
