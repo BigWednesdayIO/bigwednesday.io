@@ -1,4 +1,5 @@
 {
 	"template": "layouts/pages/login.html",
-	"title": "Login"
+	"title": "Login",
+	"noindex": true
 }

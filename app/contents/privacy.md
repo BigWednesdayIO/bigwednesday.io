@@ -2,6 +2,7 @@
 template: layouts/default.html
 title: Privacy & Cookie Policy
 hero: hero--cookies.jpg
+priority: 0.2
 ---
 
 Big Wednesday IO, at all times, is committed to and actively seeks to protect and respect your privacy. This is of critical important to us.

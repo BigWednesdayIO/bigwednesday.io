@@ -1,6 +1,7 @@
 ---
 template: layouts/default.html
 title: Terms & Conditions
+priority: 0.2
 ---
 
 These terms apply to you when you access and use the Big Wednesday IO Ltd. family of web sites, web pages, interactive features, applications, widgets, blogs and their respective contents at the following URL(s): www.bigwednesday.io, whether accessed via computer, mobile device or other technology and whether as a guest or a registered user (collectively, the “Services”). Use of our Services includes accessing, browsing, or registering to use our products and services.

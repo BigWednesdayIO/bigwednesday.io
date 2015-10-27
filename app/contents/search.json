@@ -1,4 +1,5 @@
 {
 	"template": "layouts/pages/search.html",
-	"title": "Search results"
+	"title": "Search results",
+	"noindex": true
 }
