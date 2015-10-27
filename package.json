@@ -26,6 +26,7 @@
     "gulp-uglify": "^1.4.1",
     "gulp-usemin": "^0.3.14",
     "moment": "2.10.x",
+    "node-sass": "3.3.2",
     "request": "^2.64.0",
     "run-wintersmith": "0.0.3",
     "surge": "^0.15.0",
