@@ -54,6 +54,10 @@
 		}
 	}
 
+	&--random {
+		background-image: none;
+	}
+
 	.page-body + & {
 		border: $border-strong;
 	}
