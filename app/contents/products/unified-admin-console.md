@@ -4,6 +4,7 @@ title: Unified Admin Console
 tagline: A powerful container for our management apps built using a modern, fast, intuitive UI framework
 icon: google-controller
 section: products
+aside: unified-admin-console-aside.html
 ---
 
 All our management apps are orthogonal components designed and built using the same fast,  intuitive UI framework allowing them to be seamlessly integrated into the Unified Admin Console. 
