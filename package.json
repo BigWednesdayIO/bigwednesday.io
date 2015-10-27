@@ -19,7 +19,7 @@
     "gulp-extend": "^0.2.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-minify-css": "^1.2.1",
-    "gulp-rev": "git://github.com/mstrutt/gulp-rev.git",
+    "gulp-rev": "^6.0.1",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svg-symbols": "^1.0.0",
@@ -34,9 +34,9 @@
     "underscore": "1.8.x",
     "wintersmith": "^2.2.1",
     "wintersmith-contents": "^0.1.4",
-    "wintersmith-livereload": "^0.2.0",
+    "wintersmith-livereload": "^0.2.2",
     "wintersmith-nunjucks": "^0.5.1",
-    "wintersmith-sitemap": "^0.2.1"
+    "wintersmith-sitemap": "github:bigwednesdayio/wintersmith-sitemap"
   },
   "scripts": {
     "test": "gulp lint"
