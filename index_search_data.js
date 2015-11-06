@@ -39,7 +39,7 @@ if (preRequisiteErrors.length) {
 }
 
 var productsDirectory = pagesDirectory + '/products';
-var indexBaseUri = process.env.SEARCH_API + '/1/search/indexes/';
+var indexBaseUri = process.env.SEARCH_API + '/1/indexes/';
 var pagesIndex = 'big-wednesday-io-pages';
 var productsIndex = 'big-wednesday-io-products';
 var pagesIndexUri = indexBaseUri + pagesIndex;
