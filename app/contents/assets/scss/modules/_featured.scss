@@ -17,7 +17,7 @@
 		margin: 0 0 $pad;
 
 		@media (min-width: $bp-medium) {
-			margin: 0 $pad 0 0;
+			margin: 0 $pad-and-half 0 0;
 		}
 	}
 
@@ -32,6 +32,10 @@
 			display: block;
 			max-width: 100%;
 		}
+	}
+
+	&__text {
+		flex: 1;
 	}
 
 	&__title {

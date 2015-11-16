@@ -47,6 +47,7 @@
 		<div class="content-wrap">
 			{% block header %}{% endblock %}
 
+			{% block pagebody %}
 			<div class="page-body__inner">
 				<main class="page-body__primary" itemprop="description">
 					{% block content %}
@@ -57,6 +58,7 @@
 				</main>
 				<aside class="page-body__secondary">{% block aside %}{% endblock %}</aside>
 			</div>
+			{% endblock %}
 		</div>
 	</div>
 </div>

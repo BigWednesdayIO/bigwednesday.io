@@ -17,6 +17,14 @@ body {
 	}
 }
 
+.text-wrap {
+	@media (min-width: $bp-medium) {
+		max-width: 100% * (2/3);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 .page-body {
 	position: relative;
 	padding: $pad;

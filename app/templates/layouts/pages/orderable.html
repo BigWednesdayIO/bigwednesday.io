@@ -1,0 +1,48 @@
+{% extends "layouts/solution.html" %}
+
+{% block pagebody %}
+	{% block content %}
+	<div class="markdown text-wrap">
+		{{ page.html }}
+	</div>
+	{% endblock %}
+
+	<ol class="pricing panel">
+		{% for plan in contents.data['pricing-plans.json'].metadata %}
+			<li class="pricing__option {% if plan.name == 'Standard' %}pricing__option--featured{% endif %} plan">
+				<span class="plan__price">{{ plan.price }}</span>
+				<del class="plan__price plan__price--was">{{ plan.was_price}}</del>
+				<h3 class="plan__name">{{ plan.name }}</h3>
+
+				<div class="plan__actions">
+					<a class="button--primary">Buy now</a>
+					<a href="#">Free trial</a>
+				</div>
+
+				<ul class="plan__features">
+					{% if plan.orders_desc %}
+						<li>{{ plan.orders_desc }}</li>
+					{% else %}
+						<li class="active">Unlimited orders</li>
+					{% endif %}
+					<li class="active">Unlimited users</li>
+				</ul>
+
+				<ul class="plan__features">
+					<li>Unlimited free 24/7 support</li>
+					<li>Export data to Excel, Sheets or CSV</li>
+					<li>No setup fees or contracts</li>
+					<li>Automatic secure backups</li>
+					<li>Highest level SSL security encryption</li>
+					<li>Free iPhone and Android apps</li>
+				</ul>
+			</li>
+		{% endfor %}
+	</ol>
+
+	<div class="centred text-wrap">
+		<h2>30-day free trial</h2>
+		<p class="tagline">Try every feature, add unlimited users, no credit card required.</p>
+	</div>
+
+{% endblock %}

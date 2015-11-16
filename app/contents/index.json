@@ -2,8 +2,8 @@
 	"template": "layouts/pages/index.html",
 	"title": "Home",
 	"filename": "index.html",
-	"hero": "hero--pbc.jpg",
-	"hero_mobile": "hero--pbc-mobile.jpg",
+	"hero": "hero--orderable.jpg",
+	"hero_mobile": "hero--orderable-mobile.jpg",
 	"changefreq": "weekly",
 	"priority": 1,
 	"date": "2015-10-27 09:50:00"

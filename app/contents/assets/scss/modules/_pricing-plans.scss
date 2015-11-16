@@ -1,0 +1,86 @@
+.pricing {
+	display: flex;
+	flex-flow: column nowrap;	
+	margin: $pad*2 $pad;
+	padding: 0;
+
+	@media (min-width: $bp-medium) {
+		flex-direction: row;
+		align-items: flex-start;
+		margin: $pad*2.5 0 $pad*3;
+	}
+
+	&__option {
+		flex: 1;
+		padding: $pad*2 $pad*2;
+
+		&--featured {
+			background: white;
+			border: $border;
+			margin: 0 $pad*-1;
+			box-shadow: $section-shadow;
+
+			@media (min-width: $bp-medium) {
+				padding: $pad*3 $pad*2;
+				margin: $pad*-1;
+			}
+		}
+	}
+}
+
+.plan {
+	text-align: center;
+
+	&__price {
+		display: block;
+		font-size: 2.2em;
+		line-height: 1.4;
+		color: $brand;
+
+		&--was {
+			font-size: em(16);
+			color: #888;
+		}
+	}
+
+	&__name {
+		text-transform: uppercase;
+		margin: $pad-half 0;
+	}
+
+	&__actions {
+		display: flex;
+		flex-flow: column nowrap;
+		padding: $pad 0 $pad-half;
+
+		.button--primary {
+			padding-left: $pad-double;
+			padding-right: $pad-double;
+		}
+
+		> a {
+			display: block;
+			margin: auto;
+
+			+ a {
+				margin-top: $pad*(3/4);
+			}
+		}
+	}
+
+	&__features {
+		line-height: em(24);
+		margin-top: $pad;
+		padding-top: $pad;
+		border-top: $border-strong;
+
+		& + & {
+			padding-top: $pad-and-half;
+		}
+
+		.active {
+			color: $brand;
+			font-weight: 600;
+		}
+	}
+}
