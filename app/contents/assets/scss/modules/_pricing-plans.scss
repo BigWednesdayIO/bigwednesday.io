@@ -1,13 +1,13 @@
 .pricing {
 	display: flex;
 	flex-flow: column nowrap;	
-	margin: $pad*2 $pad;
+	margin: $pad $pad 0;
 	padding: 0;
 
 	@media (min-width: $bp-medium) {
 		flex-direction: row;
 		align-items: flex-start;
-		margin: $pad*2.5 0 $pad*3;
+		margin: $pad 0 0;
 	}
 
 	&__option {
