@@ -4,7 +4,7 @@ title: Terms & Conditions
 priority: 0.2
 ---
 
-These terms apply to you when you access and use the Big Wednesday IO Ltd. family of web sites, web pages, interactive features, applications, widgets, blogs and their respective contents at the following URL(s): www.bigwednesday.io, whether accessed via computer, mobile device or other technology and whether as a guest or a registered user (collectively, the “Services”). Use of our Services includes accessing, browsing, or registering to use our products and services.
+These terms apply to you when you access and use the Big Wednesday IO Ltd. family of web sites, web pages, interactive features, applications, widgets, blogs and their respective contents at the following URL(s): http://bigwednesday.io, https://orderable.io, https://orderable.co, https://orderable.co.uk whether accessed via computer, mobile device or other technology and whether as a guest or a registered user (collectively, the “Services”). Use of our Services includes accessing, browsing, or registering to use our products and services.
 
 The Services are offered by Big Wednesday IO Ltd. (Company No. 219586868) and its subsidiaries and affiliated companies, third party developers and other partners (collectively, “Big Wednesday IO Ltd.,” or “we”, “us”, “our”).
 
