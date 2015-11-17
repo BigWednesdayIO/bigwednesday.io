@@ -43,6 +43,7 @@
 		</div>
 	{% endif %}
 
+	{% block pagebody %}
 	<div class="page-body">
 		<div class="content-wrap">
 			{% block header %}{% endblock %}
@@ -59,5 +60,6 @@
 			</div>
 		</div>
 	</div>
+	{% endblock %}
 </div>
 {% endblock %}

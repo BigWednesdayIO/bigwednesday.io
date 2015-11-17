@@ -1,0 +1,76 @@
+{% extends "layouts/solution.html" %}
+
+{% set hero_style = "hero--poster" %}
+
+{% block pagebody %}
+<main itemprop="description">
+	<div class="content-wrap">
+		<div class="markdown text-wrap">
+			{{ page.html }}
+		</div>
+	</div>
+
+	<div class="panel" style="padding: 1em 1em 4em; margin: 3em 0;">
+		<div class="content-wrap">
+			<div class="markdown text-wrap">
+				<h2>Features</h2>
+				<p>Orderable runs in the cloud meaning you can do your ordering using any device whenever you need to.</p>
+				<p>Orderable connects with your favourite online accounting software so that each transaction comes up quickly and matches up.</p>
+				<p>Orderable allows unlimited users so that you and your colleagues can work at the same time from different places.</p>
+				<p>There’s nothing to install, upgrades are free and everything is backed up automatically.</p>
+				<p>There’s a mobile app too: you can use it to run your business on the go.</p>
+				<p>Orderable is always secure and reliable and our experts are here to support you 24/7.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-wrap">
+		<div class="markdown text-wrap">
+			<h2>Pricing plans</h2>
+			<p>No hidden costs or surprises. Cancel or change your plan at any time.</p>
+		</div>
+	</div>
+	
+	<div class="content-wrap">
+		<ol class="pricing panel">
+			{% for plan in contents.data['pricing-plans.json'].metadata %}
+				<li class="pricing__option {% if plan.name == 'Standard' %}pricing__option--featured{% endif %} plan">
+					<span class="plan__price">{{ plan.price }}</span>
+					<del class="plan__price plan__price--was">{{ plan.was_price}}</del>
+					<h3 class="plan__name">{{ plan.name }}</h3>
+
+					{#
+					<div class="plan__actions">
+						<a class="button--primary">Buy now</a>
+						<a>Free trial</a>
+					</div>
+					#}
+
+					<ul class="plan__features">
+						{% if plan.orders_desc %}
+							<li>{{ plan.orders_desc }}</li>
+						{% else %}
+							<li class="active">Unlimited orders</li>
+						{% endif %}
+						<li class="active">Unlimited users</li>
+					</ul>
+
+					<ul class="plan__features">
+						<li>Unlimited free 24/7 support</li>
+						<li>Export data to Excel, Sheets or CSV</li>
+						<li>No setup fees or contracts</li>
+						<li>Automatic secure backups</li>
+						<li>Highest level SSL security encryption</li>
+						<li>Free iPhone and Android apps</li>
+					</ul>
+				</li>
+			{% endfor %}
+		</ol>
+
+		<div class="centred text-wrap">
+			<h2>30-day free trial</h2>
+			<p class="tagline">Try every feature, add unlimited users, no credit card required.</p>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -61,4 +61,53 @@
 			background-size: cover;
 		}
 	}
+
+	&__banner {
+		max-width: 500px;
+		padding: 20px 20px 8px;
+		font-family: $font-primary;
+		font-size: 16px;
+		background: $ui-primary-highlight;
+		color: white;
+		text-shadow: none;
+
+		p {
+			font-size: em(16);
+			margin: 0 0 $pad;
+		}
+
+		h1 {
+			position: relative;
+			font-size: 36px !important;
+			line-height: 1.1 !important;
+			padding-top: 12px;
+			padding-bottom: 24px;
+			border-bottom: 1px inset rgba(255, 255, 255, .12);
+			margin: 0 0 4px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: -8px;
+				height: 4px;
+				width: 65px;
+				background: rgba(255, 255, 255, .7);
+			}
+		}
+
+		a {
+			@extend %button;
+			display: inline-block;
+			padding: $pad/4 0;
+			font-size: 18px;
+			color: $ui-primary-text;
+
+			svg {
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 2px;
+				margin-bottom: 2px;
+			}
+		}
+	}
 }

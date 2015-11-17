@@ -1,12 +1,18 @@
 {% extends "layouts/base.html" %}
 {% block page %}
 {% include "includes/hero-prefetch.html" %}
-<div id="{{ page.metadata.hero | filename }}" class="hero hero--poster">
+<div id="{{ page.metadata.hero | filename }}" class="hero hero--poster hero--homepage">
 	<div class="content-wrap">
 		{% block hero %}
-			<div class="hero__text-left--tight">
-				<h1>Commerce Infrastructure<br />for the Internet</h1>
-				<p>Built to scale and built to be fast - the best commerce experience with the lowest possible latency. API driven commerce, delivered everywhere. Welcome to the post-browser era.</p>
+			<div class="hero__banner">
+				<p style="margin-top: 0;">Great suppliers delivering to you</p>
+				<h1>Order the products you need from the suppliers you love</h1>
+				<a class="align-text" href="/solutions/orderable/">
+					Sign up now
+					<svg height="22" width="22">
+						<use xlink:href="#arrow-right-circle"></use>
+					</svg>
+				</a>
 			</div>
 		{% endblock %}
 	</div>
@@ -14,7 +20,7 @@
 <aside class="featured panel">
 	<div class="content-wrap content-wrap--narrow">
 		<div class="featured__inner">
-			{% block featured %}{% include "includes/pub-buying-club-feature.html" %}{% endblock %}
+			{% block featured %}{% include "includes/orderable-feature.html" %}{% endblock %}
 		</div>
 	</div>
 </aside>

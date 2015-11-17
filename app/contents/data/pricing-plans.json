@@ -1,0 +1,40 @@
+[
+	{
+		"name": "Starter",
+		"price": "£4.50",
+		"was_price": "£9.00",
+		"orders": true,
+		"orders_desc": "Place 5 orders",
+		"users": true,
+		"support": true,
+		"export": true,
+		"setup_fee": 0,
+		"backups": true,
+		"encryption": true,
+		"apps": true
+	}, {
+		"name": "Standard",
+		"price": "£10.00",
+		"was_price": "£20.00",
+		"orders": true,
+		"users": true,
+		"support": true,
+		"export": true,
+		"setup_fee": 0,
+		"backups": true,
+		"encryption": true,
+		"apps": true
+	}, {
+		"name": "Premium",
+		"price": "£12.50",
+		"was_price": "£25.00",
+		"orders": true,
+		"users": true,
+		"support": true,
+		"export": true,
+		"setup_fee": 0,
+		"backups": true,
+		"encryption": true,
+		"apps": true
+	}
+]
