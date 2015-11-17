@@ -4,7 +4,7 @@
 		"price": "£4.50",
 		"was_price": "£9.00",
 		"orders": true,
-		"orders_desc": "Create and send 5 orders",
+		"orders_desc": "Place 5 orders",
 		"users": true,
 		"support": true,
 		"export": true,
