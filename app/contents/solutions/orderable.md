@@ -28,4 +28,4 @@ Now Laura can do her online ordering quickly and easily: she can fill her shoppi
 
 Laura only has to manage one order and with Orderable she discovers that the time it takes her to order the supplies she needs to operate her business isn’t an hour any more: it’s less than 5 minutes. What’s more, Orderable automatically raises supplier invoices for Laura and works with her favourite online accounting software too. More time saved. More time for Laura to take care of her customers.
 
-After a few months Orderable tells Laura that it can probably guess with a high degree of accuracy what she wants to order today and will, if she wishes it, fill her shopping cart for her. After a couple of years Laura finds she rarely needs to modify Orderable’s shopping cart and ordering is taking less than a minute.
+After a few months Orderable tells Laura that it can probably predict what she wants to order today and has prepared a shopping cart for her. Soon Laura finds she rarely needs to modify Orderable’s shopping cart and ordering is taking her less than a minute.
