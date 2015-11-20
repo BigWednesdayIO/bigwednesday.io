@@ -78,6 +78,10 @@
 .media-group__heading {
 	color: $body-heading;
 	text-transform: uppercase;
+
+	.hero & {
+		color: inherit;
+	}
 }
 
 .media-group {

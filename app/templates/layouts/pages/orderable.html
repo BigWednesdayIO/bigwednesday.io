@@ -2,35 +2,82 @@
 
 {% set hero_style = "hero--poster" %}
 
+{% set orderableData = contents.data["orderable.json"].metadata %}
+
+{% block hero %}
+	<div class="text-wrap">
+		<div class="logo-header">
+			<span class="logo-header__icon">
+				<img src="{{ assets }}/images/{{ page.metadata.logo }}" alt="{{ page.metadata.title }} Logo" itemprop="logo" itemprop="image" height="60" width="60" />
+			</span>
+			<div class="logo-header__text">
+				<h1 itemprop="name">{{ page.metadata.title }}</h1>
+				<p itemprop="description">{{ page.metadata.tagline }}</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
 {% block pagebody %}
 <main itemprop="description">
 	<div class="page-body">
 		<div class="content-wrap">
-			<div class="markdown text-wrap">
+			<div class="text-wrap centred">
+				<h2>Why</h2>
+				<p class="tagline">Orderable is a cloud platform that connects buyers to suppliers</p>
+			</div>
+
+			<div class="markdown text-wrap first-two-bold">
 				{{ page.html }}
 			</div>
 		</div>
 	</div>
 
-	<div class="panel" style="padding: 1em 1em 4em; margin: 2em 0 1em;">
-		<div class="content-wrap">
-			<div class="markdown text-wrap">
-				<h2 id="features">Features</h2>
-				<p>Orderable runs in the cloud meaning you can do your ordering using any device whenever you need to.</p>
-				<p>Orderable connects with your favourite online accounting software so that each transaction comes up quickly and matches up.</p>
-				<p>Orderable allows unlimited users so that you and your colleagues can work at the same time from different places.</p>
-				<p>There’s nothing to install, upgrades are free and everything is backed up automatically.</p>
-				<p>There’s a mobile app too: you can use it to run your business on the go.</p>
-				<p>Orderable is always secure and reliable and our experts are here to support you 24/7.</p>
-			</div>
+	<div id="how-it-works" class="hero" style="background-image: url('/assets/images/hero--flatwhite.jpg'); padding: 8rem 0;">
+		<div class="content-wrap centred">
+			<h2 style="margin-top: 0">How it works</h2>
+			<p>Everything you need from your favourite suppliers in one place</p>
+		</div>
+	</div>
+
+	<div class="page-body">
+		<div class="content-wrap centred">
+			<ul class="grid-list grid-list--full" style="margin-top: 3em;">
+				{% for item in orderableData["how-it-works"] %}
+					{% include "includes/media-item--vertical.html" %}
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+
+	<div id="the-features" class="hero" style="background-image: url('/assets/images/hero--flatwhite-2.jpg')">
+		<div class="content-wrap centred">
+			<h2 style="margin: 0; padding: .8em 0 1.2em;">The features</h2>
+			<ul class="grid-list grid-list--full grid-list--centred">
+				{% for item in orderableData.features %}
+					{% include "includes/media-item--vertical.html" %}
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+
+	<div id="suppliers" class="panel" style="padding: 1em 1em 4em; margin: 0 0 1em;">
+		<div class="content-wrap centred">
+			<h2>Suppliers</h2>
+			<p class="tagline">We’re here to make it easy for you to join the network</p>
+			<ul class="grid-list grid-list--full grid-list--centred">
+				{% for item in orderableData.suppliers %}
+					{% include "includes/media-item--vertical.html" %}
+				{% endfor %}
+			</ul>
 		</div>
 	</div>
 
 	<div class="page-body">
 		<div class="content-wrap">
-			<div class="markdown text-wrap">
+			<div class="text-wrap centred">
 				<h2 id="pricing-plans">Pricing plans</h2>
-				<p>No hidden costs or surprises. Cancel or change your plan at any time.</p>
+				<p class="tagline" style="margin-bottom: 0">No hidden costs or surprises. Cancel or change your plan at any time.</p>
 			</div>
 		</div>
 	</div>

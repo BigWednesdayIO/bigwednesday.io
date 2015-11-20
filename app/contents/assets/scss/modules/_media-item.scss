@@ -28,6 +28,22 @@
 
 	}
 
+	&--vertical {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	&--vertical & {
+		&__icon,
+		&__image {
+			margin: 0 0 $pad;
+		}
+
+		&__title {
+			margin-bottom: $pad-half;
+		}
+	}
+
 	#{$no-flexbox} & {
 		display: block;
 		text-align: left;

@@ -31,6 +31,10 @@
 			margin-bottom: $pad*4;
 		}
 	}
+
+	&--centred {
+		justify-content: center;
+	}
 }
 
 .card-list {
