@@ -9,7 +9,7 @@ sections: Why, How it works, The features, Suppliers, Pricing plans
 priority: 0.9
 ---
 
-Many small business owners would like a better way to buy from suppliers. They would like to be able to source products more easily and, when they have identified the perfect supplier, place their order with them immediately. They would like to spend less time placing orders over the phone, less time raising purchase orders and less time chasing suppliers for paper invoices. They would like their ordering process to be accurate, reliable and fast and they really want to be able to place their orders whenever and wherever they want.
+Many small business owners would like a better way to buy from suppliers. They would like to be able to source products more easily and, when they have identified the perfect supplier, place their order with them immediately. They would like to spend less time placing orders over the phone, less time raising purchase orders and less time chasing suppliers for paper invoices. They would like their ordering process to be accurate, reliable and fast and they want to be able to place their orders whenever and wherever they want.
 
 Orderable makes it easy for independent retailers in the eating and drinking out industry to order the supplies they need to operate their businesses:-
 
