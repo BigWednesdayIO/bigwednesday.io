@@ -1,0 +1,63 @@
+{
+	"how-it-works": [
+		{
+			"icon": "map-marker-radius",
+			"name": "Tell us your postcode",
+			"description": "...that’s your delivery postcode"
+		}, {
+			"icon": "cart-plus",
+			"name": "Start shopping",
+			"description": "Find the products you need - all from suppliers who will deliver to your area"
+		}, {
+			"icon": "clipboard-text",
+			"name": "Submit your order",
+			"description": "Once you join the network you can buy from any new supplier and enjoy the same credit terms you enjoy with your existing suppliers"
+		}
+	],
+	"features": [
+		{
+			"icon": "cloud-outline",
+			"name": "It’s the cloud",
+			"description": "Orderable runs in the cloud meaning you can do your ordering using any device whenever you need to. There’s nothing to install, upgrades are free and everything is backed up automatically."
+		}, {
+			"icon": "margin",
+			"name": "Accounting",
+			"description": "Orderable connects with your favourite online accounting software so that each transaction comes up quickly and matches up."
+		}, {
+			"icon": "account-multiple-outline",
+			"name": "Unlimited users",
+			"description": "Orderable allows unlimited users so that you and your colleagues can work at the same time from different places."
+		}, {
+			"icon": "web",
+			"name": "Everywhere",
+			"description": "There’s a mobile app too: you can use it to run your business on the go."
+		}, {
+			"icon": "lock-outline",
+			"name": "Secure",
+			"description": "Orderable is always secure and reliable and our experts are here to support you."
+		}
+	],
+	"suppliers": [
+		{
+			"icon": "sale",
+			"name": "Tailored pricing",
+			"description": "Tailor your pricing to your customer"
+		}, {
+			"icon": "google-circles-communities",
+			"name": "Connect",
+			"description": "With customers who want to buy from you"
+		}, {
+			"icon": "heart-outline",
+			"name": "Free to suppliers",
+			"description": "We’re free to suppliers - now and always"
+		}, {
+			"icon": "crown",
+			"name": "Stay in charge",
+			"description": "Have the final say in who can order from you"
+		}, {
+			"icon": "star",
+			"name": "In-house curation",
+			"description": "To make sure your brand and your products stand out"
+		}
+	]
+}

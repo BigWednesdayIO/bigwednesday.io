@@ -322,3 +322,11 @@ table {
 		padding-top: em(7);
 	}
 }
+
+.first-two-bold {
+	> p:nth-child(1),
+	> p:nth-child(2) {
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+}
