@@ -2,8 +2,7 @@
 	"how-it-works": [
 		{
 			"icon": "map-marker-radius",
-			"name": "Tell us your postcode",
-			"description": "...that’s your delivery postcode"
+			"name": "Tell us your postcode"
 		}, {
 			"icon": "cart-plus",
 			"name": "Start shopping",

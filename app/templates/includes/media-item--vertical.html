@@ -6,6 +6,6 @@
 	</div>
 	<div class="media-item__text">
 		<h3 class="media-item__title">{{ item.name }}</h3>
-		<p class="media-item__preview">{{ item.description }}</p>
+		{% if item.description %}<p class="media-item__preview">{{ item.description }}</p>{% endif %}
 	</div>
 </li>
